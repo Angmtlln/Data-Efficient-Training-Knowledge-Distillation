@@ -1,0 +1,17 @@
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+results/checkpoints/
+*.pt
+*.safetensors
+
+# data/: raw splits and embeddings are cheap to regenerate (prepare_data.py, features.py),
+# but per-example scores are expensive (full-data run + 3-fold CV), so they are versioned
+data/*
+!data/scores.parquet
+!data/oof_probs.npy
+
+# results/runs/: logs are noise, training dynamics of the full-data run are expensive
+results/runs/*
+!results/runs/dynamics_full_seed0.npz
