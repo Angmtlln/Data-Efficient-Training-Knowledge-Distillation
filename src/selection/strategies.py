@@ -143,9 +143,15 @@ STRATEGIES = dict(
     moderate=coreset.moderate,
     d2=coreset.d2(beta=0.0),
     d2_b10=coreset.d2(beta=0.10),
+    # final hybrid: domain filter first, then coverage-centric selection
+    ccs_len8=restrict(lambda df: df.n_words >= 8, coreset.ccs(beta=0.10)),
+    # scalability: the same selection on cheap scores (src/analysis/cheap_scores.py)
+    ccs_b10_cheap=coreset.ccs(beta=0.10, score="el2n_cheap"),
+    ccs_len8_cheap=restrict(lambda df: df.n_words >= 8, coreset.ccs(beta=0.10, score="el2n_cheap")),
 )
 NEEDS_OOF = {"clean", "clean_kmeans", "clean_ambiguous_bal", "clean_len5_kmeans", "rank_agg",
              "clean_len8", "mix_ambig20"}
+NEEDS_CHEAP = {"ccs_b10_cheap", "ccs_len8_cheap"}
 
 
 def main():
@@ -159,6 +165,9 @@ def main():
     for name in args.only or STRATEGIES:
         if name in NEEDS_OOF and "label_issue" not in df:
             print(f"skip {name}: run cv_predict + scores first")
+            continue
+        if name in NEEDS_CHEAP and "el2n_cheap" not in df:
+            print(f"skip {name}: run cheap_scores + scores first")
             continue
         for s in args.seeds:
             idx = STRATEGIES[name](df, budget, np.random.default_rng(s))

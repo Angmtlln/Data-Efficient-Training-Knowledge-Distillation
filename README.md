@@ -1,7 +1,8 @@
 # Data-Efficient Training: отбор 10% SST-2 для ModernBERT
 
 Исследуем, как стратегия отбора подмножества (качество / разнообразие / важность) влияет
-на качество ModernBERT-base, обученного на 10% GLUE SST-2. Условие — в [Conditions.md](Conditions.md).
+на качество ModernBERT-base, обученного на 10% GLUE SST-2. Условие — в [Conditions.md](Conditions.md),
+результаты и выводы — в **[REPORT.md](REPORT.md)**.
 
 ## Окружение
 

@@ -21,6 +21,7 @@ AXIS = {
     "hard": "importance", "easy": "importance", "ambiguous": "importance",
     "hard_bal": "importance", "easy_bal": "importance", "ambiguous_bal": "importance",
     "ccs_b03": "coreset", "ccs_b10": "coreset", "moderate": "coreset", "d2": "coreset", "d2_b10": "coreset",
+    "ccs_b10_cheap": "coreset", "ccs_len8": "hybrid", "ccs_len8_cheap": "hybrid",
 }
 COLORS = {"quality": "#2a78d6", "diversity": "#eb6834", "importance": "#1baf7a", "hybrid": "#6250d6", "coreset": "#e87ba4",
           "baseline": "#8a8985"}
@@ -143,6 +144,31 @@ def plot_cartography(scores):
     plt.close(fig)
 
 
+def plot_val_vs_test(summary, label=("len_ge8", "ccs_len8", "ccs_b10", "ccs_b10_cheap", "d2_b10",
+                                      "longest", "rank_agg", "kcenter", "random")):
+    s = summary[(summary.test_acc_mean > 0.9) & (summary.strategy != "full")]
+    fig, ax = plt.subplots(figsize=(6.5, 5.2), facecolor=SURFACE)
+    style(ax)
+    ax.grid(axis="y", color=GRID, linewidth=0.8)
+    for _, r in s.iterrows():
+        ax.scatter(r.val_acc_mean * 100, r.test_acc_mean * 100, s=60, zorder=3,
+                   color=COLORS[AXIS.get(r.strategy, "hybrid")], edgecolor=SURFACE, linewidth=2)
+        if r.strategy in label:
+            left = r.strategy == "ccs_len8"  # sits right next to len_ge8
+            ax.annotate(r.strategy, (r.val_acc_mean * 100, r.test_acc_mean * 100),
+                        xytext=(-6, -10) if left else (6, 3), ha="right" if left else "left",
+                        textcoords="offset points", fontsize=8, color=INK2)
+    rho = spearmanr(s.val_acc_mean, s.test_acc_mean).statistic
+    ax.set_xlabel("val accuracy, % (phrases, same distribution as train)", color=INK2)
+    ax.set_ylabel("test accuracy, % (full sentences)", color=INK2)
+    ax.set_title(f"Strategy ranking on val vs test (Spearman ρ = {rho:+.2f})", color=INK, loc="left", fontsize=11)
+    handles = [plt.Line2D([], [], marker="o", linestyle="", markersize=7, color=c) for c in COLORS.values()]
+    ax.legend(handles, COLORS.keys(), loc="lower right", frameon=False, fontsize=8)
+    fig.tight_layout()
+    fig.savefig(FIG_DIR / "val_vs_test.png", dpi=160)
+    plt.close(fig)
+
+
 def main():
     FIG_DIR.mkdir(parents=True, exist_ok=True)
     res = pd.read_csv(RESULTS_CSV)
@@ -152,7 +178,7 @@ def main():
         n_runs=("seed", "size"),
         test_acc_mean=("test_acc", "mean"), test_acc_std=("test_acc", "std"),
         test_f1_mean=("test_f1", "mean"), test_f1_std=("test_f1", "std"),
-        val_acc_mean=("val_acc", "mean"),
+        val_acc_mean=("val_acc", "mean"), val_acc_std=("val_acc", "std"),
     ).reset_index()
     full_acc = summary.set_index("strategy").test_acc_mean["full"]
     rand_acc = summary.set_index("strategy").test_acc_mean["random"]
@@ -161,6 +187,10 @@ def main():
     rand_runs = res[res.strategy == "random"].test_acc
     summary["p_vs_random"] = summary.strategy.map(
         lambda n: ttest_ind(res[res.strategy == n].test_acc, rand_runs, equal_var=False).pvalue
+        if n not in ("random", "full") else np.nan)
+    rand_val = res[res.strategy == "random"].val_acc
+    summary["p_val_vs_random"] = summary.strategy.map(
+        lambda n: ttest_ind(res[res.strategy == n].val_acc, rand_val, equal_var=False).pvalue
         if n not in ("random", "full") else np.nan)
     summary["axis"] = summary.strategy.map(lambda n: AXIS.get(n, "hybrid"))
     summary = summary.sort_values("test_acc_mean", ascending=False)
@@ -194,6 +224,7 @@ def main():
     plot_strategies(summary, full_acc, rand_acc)
     plot_correlations(per_strategy[per_strategy.test_acc > 0.9], feats)
     plot_cartography(scores)
+    plot_val_vs_test(summary)
     print(f"\nfigures -> {FIG_DIR}")
 
 
