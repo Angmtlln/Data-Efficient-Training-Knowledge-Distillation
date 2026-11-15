@@ -13,6 +13,8 @@ from scipy.stats import spearmanr, ttest_ind
 from src.config import DATA_DIR, RESULTS_CSV, RESULTS_DIR, SUBSETS_DIR
 
 FIG_DIR = RESULTS_DIR / "figures"
+# suffix _bNN is a budget (e.g. random_b05), except for these names where it is the beta of CCS / D2
+BETA_NAMES = r"(?:ccs|d2)_b\d\d$"
 
 AXIS = {
     "random": "baseline", "stratified": "baseline", "full": "baseline",
@@ -22,6 +24,7 @@ AXIS = {
     "hard_bal": "importance", "easy_bal": "importance", "ambiguous_bal": "importance",
     "ccs_b03": "coreset", "ccs_b10": "coreset", "moderate": "coreset", "d2": "coreset", "d2_b10": "coreset",
     "ccs_b10_cheap": "coreset", "ccs_len8": "hybrid", "ccs_len8_cheap": "hybrid",
+    "ccs_b10_bal": "coreset", "ccs_b10_cheap_bal": "coreset", "dsir": "quality", "domain_clf": "quality",
 }
 COLORS = {"quality": "#2a78d6", "diversity": "#eb6834", "importance": "#1baf7a", "hybrid": "#6250d6", "coreset": "#e87ba4",
           "baseline": "#8a8985"}
@@ -169,10 +172,50 @@ def plot_val_vs_test(summary, label=("len_ge8", "ccs_len8", "ccs_b10", "ccs_b10_
     plt.close(fig)
 
 
+def budget_sweep(res, full_acc):
+    """Accuracy vs budget for strategies run at several budgets (<name>_b<pct>_s<seed>, 10% = no suffix)."""
+    # ccs_b10, d2_b10 etc. carry the beta of CCS / D2, not a budget
+    is_sweep = res.strategy.str.contains(r"_b\d\d$", regex=True) & ~res.strategy.str.match(BETA_NAMES)
+    budget = res.strategy.str.extract(r"_b(\d\d)$")[0].where(is_sweep)
+    swept = res.strategy.where(~is_sweep, res.strategy.str.replace(r"_b\d\d$", "", regex=True))
+    names = swept[budget.notna()].unique()
+    d = res.assign(base=swept, budget=budget.astype(float).fillna(10.0))
+    d = d[d.base.isin(names)]
+    sweep = d.groupby(["base", "budget"]).test_acc.agg(["mean", "std", "size"]).reset_index()
+    sweep.to_csv(RESULTS_DIR / "budget_sweep.csv", index=False)
+    print("\nBudget sweep (test acc):")
+    print(sweep.pivot(index="base", columns="budget", values="mean").round(4).to_string())
+
+    fig, ax = plt.subplots(figsize=(7, 4.6), facecolor=SURFACE)
+    style(ax)
+    ax.grid(axis="y", color=GRID, linewidth=0.8)
+    colors = {"random": COLORS["baseline"], "len_ge8": COLORS["quality"], "domain_clf": COLORS["hybrid"],
+              "ccs_b10_cheap": COLORS["coreset"]}
+    for name, g in sweep.groupby("base"):
+        g = g.sort_values("budget")
+        c = colors.get(name, COLORS["diversity"])
+        ax.errorbar(g.budget, g["mean"] * 100, yerr=g["std"] * 100, color=c, linewidth=2, marker="o",
+                    markersize=7, capsize=2, label=name)
+    ax.axhline(full_acc * 100, color=INK2, linewidth=1)
+    ax.annotate("full 100%", (1, full_acc * 100), xytext=(0, 4), textcoords="offset points", fontsize=8, color=INK2)
+    ax.set_xscale("log")
+    ax.set_xticks([1, 5, 10, 20], ["1%", "5%", "10%", "20%"])
+    ax.set_xlabel("budget, % of the pool (log scale)", color=INK2)
+    ax.set_ylabel("test accuracy, %", color=INK2)
+    ax.legend(frameon=False, fontsize=8, loc="lower right")
+    ax.set_title("Test accuracy vs selection budget (mean ± std over seeds)", color=INK, loc="left", fontsize=11)
+    fig.tight_layout()
+    fig.savefig(FIG_DIR / "budget_sweep.png", dpi=160)
+    plt.close(fig)
+
+
 def main():
     FIG_DIR.mkdir(parents=True, exist_ok=True)
-    res = pd.read_csv(RESULTS_CSV)
-    res["strategy"] = res.subset.map(strategy_of)
+    res_all = pd.read_csv(RESULTS_CSV)
+    res_all["strategy"] = res_all.subset.map(strategy_of)
+    # the main analysis is at the 10% budget; other budgets only feed the sweep figure
+    res = res_all[~res_all.strategy.str.contains(r"_b\d\d$", regex=True)
+                  | res_all.strategy.str.match(BETA_NAMES)].copy()
 
     summary = res.groupby("strategy").agg(
         n_runs=("seed", "size"),
@@ -225,6 +268,7 @@ def main():
     plot_correlations(per_strategy[per_strategy.test_acc > 0.9], feats)
     plot_cartography(scores)
     plot_val_vs_test(summary)
+    budget_sweep(res_all, full_acc)
     print(f"\nfigures -> {FIG_DIR}")
 
 

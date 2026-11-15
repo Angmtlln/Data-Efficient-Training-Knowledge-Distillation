@@ -12,7 +12,7 @@ import torch
 
 from src.config import BUDGET_FRACTION, DATA_DIR
 from src.data import save_subset
-from src.selection import coreset
+from src.selection import coreset, domain, dsir
 
 
 def _random_from(candidates, budget, rng):
@@ -127,6 +127,8 @@ not_noisy_len5 = lambda df: ~df.label_issue & (df.n_words >= 5)
 not_noisy_len8 = lambda df: ~df.label_issue & (df.n_words >= 8)
 
 STRATEGIES = dict(
+    # same draw as random_baseline.random_subset, so random_s<seed> files are reproduced exactly
+    random=lambda df, budget, rng: rng.choice(len(df), size=budget, replace=False),
     longest=longest, len_ge8=len_ge8, low_ppl=low_ppl, clean=clean,
     kmeans=kmeans_balanced, kcenter=kcenter,
     hard=hard, easy=easy, ambiguous=ambiguous,
@@ -148,20 +150,29 @@ STRATEGIES = dict(
     # scalability: the same selection on cheap scores (src/analysis/cheap_scores.py)
     ccs_b10_cheap=coreset.ccs(beta=0.10, score="el2n_cheap"),
     ccs_len8_cheap=restrict(lambda df: df.n_words >= 8, coreset.ccs(beta=0.10, score="el2n_cheap")),
+    # is the CCS gain a class-balance effect?
+    ccs_b10_bal=class_balanced(coreset.ccs(beta=0.10)),
+    ccs_b10_cheap_bal=class_balanced(coreset.ccs(beta=0.10, score="el2n_cheap")),
+    # principled version of the length filter: importance resampling towards unlabeled target sentences
+    dsir=dsir.dsir,
+    domain_clf=domain.domain_clf,
 )
 NEEDS_OOF = {"clean", "clean_kmeans", "clean_ambiguous_bal", "clean_len5_kmeans", "rank_agg",
              "clean_len8", "mix_ambig20"}
-NEEDS_CHEAP = {"ccs_b10_cheap", "ccs_len8_cheap"}
+NEEDS_CHEAP = {"ccs_b10_cheap", "ccs_len8_cheap", "ccs_b10_cheap_bal"}
 
 
 def main():
     p = argparse.ArgumentParser()
     p.add_argument("--seeds", type=int, nargs="+", default=[0, 1, 2])
     p.add_argument("--only", nargs="+", default=None)
+    p.add_argument("--budget", type=float, default=BUDGET_FRACTION,
+                   help="fraction of the pool; non-default budgets are saved as <name>_b<pct>_s<seed>")
     args = p.parse_args()
 
     df = pd.read_parquet(DATA_DIR / "scores.parquet")
-    budget = int(len(df) * BUDGET_FRACTION)
+    budget = int(len(df) * args.budget)
+    suffix = "" if args.budget == BUDGET_FRACTION else f"_b{round(args.budget * 100):02d}"
     for name in args.only or STRATEGIES:
         if name in NEEDS_OOF and "label_issue" not in df:
             print(f"skip {name}: run cv_predict + scores first")
@@ -172,9 +183,9 @@ def main():
         for s in args.seeds:
             idx = STRATEGIES[name](df, budget, np.random.default_rng(s))
             assert len(np.unique(idx)) == budget
-            save_subset(f"{name}_s{s}", idx)
+            save_subset(f"{name}{suffix}_s{s}", idx)
         sub = df.iloc[idx]
-        print(f"{name:10s} words {sub.n_words.mean():5.1f} | pos {sub.label.mean():.3f} | "
+        print(f"{name + suffix:10s} n {budget} | words {sub.n_words.mean():5.1f} | pos {sub.label.mean():.3f} | "
               f"conf {sub.confidence.mean():.3f} | clusters {sub.cluster.nunique():3d} | test_sim {sub.test_sim.mean():.3f}")
 
 
