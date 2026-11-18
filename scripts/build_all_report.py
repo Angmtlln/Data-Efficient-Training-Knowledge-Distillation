@@ -37,18 +37,16 @@ def main():
   if row.part=='part3' and row.name.startswith('forget_') and row.name!='forget_random':
    random_acc=s[(s.part=='part3')&(s.name=='forget_random')].accuracy_pct.iloc[0]
    comparison+=f' Относительно обычной случайной выборки: **{row.accuracy_pct-random_acc:+.2f} п.п.** Это другое сравнение.'
-  refs='\n'.join(f'- [{sources[k]["short"]}]({sources[k]["url"]}).' for k in family['sources']) or 'Отдельной статьи-источника нет: это наше условие для честного сравнения.'
+  refs='\n'.join(f'- [{sources[k]["short"]}]({sources[k]["url"]}).' for k in family['sources']) or 'Отдельной статьи-источника нет: это мое условие для честного сравнения.'
   card=f'''# {info['title']}
 
 **Результат: {row.accuracy_pct:.2f}% верных ответов, разброс {row.sd_pp:.2f} п.п.**
 
 {info['meaning']}
 
-## Зачем пробовали
+## Идея и реализация
 
 {info['why']}
-
-## Что сделали
 
 {info['how']}
 
@@ -57,7 +55,7 @@ def main():
 {comparison}
 
 {table(performance)}
-## Что было в статье, а что у нас
+## Сравнение со статьями
 
 {family['paper']}
 
@@ -71,7 +69,7 @@ def main():
 
 {info['next']}
 
-Это вывод по трем запускам. Малую разницу не считаем доказанным преимуществом. Если меняли несколько условий сразу, нельзя приписывать весь эффект одному изменению.
+Это вывод по трем запускам. Малую разницу я не считаю доказанным преимуществом. Если я меняла несколько условий сразу, нельзя приписывать весь эффект одному изменению.
 
 ## Каждый запуск
 
@@ -87,17 +85,17 @@ def main():
   (cards/f'{row.part}_{row.name}.md').write_text(clean(card))
  index=['## Карточки методов']
  for part,title in [('part1','Простые способы'),('part2','Языковые группы и пары'),('part3','Проверка исправлений')]:
-  index+=['### '+title,'\n'+'\n'.join('- '+link(part,n) for n in s[s.part==part].name)+'\n']
+  index+=['### '+title,'\n'+'\n'.join('- '+link(part,n) for n in s[s.part==part].name if not (part=='part3' and n.startswith('forget_')))+'\n']
  replacements['{{METHOD_INDEX}}']='\n\n'.join(index)
  report=(ROOT/'docs/report_template.md').read_text()
  for old,new in replacements.items():report=report.replace(old,new)
  assert '{{' not in report
  a.output.write_text(clean(report).rstrip() + '\n')
- src=['# Статьи и связь с нашими опытами\n','Проверено по arXiv 18 ноября 2026. Для трех ключевых сравнений прочитан полный текст; для остальных — аннотация. Ниже указан объем проверки. Числа относятся к условиям авторов, а не к нашему SST-2. Ссылки ведут на первоисточники.\n']
+ src=['# Статьи и связь с моими опытами\n','Проверено по arXiv 18 ноября 2026. Для трех ключевых сравнений прочитан полный текст; для остальных — аннотация. Ниже указан объем проверки. Числа относятся к условиям авторов, а не к моему опыту на SST-2. Ссылки ведут на первоисточники.\n']
  for key,source in sources.items():
-  src.append(f'## {source["short"]}\n\n[{source["title"]}]({source["url"]})\n\n**Что проверено:** {source["checked"]}.\n\n**Результат статьи.** {source["result"]}\n\n**Как связано с нами.** {source["difference"]}\n')
- src+=['## Какую модель представлений мы использовали\n\n[all-MiniLM-L6-v2](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2) из Sentence Transformers. Ссылка на Sentence-BERT объясняет общий подход к представлениям предложений, но не означает, что мы обучали исходную SBERT или повторяли ее эксперименты.\n',
- '## Что не является повторением статьи\n\nСлучайные контроли, средняя редкость слов, доля уникальных слов, конкретные доли добавок и наши ограничения состава придуманы для этого проекта. У них нет чужого результата на том же протоколе, который можно честно поставить рядом.\n']
+  src.append(f'## {source["short"]}\n\n[{source["title"]}]({source["url"]})\n\n**Что проверено:** {source["checked"]}.\n\n**Результат статьи.** {source["result"]}\n\n**Связь с моим опытом.** {source["difference"]}\n')
+ src+=['## Модель представлений\n\n[all-MiniLM-L6-v2](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2) из Sentence Transformers. Ссылка на Sentence-BERT объясняет общий подход к представлениям предложений, но не означает, что я обучала исходную SBERT или повторяла ее эксперименты.\n',
+ '## Что не является повторением статьи\n\nСлучайные контроли, средняя редкость слов, доля уникальных слов, конкретные доли добавок и мои ограничения состава придуманы для этого проекта. У них нет чужого результата на том же протоколе, который можно честно поставить рядом.\n']
  (ROOT/'docs/SOURCES.md').write_text(clean('\n'.join(src)))
  print('Updated report, 28 method cards and source notes')
 if __name__=='__main__':main()
