@@ -1,0 +1,34 @@
+{
+  "verified_runs": 54,
+  "pool": 65349,
+  "val": 2000,
+  "test": 872,
+  "test_slices": {
+    "negation": 164,
+    "contrast": 121
+  },
+  "overlap_normalization": "strip + lowercase, exact text only; not source-sentence overlap",
+  "split_text_overlaps": [
+    {
+      "left": "pool",
+      "right": "val",
+      "right_exact_text_overlap": 24
+    },
+    {
+      "left": "pool",
+      "right": "test",
+      "right_exact_text_overlap": 0
+    },
+    {
+      "left": "val",
+      "right": "test",
+      "right_exact_text_overlap": 0
+    }
+  ],
+  "pool_mean_words": 9.409111080506205,
+  "pool_proxy_error": 0.17063765321581048,
+  "pool_proxy_loss": 0.39035783123218526,
+  "eligible_proxy_error": 0.1709553678734298,
+  "eligible_proxy_loss": 0.3903932078664446,
+  "val_test_method_spearman": 0.7867837909620047
+}

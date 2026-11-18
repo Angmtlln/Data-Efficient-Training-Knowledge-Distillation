@@ -1,0 +1,10 @@
+control,seed,delta_pp,shared_rows,replaced_rows
+pair_random,17,-1.9495412844036775,684,5850
+pair_random,42,0.0,689,5845
+pair_random,101,1.6055045871559592,667,5867
+pair_matched_random,17,-1.834862385321101,0,6534
+pair_matched_random,42,0.2293577981651418,0,6534
+pair_matched_random,101,0.11467889908256534,0,6534
+pair_broken_pairs,17,-0.9174311926605561,6502,32
+pair_broken_pairs,42,0.11467889908256534,6502,32
+pair_broken_pairs,101,0.6880733944954032,6502,32

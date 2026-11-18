@@ -1,0 +1,29 @@
+{
+  "candidate_pairs": 1080,
+  "normalized_conflicting_texts": 4,
+  "representative_texts": 64998,
+  "skipped_large_buckets": 0,
+  "max_span": 2,
+  "min_context": 4,
+  "max_bucket": 100,
+  "disjoint_all": 825,
+  "by_category": {
+    "operator_insertion_deletion": {
+      "candidates": 165,
+      "disjoint": 141
+    },
+    "operator_phrase_rewrite": {
+      "candidates": 9,
+      "disjoint": 7
+    },
+    "other_opposite_label_edit": {
+      "candidates": 898,
+      "disjoint": 686
+    },
+    "polarity_word_substitution": {
+      "candidates": 8,
+      "disjoint": 5
+    }
+  },
+  "note": "All unreviewed. Opposite gold labels do not certify causal/semantic validity. No new training subsets created."
+}

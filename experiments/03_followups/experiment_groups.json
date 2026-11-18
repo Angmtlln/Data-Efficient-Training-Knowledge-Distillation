@@ -1,0 +1,16 @@
+{
+  "forgetting": [
+    "forget_random",
+    "forget_matched_zero",
+    "forget_dose05",
+    "forget_dose10",
+    "forget_all"
+  ],
+  "skills": [
+    "skill_matched_random_v2",
+    "grad_raw_mix25",
+    "grad_nobias_mix25",
+    "grad_randomref_nobias_mix25",
+    "neg_embedding_mix25"
+  ]
+}

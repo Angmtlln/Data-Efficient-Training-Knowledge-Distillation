@@ -1,0 +1,5 @@
+# Machine-generated evidence is preserved but collapsed in GitHub code reviews.
+results/** linguist-generated=true
+experiments/*/selections/*.json linguist-generated=true
+*.npz binary
+*.png binary

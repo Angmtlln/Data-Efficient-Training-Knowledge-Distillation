@@ -1,0 +1,13 @@
+.venv*/
+__pycache__/
+*.pyc
+.hf-cache/
+.training.lock
+experiments/*/data/*
+outputs/
+local_checkpoints/
+*.incoming/
+
+experiments/03_followups/gradient_variants.npz
+experiments/03_followups/gradient_diagnostics.json
+experiments/*/reports/

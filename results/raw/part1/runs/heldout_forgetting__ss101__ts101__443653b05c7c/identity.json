@@ -1,0 +1,28 @@
+{
+  "selection_sha256": "1b16f9ce58457a039a704a9aa2d064cd4cf71755ec183e06539c21b5840c7eb8",
+  "config": {
+    "model": "answerdotai/ModernBERT-base",
+    "model_revision": "8949b909ec900327062f0ebf497f51aef5e6f0c8",
+    "training": {
+      "epochs": 3,
+      "batch_size": 32,
+      "learning_rate": 5e-05,
+      "weight_decay": 0.01,
+      "warmup_ratio": 0.06,
+      "max_length": 64,
+      "checkpoint_steps": 100
+    }
+  },
+  "training": {
+    "epochs": 3,
+    "batch_size": 32,
+    "learning_rate": 5e-05,
+    "weight_decay": 0.01,
+    "warmup_ratio": 0.06,
+    "max_length": 64,
+    "checkpoint_steps": 100
+  },
+  "seed": 101,
+  "code_hash": "cfc8010de6d1b8a8576bf3846aa4d810db3ee943dd3c074d3d56e75935d44962",
+  "pilot": false
+}

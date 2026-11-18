@@ -1,0 +1,9 @@
+name,label,spearman_loss
+negation_gradient,0,-0.9983706935625224
+negation_gradient,1,0.9990831472905991
+negation_randomref_gradient,0,0.9920856090801412
+negation_randomref_gradient,1,-0.9953314361038548
+contrast_gradient,0,0.9945405307761757
+contrast_gradient,1,-0.997054271538234
+contrast_randomref_gradient,0,0.997585890012067
+contrast_randomref_gradient,1,-0.9985917723915654

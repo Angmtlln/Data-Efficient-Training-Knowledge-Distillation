@@ -1,0 +1,9 @@
+{
+  "main": [
+    "random",
+    "lexical_diversity",
+    "rare_words",
+    "dedup_exact",
+    "heldout_forgetting"
+  ]
+}

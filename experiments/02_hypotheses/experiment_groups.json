@@ -1,0 +1,22 @@
+{
+  "negation": [
+    "skill_random",
+    "negation_keyword",
+    "negation_embedding",
+    "negation_gradient",
+    "negation_randomref_gradient"
+  ],
+  "contrast": [
+    "skill_random",
+    "contrast_keyword",
+    "contrast_embedding",
+    "contrast_gradient",
+    "contrast_randomref_gradient"
+  ],
+  "pairs": [
+    "pair_random",
+    "pair_matched_random",
+    "pair_pairs",
+    "pair_broken_pairs"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "model": "sentence-transformers/all-MiniLM-L6-v2",
+  "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+  "pool_sha256": "c0649daca41978a971b794e5a190068945eda3706c44338fc98c1aa0eaecaea3",
+  "shape": [
+    65349,
+    384
+  ],
+  "device": "cpu",
+  "embedding_cpu_seconds": 23.12219786643982
+}

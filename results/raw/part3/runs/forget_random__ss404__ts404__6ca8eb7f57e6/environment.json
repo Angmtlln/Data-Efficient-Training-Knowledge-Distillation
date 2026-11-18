@@ -1,0 +1,13 @@
+{
+  "python": "3.12.15 (main, Oct 13 2026, 16:52:04) [GCC 15.3.0]",
+  "platform": "Linux-5.15.0-202-generic-x86_64-with-glibc2.39",
+  "packages": {
+    "torch": "2.14.1+cu132",
+    "datasets": "3.6.0",
+    "numpy": "2.5.5",
+    "scikit-learn": "1.7.2",
+    "transformers": "4.57.1",
+    "accelerate": "1.11.0"
+  },
+  "timestamp": 1795004708.899929
+}

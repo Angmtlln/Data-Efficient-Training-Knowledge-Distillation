@@ -1,0 +1,20 @@
+{
+  "source": "nyu-mll/glue/sst2",
+  "revision": "bcdcba79d07bc864c1c254ccfcedcce55bcc9a8c",
+  "split_seed": 42,
+  "test_source": "GLUE validation, not official unlabeled test",
+  "splits": {
+    "pool": {
+      "n": 65349,
+      "sha256": "c0649daca41978a971b794e5a190068945eda3706c44338fc98c1aa0eaecaea3"
+    },
+    "val": {
+      "n": 2000,
+      "sha256": "b288cf10da839ac7de62a900467275a886390ff0998a8e63e89216a7f5b968cc"
+    },
+    "test": {
+      "n": 872,
+      "sha256": "c2e72ac53c21130e2791d7703fa43ac06052fb8ebd01452e9a1870100ed00221"
+    }
+  }
+}

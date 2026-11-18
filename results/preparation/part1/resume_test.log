@@ -1,0 +1,15 @@
+.
+----------------------------------------------------------------------
+Ran 1 test in 0.377s
+
+OK
+{'loss': 0.6914, 'grad_norm': 0.01279936172068119, 'learning_rate': 4.375e-05, 'epoch': 0.16666666666666666}
+{'loss': 0.6954, 'grad_norm': 0.7427150011062622, 'learning_rate': 3.125e-05, 'epoch': 0.3333333333333333}
+{'loss': 0.6929, 'grad_norm': 0.07806141674518585, 'learning_rate': 1.8750000000000002e-05, 'epoch': 0.5}
+{'loss': 0.6939, 'grad_norm': 0.7282943725585938, 'learning_rate': 6.25e-06, 'epoch': 0.6666666666666666}
+{'train_runtime': 0.0984, 'train_samples_per_second': 162.633, 'train_steps_per_second': 81.317, 'train_loss': 0.6933829188346863, 'epoch': 0.6666666666666666}
+{'loss': 0.6914, 'grad_norm': 0.01279936172068119, 'learning_rate': 4.375e-05, 'epoch': 0.16666666666666666}
+{'loss': 0.6954, 'grad_norm': 0.7427150011062622, 'learning_rate': 3.125e-05, 'epoch': 0.3333333333333333}
+{'loss': 0.6929, 'grad_norm': 0.07806141674518585, 'learning_rate': 1.8750000000000002e-05, 'epoch': 0.5}
+{'loss': 0.6939, 'grad_norm': 0.7282943725585938, 'learning_rate': 6.25e-06, 'epoch': 0.6666666666666666}
+{'train_runtime': 0.022, 'train_samples_per_second': 728.502, 'train_steps_per_second': 364.251, 'train_loss': 0.34669674932956696, 'epoch': 0.6666666666666666}

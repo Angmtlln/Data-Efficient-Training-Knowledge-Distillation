@@ -1,0 +1,14 @@
+{
+  "python": "3.11.15 (main, Mar  3 2026, 15:47:15) [Clang 21.1.4 ]",
+  "platform": "macOS-26.2-arm64-arm-64bit",
+  "packages": {
+    "torch": "2.8.0",
+    "datasets": "3.6.0",
+    "numpy": "2.4.6",
+    "scikit-learn": "1.7.2",
+    "transformers": "4.57.1",
+    "accelerate": "1.11.0",
+    "sentence-transformers": "5.1.2"
+  },
+  "timestamp": 1794909696.37539
+}

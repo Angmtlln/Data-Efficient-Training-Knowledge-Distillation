@@ -1,0 +1,78 @@
+a,b,text_a,text_b,label_a,label_b,removed,added,similarity,context_tokens,category,review_status,accepted,orig_idx_a,orig_idx_b
+34677,59460,wo n't be talking about the film once you exit the theater ,be talking about the film once you exit the theater ,0,1,wo n't,,0.8333333333333334,10,operator_insertion_deletion,unreviewed,False,39373,26164
+51886,21886,sacrificing any of the cultural intrigue ,without sacrificing any of the cultural intrigue ,0,1,,without,0.8571428571428571,6,operator_insertion_deletion,unreviewed,False,24401,51265
+8272,53197,are n't many conclusive answers in the film ,many conclusive answers in the film ,0,1,are n't,,0.75,6,operator_insertion_deletion,unreviewed,False,121,63330
+23945,52433,lacking the spark of imagination that might have made it an exhilarating ,the spark of imagination that might have made it an exhilarating ,0,1,lacking,,0.9166666666666666,11,operator_insertion_deletion,unreviewed,False,62536,53966
+15943,57329,fails because it demands that you suffer the dreadfulness of war from both sides ,it demands that you suffer the dreadfulness of war from both sides ,0,1,fails because,,0.8571428571428571,12,operator_insertion_deletion,unreviewed,False,34884,5545
+51420,18799,"can not recommend it , because it overstays its natural running time ","recommend it , because it overstays its natural running time ",0,1,can not,,0.8333333333333334,10,operator_insertion_deletion,unreviewed,False,59127,27957
+51798,2040,nothing to gain from watching they ,gain from watching they ,0,1,nothing to,,0.6666666666666666,4,operator_insertion_deletion,unreviewed,False,64180,9385
+43617,16878,falling into the hollywood trap and making a vanity project with nothing new to offer ,not falling into the hollywood trap and making a vanity project with nothing new to offer ,0,1,,not,0.9375,15,operator_insertion_deletion,unreviewed,False,1704,7464
+46663,2714,not to be moved by this drama ,to be moved by this drama ,0,1,not,,0.8571428571428571,6,operator_insertion_deletion,unreviewed,False,45675,55145
+7516,37639,"nothing here seems as funny as it did in analyze this , not even joe viterelli as de niro 's right-hand goombah . ","seems as funny as it did in analyze this , not even joe viterelli as de niro 's right-hand goombah . ",0,1,nothing here,,0.9230769230769231,24,operator_insertion_deletion,unreviewed,False,11548,9659
+46117,29873,"no excuse for following up a delightful , well-crafted family film with a computer-generated cold fish ","for following up a delightful , well-crafted family film with a computer-generated cold fish ",0,1,no excuse,,0.9,18,operator_insertion_deletion,unreviewed,False,33967,63928
+62926,46395,may not rival the filmmaker 's period pieces ,rival the filmmaker 's period pieces ,0,1,may not,,0.7777777777777778,7,operator_insertion_deletion,unreviewed,False,10817,33705
+19740,58464,notice the 129-minute running time ,do n't notice the 129-minute running time ,0,1,,do n't,0.7777777777777778,7,operator_insertion_deletion,unreviewed,False,17295,61134
+62783,11309,finds no way to entertain or inspire its viewers ,way to entertain or inspire its viewers ,0,1,finds no,,0.7777777777777778,7,operator_insertion_deletion,unreviewed,False,15703,15276
+22696,18626,is n't as sharp or as fresh ,as sharp or as fresh ,0,1,is n't,,0.7142857142857143,5,operator_insertion_deletion,unreviewed,False,27155,60962
+7964,1452,it lacks the utter authority of a genre gem ,the utter authority of a genre gem ,0,1,it lacks,,0.7777777777777778,7,operator_insertion_deletion,unreviewed,False,21170,15324
+18530,59815,made without a glimmer of intelligence or invention ,a glimmer of intelligence or invention ,0,1,made without,,0.75,6,operator_insertion_deletion,unreviewed,False,34355,16439
+20044,14641,without any of its sense of fun or energy ,of its sense of fun or energy ,0,1,without any,,0.7777777777777778,7,operator_insertion_deletion,unreviewed,False,723,14124
+58675,51403,does n't do a load of good ,do a load of good ,0,1,does n't,,0.7142857142857143,5,operator_insertion_deletion,unreviewed,False,65629,60669
+1553,48023,might not seem like the proper cup of tea ,seem like the proper cup of tea ,0,1,might not,,0.7777777777777778,7,operator_insertion_deletion,unreviewed,False,63678,22242
+18718,54037,fails to match the freshness of the actress-producer and writer ,to match the freshness of the actress-producer and writer ,0,1,fails,,0.9166666666666666,11,operator_insertion_deletion,unreviewed,False,48632,41590
+49719,36348,"does n't care about cleverness , wit or any other kind of intelligent humor ","care about cleverness , wit or any other kind of intelligent humor ",0,1,does n't,,0.8571428571428571,12,operator_insertion_deletion,unreviewed,False,39495,8046
+56944,53275,is less successful on other levels ,successful on other levels ,0,1,is less,,0.6666666666666666,4,operator_insertion_deletion,unreviewed,False,327,9493
+47636,29918,no film could possibly be more contemptuous of the single female population . ,could possibly be more contemptuous of the single female population . ,0,1,no film,,0.8461538461538461,11,operator_insertion_deletion,unreviewed,False,10025,43875
+5611,4822,deny its seriousness and quality ,ca n't deny its seriousness and quality ,0,1,,ca n't,0.7142857142857143,5,operator_insertion_deletion,unreviewed,False,63456,44909
+21510,28494,does n't generate a lot of energy ,generate a lot of energy ,0,1,does n't,,0.7142857142857143,5,operator_insertion_deletion,unreviewed,False,65845,34447
+63256,12299,may not be a great piece of filmmaking ,be a great piece of filmmaking ,0,1,may not,,0.75,6,operator_insertion_deletion,unreviewed,False,6615,23577
+65082,52578,lacking any of the rollicking dark humor so necessary ,of the rollicking dark humor so necessary ,0,1,lacking any,,0.7777777777777778,7,operator_insertion_deletion,unreviewed,False,53856,27589
+10466,51562,is n't going to make box office money that makes michael jordan jealous ,going to make box office money that makes michael jordan jealous ,0,1,is n't,,0.8461538461538461,11,operator_insertion_deletion,unreviewed,False,10291,53071
+37987,48432,never achieve the popularity of my big fat greek wedding ,achieve the popularity of my big fat greek wedding ,0,1,never,,0.9,9,operator_insertion_deletion,unreviewed,False,437,10679
+54985,28351,not in a good way ,demented in a good way ,0,1,not,demented,0.8,4,operator_phrase_rewrite,unreviewed,False,28679,64096
+27534,33419,and not in a good way ,that in a good way ,0,1,and not,that,0.6666666666666666,4,operator_phrase_rewrite,unreviewed,False,63183,888
+27534,28351,and not in a good way ,demented in a good way ,0,1,and not,demented,0.6666666666666666,4,operator_phrase_rewrite,unreviewed,False,63183,64096
+54985,33419,not in a good way ,that in a good way ,0,1,not,that,0.8,4,operator_phrase_rewrite,unreviewed,False,28679,888
+32176,5107,"no more racist portraits of indians , for instance ) ","( no more racist portraits of indians , for instance ) ",0,1,no,( no,0.8181818181818182,9,operator_phrase_rewrite,unreviewed,False,43753,7753
+39296,64045,the film is deadly dull ,the film is never dull ,0,1,deadly,never,0.8,4,operator_phrase_rewrite,unreviewed,False,41631,10775
+18968,54010,'s hardly any fun to watch ,'s always fun to watch ,0,1,hardly any,always,0.7142857142857143,5,operator_phrase_rewrite,unreviewed,False,20447,9637
+57964,35986,that 's hardly any fun to watch ,that 's always fun to watch ,0,1,hardly any,always,0.75,6,operator_phrase_rewrite,unreviewed,False,924,18756
+9201,61427,that it 's hardly watchable ,that it 's actually watchable ,0,1,hardly,actually,0.8333333333333334,5,operator_phrase_rewrite,unreviewed,False,24351,27075
+57549,27732,from squirming in their seats ,squirming in their seats ,0,1,from,,0.8,4,other_opposite_label_edit,unreviewed,False,29000,63640
+33012,62047,"but , like silence , it 's a movie that gets under your skin . ","like silence , it 's a movie that gets under your skin . ",0,1,"but ,",,0.875,14,other_opposite_label_edit,unreviewed,False,37653,19457
+41501,12272,who has never made anything that was n't at least watchable ,has never made anything that was n't at least watchable ,0,1,who,,0.9090909090909091,10,other_opposite_label_edit,unreviewed,False,7561,55682
+2000,34433,offers a desperately ingratiating performance ,offers a desperately ingratiating performance . ,0,1,performance,performance .,0.6666666666666666,4,other_opposite_label_edit,unreviewed,False,22641,65979
+51970,56774,skip but film buffs should get to know ,like to skip but film buffs should get to know ,0,1,,like to,0.8,8,other_opposite_label_edit,unreviewed,False,6651,913
+56690,39432,predictability is the only winner ,is the only winner ,0,1,predictability,,0.8,4,other_opposite_label_edit,unreviewed,False,45052,41426
+33778,24565,a whole lot of nada ,a whole lot of fun ,0,1,nada,fun,0.8,4,other_opposite_label_edit,unreviewed,False,30493,39187
+33222,12480,"others in its genre in that it is does not rely on dumb gags , anatomical humor , or character cliches ","different from others in its genre in that it is does not rely on dumb gags , anatomical humor , or character cliches ",0,1,,different from,0.9130434782608695,21,other_opposite_label_edit,unreviewed,False,23122,67172
+13678,54403,loses its ability to shock and amaze ,ability to shock and amaze ,0,1,loses its,,0.7142857142857143,5,other_opposite_label_edit,unreviewed,False,17501,30139
+5003,37336,"it searches ( vainly , i think ) for something fresh to say ","searches ( vainly , i think ) for something fresh to say ",0,1,it,,0.9230769230769231,12,other_opposite_label_edit,unreviewed,False,19970,9646
+51912,19916,fear and frustration are provoked to intolerable levels ,in which fear and frustration are provoked to intolerable levels ,0,1,,in which,0.8,8,other_opposite_label_edit,unreviewed,False,60195,39202
+50687,45611,even accepting this in the right frame of mind can only provide it with so much leniency . ,accepting this in the right frame of mind can only provide it with so much leniency . ,0,1,even,,0.9444444444444444,17,other_opposite_label_edit,unreviewed,False,3078,10334
+56551,29114,posing as a serious drama about spousal abuse ,as a serious drama about spousal abuse ,0,1,posing,,0.875,7,other_opposite_label_edit,unreviewed,False,50922,52525
+26400,30439,get to an imitation movie ,to an imitation movie ,0,1,get,,0.8,4,other_opposite_label_edit,unreviewed,False,34419,11214
+16481,21321,any true emotional connection or identification frustratingly ,true emotional connection or identification frustratingly ,0,1,any,,0.8571428571428571,6,other_opposite_label_edit,unreviewed,False,1425,46140
+11247,61112,"gets under your skin and , some plot blips ","gets under your skin and , some plot blips aside ",0,1,,aside,0.9,9,other_opposite_label_edit,unreviewed,False,4093,16005
+31554,20913,its oh-so-hollywood rejiggering and ,its oh-so-hollywood rejiggering ,0,1,and,,0.875,7,other_opposite_label_edit,unreviewed,False,37331,14743
+46529,32399,wastes an exceptionally good idea ,an exceptionally good idea ,0,1,wastes,,0.8,4,other_opposite_label_edit,unreviewed,False,16367,25240
+23260,15168,is no substitute for on-screen chemistry ,no substitute for on-screen chemistry ,0,1,is,,0.875,7,other_opposite_label_edit,unreviewed,False,15240,50869
+64452,1305,to be had from films crammed with movie references ,enjoyment to be had from films crammed with movie references ,0,1,,enjoyment,0.9,9,other_opposite_label_edit,unreviewed,False,23714,64725
+64473,51286,a troubled and determined homicide cop ,troubled and determined homicide cop ,0,1,a,,0.8333333333333334,5,other_opposite_label_edit,unreviewed,False,38284,44151
+26917,22543,told what actually happened as if it were the third ending of clue ,actually happened as if it were the third ending of clue ,0,1,told what,,0.8461538461538461,11,other_opposite_label_edit,unreviewed,False,18443,50059
+54728,48237,"might survive a screening with little harm done , except maybe for the last 15 minutes , which are as maudlin as any after-school special you can imagine . ","might survive a screening with little harm done , except maybe for the last 15 minutes , which are as maudlin as any after-school special you can imagine ",0,1,imagine .,imagine,0.9354838709677419,29,other_opposite_label_edit,unreviewed,False,52590,55059
+18449,49496,a film with a great premise but only a great premise ,a film with a great premise but only a great premise . ,0,1,premise,premise .,0.8333333333333334,10,other_opposite_label_edit,unreviewed,False,20824,21592
+14591,16232,"will no doubt rally to its cause , trotting out threadbare standbys like ` masterpiece ' and ` triumph ' and all that malarkey , but ","will no doubt rally to its cause , trotting out threadbare standbys like ` masterpiece ' and ` triumph ' and all that malarkey , ",0,1,but,,0.9615384615384616,25,other_opposite_label_edit,unreviewed,False,16884,47228
+49382,37372,as terrible as the synergistic impulse that created it ,as the synergistic impulse that created it ,0,1,as terrible,,0.7777777777777778,7,other_opposite_label_edit,unreviewed,False,28585,48850
+30441,30318,to take everyone to since there 's no new `` a christmas carol '' out in the theaters this year ,family film to take everyone to since there 's no new `` a christmas carol '' out in the theaters this year ,0,1,,family film,0.92,23,other_opposite_label_edit,unreviewed,False,6610,60014
+19122,24242,lost some of the dramatic conviction that underlies the best of comedies ,of the dramatic conviction that underlies the best of comedies ,0,1,lost some,,0.8333333333333334,10,other_opposite_label_edit,unreviewed,False,63415,46251
+5085,29506,will be upstaged by an avalanche of more appealing holiday-season product ,upstaged by an avalanche of more appealing holiday-season product ,0,1,will be,,0.8461538461538461,11,other_opposite_label_edit,unreviewed,False,34749,14154
+47886,60302,then expects us to laugh because he acts so goofy all the time ,us to laugh because he acts so goofy all the time ,0,1,then expects,,0.8461538461538461,11,other_opposite_label_edit,unreviewed,False,46599,50622
+53933,38866,the worst movies of the year ,the best movies of the year ,0,1,worst,best,0.8333333333333334,5,polarity_word_substitution,unreviewed,False,45229,62624
+36291,44812,one of the worst movies of the year ,one of the best movies of the year ,0,1,worst,best,0.875,7,polarity_word_substitution,unreviewed,False,34933,54561
+38719,22587,of the worst movies of the year ,of the best films of the year ,0,1,worst movies,best films,0.7142857142857143,5,polarity_word_substitution,unreviewed,False,42536,6402
+53933,51199,the worst movies of the year ,the best films of the year ,0,1,worst movies,best films,0.6666666666666666,4,polarity_word_substitution,unreviewed,False,45229,32415
+34592,15744,one of the worst movies of the year . ,one of the best movies of the year . ,0,1,worst,best,0.8888888888888888,8,polarity_word_substitution,unreviewed,False,51622,29833
+58414,38866,the worst film of the year ,the best movies of the year ,0,1,worst film,best movies,0.6666666666666666,4,polarity_word_substitution,unreviewed,False,43630,62624
+38719,17365,of the worst movies of the year ,of the best movies of the year ,0,1,worst,best,0.8571428571428571,6,polarity_word_substitution,unreviewed,False,42536,28537
+58414,51199,the worst film of the year ,the best films of the year ,0,1,worst film,best films,0.6666666666666666,4,polarity_word_substitution,unreviewed,False,43630,32415

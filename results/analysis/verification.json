@@ -1,0 +1,38 @@
+{
+  "runs": 84,
+  "conditions": 28,
+  "seeds_old": [
+    17,
+    42,
+    101
+  ],
+  "seeds_new": [
+    202,
+    303,
+    404
+  ],
+  "test_rows": 872,
+  "test_slices": {
+    "negation": 164,
+    "contrast": 121
+  },
+  "metrics_recomputed": [
+    "accuracy",
+    "macro_f1",
+    "positive_f1"
+  ],
+  "config": {
+    "model": "answerdotai/ModernBERT-base",
+    "model_revision": "8949b909ec900327062f0ebf497f51aef5e6f0c8",
+    "training": {
+      "epochs": 3,
+      "batch_size": 32,
+      "learning_rate": 5e-05,
+      "weight_decay": 0.01,
+      "warmup_ratio": 0.06,
+      "max_length": 64,
+      "checkpoint_steps": 100
+    }
+  },
+  "notes": "SD is not a confidence interval. Paired t intervals are exploratory, unadjusted, fixed-test and n=3."
+}

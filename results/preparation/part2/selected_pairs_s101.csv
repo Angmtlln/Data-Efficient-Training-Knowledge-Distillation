@@ -1,0 +1,33 @@
+a,b,text_a,text_b,label_a,label_b,removed,added,similarity,context_tokens
+17900,62150,"lacks the compassion , good-natured humor and the level of insight that made ( eyre 's ) first film something of a sleeper success ","the compassion , good-natured humor and the level of insight that made ( eyre 's ) first film something of a sleeper success ",0,1,lacks,,0.9629629629629629,26
+40668,49561,not once in the rush to save the day did i become very involved in the proceedings ; to me ,once in the rush to save the day did i become very involved in the proceedings ; to me ,0,1,not,,0.95,19
+59601,7354,never truly come to care about the main characters and whether or not they 'll wind up together ,truly come to care about the main characters and whether or not they 'll wind up together ,0,1,never,,0.9473684210526315,18
+17375,11975,lacks the novel charm that made spy kids a surprising winner with both adults and younger audiences ,the novel charm that made spy kids a surprising winner with both adults and younger audiences ,0,1,lacks,,0.9411764705882353,16
+43617,16878,falling into the hollywood trap and making a vanity project with nothing new to offer ,not falling into the hollywood trap and making a vanity project with nothing new to offer ,0,1,,not,0.9375,15
+46308,6530,"never rises above easy , cynical potshots at morally bankrupt characters ... ","rises above easy , cynical potshots at morally bankrupt characters ... ",0,1,never,,0.9285714285714286,13
+23945,52433,lacking the spark of imagination that might have made it an exhilarating ,the spark of imagination that might have made it an exhilarating ,0,1,lacking,,0.9166666666666666,11
+18718,54037,fails to match the freshness of the actress-producer and writer ,to match the freshness of the actress-producer and writer ,0,1,fails,,0.9166666666666666,11
+33621,46867,never settles into the light-footed enchantment the material needs ,settles into the light-footed enchantment the material needs ,0,1,never,,0.9090909090909091,10
+45924,15863,never rises to its clever what-if concept . ,rises to its clever what-if concept . ,0,1,never,,0.9,9
+57789,26445,"lacking in suspense , surprise and consistent emotional conviction ","in suspense , surprise and consistent emotional conviction ",0,1,lacking,,0.8888888888888888,8
+19590,53788,never really busts out of its comfy little cell ,really busts out of its comfy little cell ,0,1,never,,0.8888888888888888,8
+3284,22030,loses its ability to shock and amaze . ,never loses its ability to shock and amaze . ,0,1,,never,0.8888888888888888,8
+12243,11400,a film that comes along every day . ,hardly a film that comes along every day . ,0,1,,hardly,0.8888888888888888,8
+34002,1452,lacks the utter authority of a genre gem ,the utter authority of a genre gem ,0,1,lacks,,0.875,7
+44553,56131,never comes together as a coherent whole . ,comes together as a coherent whole . ,0,1,never,,0.875,7
+46663,2714,not to be moved by this drama ,to be moved by this drama ,0,1,not,,0.8571428571428571,6
+33567,31574,in any way demeaning its subjects ,without in any way demeaning its subjects ,0,1,,without,0.8571428571428571,6
+14632,905,never succeed in really rattling the viewer ,succeed in really rattling the viewer ,0,1,never,,0.8571428571428571,6
+11415,25709,fails to fulfill its own ambitious goals ,to fulfill its own ambitious goals ,0,1,fails,,0.8571428571428571,6
+51886,21886,sacrificing any of the cultural intrigue ,without sacrificing any of the cultural intrigue ,0,1,,without,0.8571428571428571,6
+1902,17001,lacks in eye-popping visuals ,never lacks in eye-popping visuals ,0,1,,never,0.8571428571428571,6
+29514,55895,sacrificing its high-minded appeal ,without sacrificing its high-minded appeal ,0,1,,without,0.8571428571428571,6
+36782,34443,sacrificing the integrity of the opera ,without sacrificing the integrity of the opera ,0,1,,without,0.8571428571428571,6
+26014,59815,without a glimmer of intelligence or invention ,a glimmer of intelligence or invention ,0,1,without,,0.8571428571428571,6
+24965,40067,never rises to a higher level ,rises to a higher level ,0,1,never,,0.8333333333333334,5
+19949,35721,hardly seems worth the effort . ,seems worth the effort . ,0,1,hardly,,0.8333333333333334,5
+47550,44252,not exactly assured in its execution ,exactly assured in its execution ,0,1,not,,0.8333333333333334,5
+3380,11739,not be a breakthrough in filmmaking ,be a breakthrough in filmmaking ,0,1,not,,0.8333333333333334,5
+12867,40080,resorting to camp or parody ,without resorting to camp or parody ,0,1,,without,0.8333333333333334,5
+35717,12303,lacks the inspiration of the original ,the inspiration of the original ,0,1,lacks,,0.8333333333333334,5
+43777,31240,reeking of research library dust ,without reeking of research library dust ,0,1,,without,0.8333333333333334,5

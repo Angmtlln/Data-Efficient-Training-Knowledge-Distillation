@@ -1,0 +1,101 @@
+a,b,text_a,text_b,label_a,label_b,removed,added,similarity,context_tokens
+51123,3427,wastes the talents of its attractive young leads ,the talents of its attractive young leads ,0,1,wastes,,0.875,7
+27490,4368,that efforts toward closure only open new wounds ,reveals that efforts toward closure only open new wounds ,0,1,,reveals,0.8888888888888888,8
+1902,61247,lacks in eye-popping visuals ,in eye-popping visuals ,0,1,lacks,,0.8333333333333334,5
+25043,35322,is a whole lot of nada ,is a whole lot of fun ,0,1,nada,fun,0.8333333333333334,5
+60263,5063,"the movie is silly beyond comprehension , and ","the movie is silly beyond comprehension , ",0,1,and,,0.875,7
+34867,17985,viewers of barney 's crushingly self-indulgent spectacle ,of barney 's crushingly self-indulgent spectacle ,0,1,viewers,,0.9,9
+35021,16188,down a familiar road with a few twists ,a familiar road with a few twists ,0,1,down,,0.875,7
+23510,480,for the under-7 crowd ,the under-7 crowd ,0,1,for,,0.8333333333333334,5
+60594,43886,"you come from a family that eats , meddles , argues , laughs , kibbitzes and fights together ","come from a family that eats , meddles , argues , laughs , kibbitzes and fights together ",0,1,you,,0.9444444444444444,17
+32754,18110,the chaos of an urban conflagration ,captured the chaos of an urban conflagration ,0,1,,captured,0.8571428571428571,6
+40016,5436,"construct based on theory , sleight-of-hand , and ill-wrought hypothesis ","based on theory , sleight-of-hand , and ill-wrought hypothesis ",0,1,construct,,0.9375,15
+5111,45680,friday after next spreads them pretty thin ,after next spreads them pretty thin ,0,1,friday,,0.8571428571428571,6
+31860,52362,"been benefited from a sharper , cleaner script before it went in front of the camera ","have been benefited from a sharper , cleaner script before it went in front of the camera ",0,1,,have,0.9411764705882353,16
+5608,45109,that anyone in his right mind would want to see the it ,anyone in his right mind would want to see the it ,0,1,that,,0.9166666666666666,11
+23945,52433,lacking the spark of imagination that might have made it an exhilarating ,the spark of imagination that might have made it an exhilarating ,0,1,lacking,,0.9166666666666666,11
+29030,21803,"passion , grief and fear ","of passion , grief and fear ",0,1,,of,0.8333333333333334,5
+54925,58055,"prescribed than recommended -- as visually bland as a dentist 's waiting room , complete with soothing muzak and a cushion of predictable narrative rhythms ","than recommended -- as visually bland as a dentist 's waiting room , complete with soothing muzak and a cushion of predictable narrative rhythms ",0,1,prescribed,,0.9629629629629629,26
+65216,53500,apparently nobody here bothered to check it twice . ,nobody here bothered to check it twice . ,0,1,apparently,,0.8888888888888888,8
+59595,42674,you laugh once ( maybe twice ) ,laugh once ( maybe twice ) ,0,1,you,,0.8571428571428571,6
+52673,5145,skeeved out that they 'd need a shower ,so skeeved out that they 'd need a shower ,0,1,,so,0.9,9
+62,23092,"'s a boring movie about a boring man , made watchable by a bravura performance from a consummate actor incapable of being boring . ","it 's a boring movie about a boring man , made watchable by a bravura performance from a consummate actor incapable of being boring . ",0,1,,it,0.9615384615384616,25
+6237,37190,be impressed by this tired retread ,will be impressed by this tired retread ,0,1,,will,0.8571428571428571,6
+572,30209,in an admittedly middling film ,an admittedly middling film ,0,1,in,,0.8,4
+39773,62742,low on both suspense and payoff ,on both suspense and payoff ,0,1,low,,0.8333333333333334,5
+43477,5126,to do justice to either effort in three hours of screen time ,do justice to either effort in three hours of screen time ,0,1,to,,0.9166666666666666,11
+10967,28428,"was so endlessly , grotesquely , ","was so endlessly , grotesquely , inventive ",0,1,,inventive,0.8571428571428571,6
+26634,27049,"works so well for the first 89 minutes , but ","works so well for the first 89 minutes , ",0,1,but,,0.9,9
+27861,64352,"depressing , ruthlessly pained and depraved ","is depressing , ruthlessly pained and depraved ",0,1,,is,0.8571428571428571,6
+1836,53227,although estela bravo 's documentary is cloyingly hagiographic in its portrait of cuban leader fidel castro ,estela bravo 's documentary is cloyingly hagiographic in its portrait of cuban leader fidel castro ,0,1,although,,0.9411764705882353,16
+37987,48432,never achieve the popularity of my big fat greek wedding ,achieve the popularity of my big fat greek wedding ,0,1,never,,0.9,9
+13234,56151,devoid of pleasure or sensuality ,of pleasure or sensuality ,0,1,devoid,,0.8,4
+10600,43697,puzzle his most ardent fans ,his most ardent fans ,0,1,puzzle,,0.8,4
+44548,34999,might have required genuine acting from ms. spears ,have required genuine acting from ms. spears ,0,1,might,,0.8888888888888888,8
+6201,64421,"begins as a seven rip-off , only to switch to a mix of the shining , the thing , and any naked teenagers horror flick from the 1980s ","that begins as a seven rip-off , only to switch to a mix of the shining , the thing , and any naked teenagers horror flick from the 1980s ",0,1,,that,0.967741935483871,30
+885,16984,"repellent to fully endear itself to american art house audiences , ","repellent to fully endear itself to american art house audiences , but ",0,1,,but,0.9166666666666666,11
+2507,61296,little less bling-bling and a lot more romance ,a little less bling-bling and a lot more romance ,0,1,,a,0.9090909090909091,10
+21456,5442,the israeli/palestinian conflict as ,israeli/palestinian conflict as ,0,1,the,,0.8333333333333334,5
+4956,18558,be more timely in its despairing vision of corruption ,more timely in its despairing vision of corruption ,0,1,be,,0.8888888888888888,8
+54985,28351,not in a good way ,demented in a good way ,0,1,not,demented,0.8,4
+39358,15486,the looseness of the piece ,the beauty of the piece ,0,1,looseness,beauty,0.8,4
+6893,54242,"seems just as expectant of an adoring , wide-smiling reception ","just as expectant of an adoring , wide-smiling reception ",0,1,seems,,0.9166666666666666,11
+12243,11400,a film that comes along every day . ,hardly a film that comes along every day . ,0,1,,hardly,0.8888888888888888,8
+33621,46867,never settles into the light-footed enchantment the material needs ,settles into the light-footed enchantment the material needs ,0,1,never,,0.9090909090909091,10
+62294,49690,of our most conservative and hidebound movie-making traditions ,our most conservative and hidebound movie-making traditions ,0,1,of,,0.9,9
+52736,55590,cause you to bite your tongue to keep from laughing at the ridiculous dialog or the oh-so convenient plot twists ,you to bite your tongue to keep from laughing at the ridiculous dialog or the oh-so convenient plot twists ,0,1,cause,,0.9545454545454546,21
+27519,34411,"it 's an effort to watch this movie , ","it 's an effort to watch this movie , but ",0,1,,but,0.9090909090909091,10
+35568,24993,its observation of just how much more grueling and time-consuming the illusion of work is than actual work ,in its observation of just how much more grueling and time-consuming the illusion of work is than actual work ,0,1,,in,0.9523809523809523,20
+54936,64455,"please not only the fanatical adherents on either side , but also people who know nothing about the subject and ","please not only the fanatical adherents on either side , but also people who know nothing about the subject ",0,1,and,,0.95,19
+61098,38627,in spite of its predictability ,pleasant in spite of its predictability ,0,1,,pleasant,0.8333333333333334,5
+36792,47110,"the chateau has one very funny joke and a few other decent ones , but ","the chateau has one very funny joke and a few other decent ones , ",0,1,but,,0.9333333333333333,14
+61038,52712,brutal 90-minute battle sequence ,a brutal 90-minute battle sequence ,0,1,,a,0.8571428571428571,6
+26132,42422,am highly amused by the idea that we have come to a point in society where it has been deemed important enough to make a film in which someone has to be hired to portray richard dawson . ,i am highly amused by the idea that we have come to a point in society where it has been deemed important enough to make a film in which someone has to be hired to portray richard dawson . ,0,1,,i,0.9743589743589743,38
+13953,50049,as it explores the awful complications of one terrifying day ,it explores the awful complications of one terrifying day ,0,1,as,,0.9,9
+24391,48237,"survive a screening with little harm done , except maybe for the last 15 minutes , which are as maudlin as any after-school special you can imagine ","might survive a screening with little harm done , except maybe for the last 15 minutes , which are as maudlin as any after-school special you can imagine ",0,1,,might,0.9666666666666667,29
+37046,20953,from the guy-in-a-dress genre ,the guy-in-a-dress genre ,0,1,from,,0.9,9
+54985,10074,not in a good way ,in a good way ,0,1,not,,0.8,4
+52039,5436,"on theory , sleight-of-hand , and ill-wrought hypothesis ","based on theory , sleight-of-hand , and ill-wrought hypothesis ",0,1,,based,0.9333333333333333,14
+44553,56131,never comes together as a coherent whole . ,comes together as a coherent whole . ,0,1,never,,0.875,7
+37255,39133,by an adult who 's apparently been forced by his kids to watch too many barney videos ,an adult who 's apparently been forced by his kids to watch too many barney videos ,0,1,by,,0.9444444444444444,17
+60108,34506,"at the sometimes murky , always brooding look of i ","marvel at the sometimes murky , always brooding look of i ",0,1,,marvel,0.9090909090909091,10
+17375,11975,lacks the novel charm that made spy kids a surprising winner with both adults and younger audiences ,the novel charm that made spy kids a surprising winner with both adults and younger audiences ,0,1,lacks,,0.9411764705882353,16
+25829,42507,"are no special effects , and no hollywood endings . ","there are no special effects , and no hollywood endings . ",0,1,,there,0.9090909090909091,10
+55428,53791,on the soullessness of work ,take on the soullessness of work ,0,1,,take,0.8333333333333334,5
+13508,50721,lack of spontaneity in its execution and a dearth of real poignancy ,of spontaneity in its execution and a dearth of real poignancy ,0,1,lack,,0.9166666666666666,11
+54577,46042,proves unrelentingly grim -- and equally engrossing ,unrelentingly grim -- and equally engrossing ,0,1,proves,,0.875,7
+51137,8528,supposed to feel funny and light ,to feel funny and light ,0,1,supposed,,0.8333333333333334,5
+32572,15514,seem self-consciously poetic and forced ,seem self-consciously poetic and ,0,1,forced,,0.8571428571428571,6
+23260,9628,is no substitute for on-screen chemistry ,there is no substitute for on-screen chemistry ,0,1,,there,0.8888888888888888,8
+34468,28316,tens of thousands of german jewish refugees ,welcomed tens of thousands of german jewish refugees ,0,1,,welcomed,0.875,7
+56690,39432,predictability is the only winner ,is the only winner ,0,1,predictability,,0.8,4
+698,3950,for fashioning an engrossing entertainment out of an almost sure-fire prescription for a critical and commercial disaster ,fashioning an engrossing entertainment out of an almost sure-fire prescription for a critical and commercial disaster ,0,1,for,,0.9473684210526315,18
+47828,36498,descends into sub-tarantino cuteness ,sometimes descends into sub-tarantino cuteness ,0,1,,sometimes,0.8571428571428571,6
+42809,57267,forces you to watch people doing unpleasant things to each other and themselves ,it forces you to watch people doing unpleasant things to each other and themselves ,0,1,,it,0.9285714285714286,13
+14632,905,never succeed in really rattling the viewer ,succeed in really rattling the viewer ,0,1,never,,0.8571428571428571,6
+41744,25844,think this movie loves women at all ,this movie loves women at all ,0,1,think,,0.8571428571428571,6
+26452,62384,wants to be a suspenseful horror movie or a weepy melodrama ,to be a suspenseful horror movie or a weepy melodrama ,0,1,wants,,0.9090909090909091,10
+3728,62496,"needs mind-bending drugs when they can see this , the final part of the ` qatsi ' trilogy , directed by godfrey reggio , with music by philip glass ? ","who needs mind-bending drugs when they can see this , the final part of the ` qatsi ' trilogy , directed by godfrey reggio , with music by philip glass ? ",0,1,,who,0.9696969696969697,32
+41885,20407,stick to his day job ,to his day job ,0,1,stick,,0.8,4
+33012,23100,"but , like silence , it 's a movie that gets under your skin . ",", like silence , it 's a movie that gets under your skin . ",0,1,but,,0.9375,15
+57789,26445,"lacking in suspense , surprise and consistent emotional conviction ","in suspense , surprise and consistent emotional conviction ",0,1,lacking,,0.8888888888888888,8
+51595,64748,better to do with 94 minutes ,to do with 94 minutes ,0,1,better,,0.8333333333333334,5
+61549,55157,before pulling the plug on the conspirators and averting an american-russian armageddon ,pulling the plug on the conspirators and averting an american-russian armageddon ,0,1,before,,0.9285714285714286,13
+45956,37341,all manner of lame entertainment ,absorbs all manner of lame entertainment ,0,1,,absorbs,0.8333333333333334,5
+64452,1305,to be had from films crammed with movie references ,enjoyment to be had from films crammed with movie references ,0,1,,enjoyment,0.9,9
+18181,16086,not enough of interest onscreen ,enough of interest onscreen ,0,1,not,,0.8,4
+19122,30544,lost some of the dramatic conviction that underlies the best of comedies ,some of the dramatic conviction that underlies the best of comedies ,0,1,lost,,0.9166666666666666,11
+32012,11743,because he acts so goofy all the time ,laugh because he acts so goofy all the time ,0,1,,laugh,0.8888888888888888,8
+2763,61621,why lee 's character did n't just go to a bank manager and save everyone the misery ,wondering why lee 's character did n't just go to a bank manager and save everyone the misery ,0,1,,wondering,0.9473684210526315,18
+44820,36614,lacks dramatic punch and depth ,dramatic punch and depth ,0,1,lacks,,0.8,4
+53083,40755,would have saved this film a world of hurt ,have saved this film a world of hurt ,0,1,would,,0.8888888888888888,8
+54639,29898,a sketchy work-in-progress ,a promising work-in-progress ,0,1,sketchy,promising,0.8571428571428571,6
+18718,54037,fails to match the freshness of the actress-producer and writer ,to match the freshness of the actress-producer and writer ,0,1,fails,,0.9166666666666666,11
+55144,15677,wrong with performances here ,nothing wrong with performances here ,0,1,,nothing,0.8,4
+52420,47664,released the outtakes theatrically and used the film as a bonus feature on the dvd ,had released the outtakes theatrically and used the film as a bonus feature on the dvd ,0,1,,had,0.9375,15
+26014,59815,without a glimmer of intelligence or invention ,a glimmer of intelligence or invention ,0,1,without,,0.8571428571428571,6
+36204,1104,to lead a group of talented friends astray ,lead a group of talented friends astray ,0,1,to,,0.875,7
+58333,41405,if `` gory mayhem '' is your idea of a good time ,`` gory mayhem '' is your idea of a good time ,0,1,if,,0.9285714285714286,13
+2925,13839,"rent `` shakes the clown '' , a much funnier film with a similar theme and an equally great robin williams performance ","go rent `` shakes the clown '' , a much funnier film with a similar theme and an equally great robin williams performance ",0,1,,go,0.96,24
+13203,41445,"no rest period , no timeout ","is no rest period , no timeout ",0,1,,is,0.8571428571428571,6
+34333,57329,demands that you suffer the dreadfulness of war from both sides ,it demands that you suffer the dreadfulness of war from both sides ,0,1,,it,0.9166666666666666,11
