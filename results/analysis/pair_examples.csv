@@ -1,0 +1,4 @@
+a,b,text_a,text_b,label_a,label_b,removed,added,similarity,context_tokens
+24965,40067,never rises to a higher level ,rises to a higher level ,0,1,never,,0.8333333333333334,5
+46663,2714,not to be moved by this drama ,to be moved by this drama ,0,1,not,,0.8571428571428571,6
+19949,35721,hardly seems worth the effort . ,seems worth the effort . ,0,1,hardly,,0.8333333333333334,5

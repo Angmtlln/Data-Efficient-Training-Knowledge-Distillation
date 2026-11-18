@@ -44,10 +44,12 @@ python scripts/artifacts.py verify
 python -m pip install -r requirements.txt
 python experiments/02_hypotheses/code/download_data.py
 python scripts/analyze_all.py --dataset experiments/02_hypotheses/data/sst2
+python scripts/selection_evidence.py --dataset experiments/02_hypotheses/data/sst2
+python scripts/training_diagnostics.py
 python scripts/build_all_report.py
 ```
 
-Первый скрипт скачивает закрепленную версию данных. Второй проверяет метки, состав выборок и заново считает accuracy и F1 по ответам моделей. Третий обновляет отчет и карточки. Новое обучение не запускается.
+Первый скрипт скачивает закрепленную версию данных. Второй проверяет метки, состав выборок и заново считает accuracy и F1 по ответам моделей. `selection_evidence.py` сверяет снимок данных и проверяет состав выбранных строк. `training_diagnostics.py` читает сохраненную историю обучения. Последний скрипт обновляет отчет и карточки. Новое обучение не запускается.
 
 Графики можно обновить отдельно, без пересчета метрик и нового обучения:
 

@@ -1,0 +1,17 @@
+method,seed,pool_index,label,text,words
+heldout_forgetting,17,19,0,devastated ,1
+heldout_forgetting,17,27,0,snow dogs finds its humor in a black man getting humiliated by a pack of dogs who are smarter than him ,21
+heldout_forgetting,17,18,1,intellectual masterpieces ,2
+heldout_forgetting,17,23,1,it 's a diverting enough hour-and-a-half for the family audience . ,11
+lexical_diversity,17,117,0,through its hackneyed elements ,4
+lexical_diversity,17,122,0,a big box of consolation candy ,6
+lexical_diversity,17,18,1,intellectual masterpieces ,2
+lexical_diversity,17,29,1,witty and beneath ,3
+random,17,31,0,bad of a movie ,4
+random,17,43,0,"with all the sympathy , empathy and pity fogging up the screen ... his secret life enters the land of unintentional melodrama and tiresome love triangles . ",27
+random,17,13,1,", every once in a while a film arrives from the margin that gives viewers a chance to learn , to grow , to travel . ",26
+random,17,24,1,"hatfield and hicks make the oddest of couples , and in this sense the movie becomes a study of the gambles of the publishing world , offering a case study that exists apart from all the movie 's political ramifications . ",41
+rare_words,17,0,0,an unencouraging threefold expansion on the former mtv series ,9
+rare_words,17,19,0,devastated ,1
+rare_words,17,18,1,intellectual masterpieces ,2
+rare_words,17,24,1,"hatfield and hicks make the oddest of couples , and in this sense the movie becomes a study of the gambles of the publishing world , offering a case study that exists apart from all the movie 's political ramifications . ",41

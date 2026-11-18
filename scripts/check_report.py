@@ -13,7 +13,7 @@ def main():
  for f in ROOT.rglob('*.md'):
   if '.git' in f.parts:continue
   text=f.read_text();assert '\u0451' not in text and '\u0401' not in text,f
-  if f.name!='report_template.md':assert '{{TABLE_' not in text,f
+  if f.name!='report_template.md':assert not re.search(r'\{\{[A-Z_]+\}\}',text),f
   if f == ROOT/'REPORT.md' or f.parent in (ROOT/'docs',ROOT/'results/methods'):
    assert not re.search(r'\b(?:[Мм]ы|нас|нам|[Нн]аш(?:а|е|и|его|ей|ем|их|им|ими|у)?)\b',text),f
   for target in re.findall(r'\]\(([^)]+)\)',text):

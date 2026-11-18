@@ -87,6 +87,19 @@ def main():
  for part,title in [('part1','Простые способы'),('part2','Языковые группы и пары'),('part3','Проверка исправлений')]:
   index+=['### '+title,'\n'+'\n'.join('- '+link(part,n) for n in s[s.part==part].name if not (part=='part3' and n.startswith('forget_')))+'\n']
  replacements['{{METHOD_INDEX}}']='\n\n'.join(index)
+ examples=pd.read_csv(a.results/'analysis/selection_examples.csv')
+ erows=[]
+ for name in ['random','lexical_diversity','rare_words']:
+  for label in [0,1]:
+   row=examples[(examples.method==name)&(examples.label==label)].sort_values('pool_index').iloc[0]
+   erows.append({'Метод':methods[name]['title'],'Фраза SST-2':row.text.strip(),'Метка':'положительная' if label else 'отрицательная','Слов':int(row.words)})
+ replacements['{{SELECTION_EXAMPLES}}']=table(pd.DataFrame(erows))
+ epochs=pd.read_csv(a.results/'analysis/training_epochs.csv')
+ trainrows=[]
+ for part,name in [('part1','random'),('part1','heldout_forgetting'),('part1','rare_words'),('part2','skill_random'),('part2','negation_gradient'),('part2','contrast_gradient')]:
+  g=epochs[(epochs.part==part)&(epochs.name==name)]
+  trainrows.append({'Метод':link(part,name),'Val после 1 эпохи, %':f'{g.val_epoch1_pct.mean():.2f}','Val после 3 эпох, %':f'{g.val_epoch3_pct.mean():.2f}','Test выбранных весов, %':f'{g.test_accuracy_pct.mean():.2f}'})
+ replacements['{{TRAINING_TABLE}}']=table(pd.DataFrame(trainrows))
  report=(ROOT/'docs/report_template.md').read_text()
  for old,new in replacements.items():report=report.replace(old,new)
  assert '{{' not in report
