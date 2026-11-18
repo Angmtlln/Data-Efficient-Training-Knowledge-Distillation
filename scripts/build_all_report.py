@@ -92,7 +92,7 @@ def main():
  report=(ROOT/'docs/report_template.md').read_text()
  for old,new in replacements.items():report=report.replace(old,new)
  assert '{{' not in report
- a.output.write_text(clean(report))
+ a.output.write_text(clean(report).rstrip() + '\n')
  src=['# Статьи и связь с нашими опытами\n','Проверено по arXiv 18 ноября 2026. Для трех ключевых сравнений прочитан полный текст; для остальных — аннотация. Ниже указан объем проверки. Числа относятся к условиям авторов, а не к нашему SST-2. Ссылки ведут на первоисточники.\n']
  for key,source in sources.items():
   src.append(f'## {source["short"]}\n\n[{source["title"]}]({source["url"]})\n\n**Что проверено:** {source["checked"]}.\n\n**Результат статьи.** {source["result"]}\n\n**Как связано с нами.** {source["difference"]}\n')

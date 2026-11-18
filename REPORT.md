@@ -290,4 +290,3 @@
 - [25% по исходному градиенту](results/methods/part3_grad_raw_mix25.md)
 - [25% похожих на примеры с отрицанием](results/methods/part3_neg_embedding_mix25.md)
 - [Случайный набор с заданным составом](results/methods/part3_skill_matched_random_v2.md)
-
