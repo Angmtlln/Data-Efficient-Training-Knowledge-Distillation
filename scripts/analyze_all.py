@@ -64,9 +64,8 @@ def main():
   mg=runs[(runs.part=='part3')&(runs.name==method)].set_index('seed');bg=runs[(runs.part=='part3')&(runs.name==base)].set_index('seed')
   for seed in [202,303,404]:comparisons.append(dict(method=method,baseline=base,seed=seed,delta_pp=100*(mg.loc[seed,'accuracy']-bg.loc[seed,'accuracy']),shared_rows=len(identities['part3',method,seed]&identities['part3',base,seed])))
  pd.DataFrame(comparisons).to_csv(out/'followup_comparisons.csv',index=False)
- for title,mask in [('part1',summary.part=='part1'),('part2',summary.part=='part2'),('part3_forgetting',(summary.part=='part3')&summary.name.str.startswith('forget_')),('part3_skills',(summary.part=='part3')&~summary.name.str.startswith('forget_'))]:
-  z=summary[mask].sort_values('accuracy_pct');fig,ax=plt.subplots(figsize=(11,max(4,len(z)*.4)))
-  ax.errorbar(z.accuracy_pct,np.arange(len(z)),xerr=z.sd_pp,fmt='none',ecolor='#54616d',capsize=3);ax.scatter(z.accuracy_pct,np.arange(len(z)),s=50,c=['#267b70' if 'random' in n or 'matched_zero' in n else '#527aa3' for n in z.name]);ax.set_yticks(np.arange(len(z)),z.name);ax.grid(axis='x',alpha=.2);ax.set_xlim(65 if title=='part2' else 88,97);ax.set_xlabel('Test accuracy (%) ± SD, 3 seeds');ax.set_title(title);fig.tight_layout();fig.savefig(out/f'{title}_all_accuracy.png',dpi=160);plt.close(fig)
+ from plot_results import plot_results
+ plot_results(summary,out)
  (out/'verification.json').write_text(json.dumps(dict(runs=len(rows),conditions=len(summary),seeds_old=[17,42,101],seeds_new=[202,303,404],test_rows=len(y),test_slices={k:int(v.sum()) for k,v in masks.items()},metrics_recomputed=['accuracy','macro_f1','positive_f1'],config=configs[0],notes='SD is not a confidence interval. Paired t intervals are exploratory, unadjusted, fixed-test and n=3.'),indent=2))
  print(summary[summary.part=='part3'][['name','accuracy_pct','sd_pp','macro_f1_pct','negation_pct','contrast_pct']].to_string(index=False))
  print('Validated',len(rows),'runs; tables and figures:',out)

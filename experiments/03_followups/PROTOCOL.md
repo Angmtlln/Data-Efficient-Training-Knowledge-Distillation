@@ -1,26 +1,43 @@
-# Follow-up series, 18 November 2026
+# План третьей серии
 
-Frozen before new GPU outcomes. 30 runs: 10 methods × seeds 202/303/404. Same ModernBERT config, source splits and 6534 row budget as old series. No teacher. New results exploratory: old test has already informed design. No test labels used in selection scripts. No changes to old outputs.
+План составлен до новых GPU-результатов 18 ноября 2026. Сейчас все 30 обучений завершены; итоги — в [общем отчете](../../REPORT.md). Исходная запись плана сохранена в `results/inputs/part3/PROTOCOL.md` от корня проекта.
 
-## Forgetting (15 runs)
+Общие условия: 10 вариантов, по три запуска с номерами 202, 303, 404. В каждом 6534 строки. Модель, разделение данных и настройки такие же, как в первых сериях. Старые результаты не перезаписываются. Первые результаты уже повлияли на выбор новых опытов, поэтому это уточнение идей, а не независимое подтверждение.
 
-Fixed OOF score from original scoring seed17; 932 nonzero rows. New selection/training seeds, not new scoring proxies. Common filler of 5602 rows, plus a block of 932 rows. Each target row has a separate class×length-bin matched zero-score replacement. Arms: full-pool random, matched-zero control, 327 targets (~5%), 653 targets (~10%), all 932 (~14.3%). Replacements are nested. Matched control explicitly excludes all nonzero rows; do not call it ordinary random. Full-pool random included separately.
+## Добавка нестабильных строк: 15 обучений
 
-Primary contrast: forget_all versus forget_matched_zero; secondary doses and full-pool random. Counts, length/class diagnostics in reports/selection_audit.csv. This isolates a targeted block, not full-population rankings.
+Используем прежнюю оценку маленькой модели, seed 17. Есть 932 строки, на которых ответ хотя бы раз менялся с правильного на неправильный.
 
-## Gradient/skill repair (15 runs)
+5602 строки оставляем общими. Для каждой из 932 нестабильных строк находим обычную замену той же метки и близкой длины. Проверяем:
 
-Keep original MiniLM proxy and references. CPU 2×2 probe (bias on/off × class-centering on/off) showed that bias removal and centering alone fail to remove class-specific difficulty extremes. Therefore no full-top-k GPU sweep of these variants.
+1. обычную случайную выборку из всего набора;
+2. набор без нестабильных строк;
+3. добавку 327 таких строк;
+4. добавку 653 строк;
+5. добавку всех 932 строк.
 
-All five arms share exact quotas over label × word-length-bin × proxy correctness × within-label/correctness loss quintile. Same ~75% background per seed; remaining ~25% slots selected within strata. Arms:
-- skill_matched_random_v2: matched random control;
-- grad_raw_mix25: original gradient, now quotas + mixture;
-- grad_nobias_mix25: remove bias term, otherwise same;
-- grad_randomref_nobias_mix25: no bias, random matched reference;
-- neg_embedding_mix25: soft negation targeting, same controls.
+Главное сравнение — все 932 строки против варианта без них. Остальные дозы и обычная случайная выборка нужны для понимания размера и смысла эффекта. Набор без нестабильных строк нельзя называть обычным random.
 
-Thus every arm has identical class-specific proxy error fractions (20.66% for label0, 14.32% for label1), instead of the old 0/100% asymmetry. This is a quota-based correction, NOT proof the scores now measure useful information. Quotas preserve counts in coarse bins, not exact continuous loss or length.
+## Исправление целевого отбора: 15 обучений
 
-Primary contrasts: no-bias vs raw (effect of bias after controlling mixture/quotas); no-bias target vs random-reference (reference specificity); each targeted arm vs common random (incremental value). Overall accuracy/macro F1 plus negation/contrast lexical slices. No independent behavioral validation claimed.
+Предварительная CPU-проверка показала: удалить bias или вычесть средний градиент класса недостаточно, перекос трудности остается. Эти изменения отдельно не отправляем в большую GPU-серию.
 
-Checkpoints every100 steps/epoch, two most recent persistent states plus best; local limit2. Approximately 13 GB free on VM before launch. Automatic off-VM backup copies metrics/predictions/configs/logs, not heavy weights. Local permanent archive will be updated on checks; temporary background staging is not the only copy of old results.
+Вместо этого задаем одинаковое число строк в группах по метке, длине, правильности ответа маленькой модели и величине ее ошибки. Около 75% строк — общий случайный фон. Остальные места заполняются внутри тех же групп.
+
+Проверяем пять вариантов:
+
+1. случайный набор заданного состава;
+2. исходную градиентную оценку;
+3. градиентную оценку без bias;
+4. ту же оценку без bias, но со случайными целевыми примерами;
+5. сходство с целевыми фразами отрицания.
+
+Основные вопросы: помогает ли удаление bias, важны ли тематические целевые примеры, дает ли целевой отбор что-то сверх случайного набора того же состава.
+
+Смесь и ограничения состава введены вместе. Этот опыт не разделяет их влияние. Метрики: общая accuracy и F1, затем отдельные группы отрицаний и противопоставлений. Новых независимых языковых тестов пока нет.
+
+## Сохранение и проверка
+
+Подвыборки и их состав сохранены до обучения. Проверяются число строк, отсутствие повторных индексов и совпадение заданных групп состава.
+
+Состояния обучения сохраняются каждые 100 шагов и в конце эпохи. В ходе серии хранились два последних полных состояния и лучшее. Метрики, ответы моделей и логи копировались на локальный компьютер. Веса завершенных моделей исходный код не сохранял.
