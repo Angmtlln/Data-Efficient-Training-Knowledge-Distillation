@@ -1,0 +1,8 @@
+{
+  "method": "sparse_projected_craig_inspired",
+  "seed": 2,
+  "projection_dim": 64,
+  "neighbors": 32,
+  "selection_seconds": 13.906876100000318,
+  "zero_weight_count": 7
+}

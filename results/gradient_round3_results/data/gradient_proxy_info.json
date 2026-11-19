@@ -1,0 +1,11 @@
+{
+  "proxy_model": "sentence-transformers/paraphrase-MiniLM-L3-v2",
+  "proxy_seed": 0,
+  "proxy_train_subset": "random_s0",
+  "proxy_n": 6534,
+  "pool_n": 65349,
+  "selection_val_n": 1000,
+  "epoch_val_n": 1000,
+  "proxy_train_seconds": 20.446656578999864,
+  "scoring_seconds": 13.857879438000055
+}

@@ -1,0 +1,44 @@
+{
+  "proxy": {
+    "proxy_model": "sentence-transformers/paraphrase-MiniLM-L3-v2",
+    "proxy_seed": 0,
+    "proxy_train_subset": "random_s0",
+    "proxy_n": 6534,
+    "pool_n": 65349,
+    "selection_val_n": 1000,
+    "epoch_val_n": 1000,
+    "proxy_train_seconds": 20.446656578999864,
+    "scoring_seconds": 13.857879438000055
+  },
+  "glister": {
+    "method": "static_first_order_glister_inspired",
+    "selection_seconds": 0.024109459000101197,
+    "same_subset_all_seeds": true
+  },
+  "craig": [
+    {
+      "method": "sparse_projected_craig_inspired",
+      "seed": 0,
+      "projection_dim": 64,
+      "neighbors": 32,
+      "selection_seconds": 13.499667346000024,
+      "zero_weight_count": 17
+    },
+    {
+      "method": "sparse_projected_craig_inspired",
+      "seed": 1,
+      "projection_dim": 64,
+      "neighbors": 32,
+      "selection_seconds": 12.732714732000204,
+      "zero_weight_count": 10
+    },
+    {
+      "method": "sparse_projected_craig_inspired",
+      "seed": 2,
+      "projection_dim": 64,
+      "neighbors": 32,
+      "selection_seconds": 13.906876100000318,
+      "zero_weight_count": 7
+    }
+  ]
+}

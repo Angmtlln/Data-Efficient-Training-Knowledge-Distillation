@@ -15,3 +15,19 @@ data/*
 # results/runs/: logs are noise, training dynamics of the full-data run are expensive
 results/runs/*
 !results/runs/dynamics_full_seed0.npz
+
+# Локальные Colab-блокноты содержат встроенные архивы и не входят в репозиторий.
+src/*.ipynb
+
+# Тяжёлые/дублирующиеся файлы из первого экспорта; результаты и скоры сохраняем.
+results/svp_results/data/sst2/
+results/svp_results/data/scores.parquet
+results/svp_results/data/svp_embeddings.npy
+results/svp_results/data/svp_uncertainty_scores.npy
+results/svp_results/src/
+results/svp_results/scripts/
+
+# Локальные промежуточные копии отборов; результаты из Colab сохранены в results/*_results/.
+results/subsets/svp_forget_epoch_s*.npy
+results/subsets/svp_kcenter_cls_norm_s*.npy
+results/subsets/svp_uncertainty_s*.npy

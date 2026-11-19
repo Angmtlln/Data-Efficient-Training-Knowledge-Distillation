@@ -31,7 +31,7 @@ from src.config import MODEL_NAME, RESULTS_CSV, RUNS_DIR, TRAIN_CFG
 from src.data import load_splits, load_subset
 
 transformers.logging.set_verbosity_error()
-datasets.disable_progress_bars()
+(getattr(datasets, "disable_progress_bars", None) or datasets.disable_progress_bar)()
 
 
 def parse_args():
@@ -39,6 +39,8 @@ def parse_args():
     p.add_argument("--subset", required=True, help="'full' or name of results/subsets/<name>.npy")
     p.add_argument("--seed", type=int, default=0)
     p.add_argument("--tag", default="", help="free-form label stored in results.csv")
+    p.add_argument("--val-indices", default=None, help=".npy indices of validation used for epoch selection")
+    p.add_argument("--subset-weights", default=None, help=".npy weights aligned with subset indices")
     p.add_argument("--log-dynamics", action="store_true",
                    help="save per-example gold-label probs on the train subset after each epoch")
     for k, v in TRAIN_CFG.items():
@@ -58,7 +60,7 @@ def predict(model, loader, device):
     logits, labels = [], []
     for batch in loader:
         batch = {k: v.to(device) for k, v in batch.items()}
-        with torch.autocast("cuda", dtype=torch.bfloat16):
+        with torch.autocast("cuda", dtype=torch.bfloat16 if torch.cuda.is_bf16_supported() else torch.float16):
             out = model(input_ids=batch["input_ids"], attention_mask=batch["attention_mask"])
         logits.append(out.logits.float().cpu())
         labels.append(batch["labels"].cpu())
@@ -91,13 +93,23 @@ def make_model_and_optim(n_train, args, device):
 def train_epoch(model, loader, opt, sched, device, desc="train"):
     model.train()
     running = 0.0
+    scaler = torch.amp.GradScaler("cuda", enabled=not torch.cuda.is_bf16_supported())
     for step, batch in enumerate(tqdm(loader, desc=desc, leave=False, dynamic_ncols=True), 1):
         batch = {k: v.to(device) for k, v in batch.items()}
-        with torch.autocast("cuda", dtype=torch.bfloat16):
-            loss = model(**batch).loss
-        loss.backward()
+        weights = batch.pop("sample_weight", None)
+        with torch.autocast("cuda", dtype=torch.bfloat16 if torch.cuda.is_bf16_supported() else torch.float16):
+            if weights is None:
+                loss = model(**batch).loss
+            else:
+                labels = batch.pop("labels")
+                logits = model(**batch).logits
+                per_example = torch.nn.functional.cross_entropy(logits.float(), labels, reduction="none")
+                loss = (per_example * weights).mean()
+        scaler.scale(loss).backward()
+        scaler.unscale_(opt)
         torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)
-        opt.step()
+        scaler.step(opt)
+        scaler.update()
         sched.step()
         opt.zero_grad(set_to_none=True)
         running += loss.item()
@@ -130,7 +142,18 @@ def main():
     tok = AutoTokenizer.from_pretrained(MODEL_NAME)
     collate = DataCollatorWithPadding(tok)
     train_ds = tokenize(train_raw, tok, args.max_length)
-    val_ds = tokenize(splits["val"], tok, args.max_length)
+    if args.subset_weights:
+        weights = np.load(args.subset_weights)
+        if weights.shape != (len(train_ds),) or not np.isfinite(weights).all() or (weights < 0).any() or weights.sum() <= 0:
+            raise ValueError("invalid sample weights")
+        train_ds = train_ds.add_column("sample_weight", weights.astype(np.float32))
+    val_raw = splits["val"]
+    if args.val_indices:
+        vi = np.load(args.val_indices)
+        if len(np.unique(vi)) != len(vi) or (vi < 0).any() or (vi >= len(val_raw)).any():
+            raise ValueError("invalid validation indices")
+        val_raw = val_raw.select(vi)
+    val_ds = tokenize(val_raw, tok, args.max_length)
     test_ds = tokenize(splits["test"], tok, args.max_length)
 
     g = torch.Generator().manual_seed(args.seed)

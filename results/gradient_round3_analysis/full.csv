@@ -1,0 +1,2 @@
+timestamp,subset,tag,seed,n_train,val_acc,val_f1,test_acc,test_f1,best_epoch,train_time_s,config
+2026-11-17T21:35:27,full,gradient_round3,0,65349,0.949,0.95385,0.94839,0.94915,3,2802.5,"{""lr"": 5e-05, ""batch_size"": 32, ""epochs"": 3, ""warmup_ratio"": 0.06, ""weight_decay"": 0.01, ""max_length"": 64, ""eval_batch_size"": 256}"

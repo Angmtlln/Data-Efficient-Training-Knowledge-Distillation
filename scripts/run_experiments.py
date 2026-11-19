@@ -26,6 +26,7 @@ def main():
         done = set(zip(df.subset, df.seed))
 
     jobs = [(f"{strat}_s{s}", s) for strat in args.strategies for s in args.seeds]
+    failed = []
     for i, (subset, s) in enumerate(jobs, 1):
         if (subset, s) in done:
             print(f"[{i}/{len(jobs)}] skip {subset} (already in results.csv)", flush=True)
@@ -35,6 +36,9 @@ def main():
         r = subprocess.run([sys.executable, "-m", "src.train", "--subset", subset, "--seed", str(s)], cwd=ROOT)
         if r.returncode != 0:
             print(f"FAILED {subset} (exit code {r.returncode})", flush=True)
+            failed.append(subset)
+    if failed:
+        raise SystemExit(f"Failed runs: {failed}")
 
 
 if __name__ == "__main__":
