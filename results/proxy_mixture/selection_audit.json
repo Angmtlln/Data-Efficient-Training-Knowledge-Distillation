@@ -1,0 +1,1808 @@
+[
+  {
+    "name": "mix_random",
+    "seed": 17,
+    "n": 6534,
+    "background_n": 4900,
+    "target_n": 1634,
+    "positive": 3379,
+    "mean_words": 16.169268441995715,
+    "target_oof_gold_mean": 0.807815670967102,
+    "target_oof_wrong_fraction": 0.07649938800489596,
+    "target_rare_idf_mean": 6.098057270050049,
+    "target_cluster_count": 41,
+    "target_cluster_largest_share": 0.47796817625459,
+    "target_strata": [
+      {
+        "label": 0,
+        "length_bin": 2,
+        "count": 264
+      },
+      {
+        "label": 0,
+        "length_bin": 3,
+        "count": 151
+      },
+      {
+        "label": 0,
+        "length_bin": 4,
+        "count": 131
+      },
+      {
+        "label": 0,
+        "length_bin": 5,
+        "count": 78
+      },
+      {
+        "label": 0,
+        "length_bin": 6,
+        "count": 54
+      },
+      {
+        "label": 0,
+        "length_bin": 7,
+        "count": 36
+      },
+      {
+        "label": 0,
+        "length_bin": 8,
+        "count": 37
+      },
+      {
+        "label": 1,
+        "length_bin": 2,
+        "count": 285
+      },
+      {
+        "label": 1,
+        "length_bin": 3,
+        "count": 221
+      },
+      {
+        "label": 1,
+        "length_bin": 4,
+        "count": 148
+      },
+      {
+        "label": 1,
+        "length_bin": 5,
+        "count": 105
+      },
+      {
+        "label": 1,
+        "length_bin": 6,
+        "count": 60
+      },
+      {
+        "label": 1,
+        "length_bin": 7,
+        "count": 26
+      },
+      {
+        "label": 1,
+        "length_bin": 8,
+        "count": 38
+      }
+    ]
+  },
+  {
+    "name": "mix_hard",
+    "seed": 17,
+    "n": 6534,
+    "background_n": 4900,
+    "target_n": 1634,
+    "positive": 3379,
+    "mean_words": 16.18166513621059,
+    "target_oof_gold_mean": 0.31820690631866455,
+    "target_oof_wrong_fraction": 0.9516523867809058,
+    "target_rare_idf_mean": 6.156395435333252,
+    "target_cluster_count": 31,
+    "target_cluster_largest_share": 0.46878824969400246,
+    "target_strata": [
+      {
+        "label": 0,
+        "length_bin": 2,
+        "count": 264
+      },
+      {
+        "label": 0,
+        "length_bin": 3,
+        "count": 151
+      },
+      {
+        "label": 0,
+        "length_bin": 4,
+        "count": 131
+      },
+      {
+        "label": 0,
+        "length_bin": 5,
+        "count": 78
+      },
+      {
+        "label": 0,
+        "length_bin": 6,
+        "count": 54
+      },
+      {
+        "label": 0,
+        "length_bin": 7,
+        "count": 36
+      },
+      {
+        "label": 0,
+        "length_bin": 8,
+        "count": 37
+      },
+      {
+        "label": 1,
+        "length_bin": 2,
+        "count": 285
+      },
+      {
+        "label": 1,
+        "length_bin": 3,
+        "count": 221
+      },
+      {
+        "label": 1,
+        "length_bin": 4,
+        "count": 148
+      },
+      {
+        "label": 1,
+        "length_bin": 5,
+        "count": 105
+      },
+      {
+        "label": 1,
+        "length_bin": 6,
+        "count": 60
+      },
+      {
+        "label": 1,
+        "length_bin": 7,
+        "count": 26
+      },
+      {
+        "label": 1,
+        "length_bin": 8,
+        "count": 38
+      }
+    ]
+  },
+  {
+    "name": "mix_uncertain",
+    "seed": 17,
+    "n": 6534,
+    "background_n": 4900,
+    "target_n": 1634,
+    "positive": 3379,
+    "mean_words": 16.163911845730027,
+    "target_oof_gold_mean": 0.5123011469841003,
+    "target_oof_wrong_fraction": 0.4057527539779682,
+    "target_rare_idf_mean": 6.129350185394287,
+    "target_cluster_count": 32,
+    "target_cluster_largest_share": 0.46878824969400246,
+    "target_strata": [
+      {
+        "label": 0,
+        "length_bin": 2,
+        "count": 264
+      },
+      {
+        "label": 0,
+        "length_bin": 3,
+        "count": 151
+      },
+      {
+        "label": 0,
+        "length_bin": 4,
+        "count": 131
+      },
+      {
+        "label": 0,
+        "length_bin": 5,
+        "count": 78
+      },
+      {
+        "label": 0,
+        "length_bin": 6,
+        "count": 54
+      },
+      {
+        "label": 0,
+        "length_bin": 7,
+        "count": 36
+      },
+      {
+        "label": 0,
+        "length_bin": 8,
+        "count": 37
+      },
+      {
+        "label": 1,
+        "length_bin": 2,
+        "count": 285
+      },
+      {
+        "label": 1,
+        "length_bin": 3,
+        "count": 221
+      },
+      {
+        "label": 1,
+        "length_bin": 4,
+        "count": 148
+      },
+      {
+        "label": 1,
+        "length_bin": 5,
+        "count": 105
+      },
+      {
+        "label": 1,
+        "length_bin": 6,
+        "count": 60
+      },
+      {
+        "label": 1,
+        "length_bin": 7,
+        "count": 26
+      },
+      {
+        "label": 1,
+        "length_bin": 8,
+        "count": 38
+      }
+    ]
+  },
+  {
+    "name": "mix_mid",
+    "seed": 17,
+    "n": 6534,
+    "background_n": 4900,
+    "target_n": 1634,
+    "positive": 3379,
+    "mean_words": 16.17309458218549,
+    "target_oof_gold_mean": 0.8635259866714478,
+    "target_oof_wrong_fraction": 0.0,
+    "target_rare_idf_mean": 6.07147216796875,
+    "target_cluster_count": 35,
+    "target_cluster_largest_share": 0.4834761321909425,
+    "target_strata": [
+      {
+        "label": 0,
+        "length_bin": 2,
+        "count": 264
+      },
+      {
+        "label": 0,
+        "length_bin": 3,
+        "count": 151
+      },
+      {
+        "label": 0,
+        "length_bin": 4,
+        "count": 131
+      },
+      {
+        "label": 0,
+        "length_bin": 5,
+        "count": 78
+      },
+      {
+        "label": 0,
+        "length_bin": 6,
+        "count": 54
+      },
+      {
+        "label": 0,
+        "length_bin": 7,
+        "count": 36
+      },
+      {
+        "label": 0,
+        "length_bin": 8,
+        "count": 37
+      },
+      {
+        "label": 1,
+        "length_bin": 2,
+        "count": 285
+      },
+      {
+        "label": 1,
+        "length_bin": 3,
+        "count": 221
+      },
+      {
+        "label": 1,
+        "length_bin": 4,
+        "count": 148
+      },
+      {
+        "label": 1,
+        "length_bin": 5,
+        "count": 105
+      },
+      {
+        "label": 1,
+        "length_bin": 6,
+        "count": 60
+      },
+      {
+        "label": 1,
+        "length_bin": 7,
+        "count": 26
+      },
+      {
+        "label": 1,
+        "length_bin": 8,
+        "count": 38
+      }
+    ]
+  },
+  {
+    "name": "mix_easy",
+    "seed": 17,
+    "n": 6534,
+    "background_n": 4900,
+    "target_n": 1634,
+    "positive": 3379,
+    "mean_words": 16.181512090603,
+    "target_oof_gold_mean": 0.9766364097595215,
+    "target_oof_wrong_fraction": 0.0,
+    "target_rare_idf_mean": 5.952681541442871,
+    "target_cluster_count": 35,
+    "target_cluster_largest_share": 0.5361077111383109,
+    "target_strata": [
+      {
+        "label": 0,
+        "length_bin": 2,
+        "count": 264
+      },
+      {
+        "label": 0,
+        "length_bin": 3,
+        "count": 151
+      },
+      {
+        "label": 0,
+        "length_bin": 4,
+        "count": 131
+      },
+      {
+        "label": 0,
+        "length_bin": 5,
+        "count": 78
+      },
+      {
+        "label": 0,
+        "length_bin": 6,
+        "count": 54
+      },
+      {
+        "label": 0,
+        "length_bin": 7,
+        "count": 36
+      },
+      {
+        "label": 0,
+        "length_bin": 8,
+        "count": 37
+      },
+      {
+        "label": 1,
+        "length_bin": 2,
+        "count": 285
+      },
+      {
+        "label": 1,
+        "length_bin": 3,
+        "count": 221
+      },
+      {
+        "label": 1,
+        "length_bin": 4,
+        "count": 148
+      },
+      {
+        "label": 1,
+        "length_bin": 5,
+        "count": 105
+      },
+      {
+        "label": 1,
+        "length_bin": 6,
+        "count": 60
+      },
+      {
+        "label": 1,
+        "length_bin": 7,
+        "count": 26
+      },
+      {
+        "label": 1,
+        "length_bin": 8,
+        "count": 38
+      }
+    ]
+  },
+  {
+    "name": "mix_rare",
+    "seed": 17,
+    "n": 6534,
+    "background_n": 4900,
+    "target_n": 1634,
+    "positive": 3379,
+    "mean_words": 16.133302724211816,
+    "target_oof_gold_mean": 0.7774838209152222,
+    "target_oof_wrong_fraction": 0.11077111383108935,
+    "target_rare_idf_mean": 7.493241310119629,
+    "target_cluster_count": 27,
+    "target_cluster_largest_share": 0.8115055079559363,
+    "target_strata": [
+      {
+        "label": 0,
+        "length_bin": 2,
+        "count": 264
+      },
+      {
+        "label": 0,
+        "length_bin": 3,
+        "count": 151
+      },
+      {
+        "label": 0,
+        "length_bin": 4,
+        "count": 131
+      },
+      {
+        "label": 0,
+        "length_bin": 5,
+        "count": 78
+      },
+      {
+        "label": 0,
+        "length_bin": 6,
+        "count": 54
+      },
+      {
+        "label": 0,
+        "length_bin": 7,
+        "count": 36
+      },
+      {
+        "label": 0,
+        "length_bin": 8,
+        "count": 37
+      },
+      {
+        "label": 1,
+        "length_bin": 2,
+        "count": 285
+      },
+      {
+        "label": 1,
+        "length_bin": 3,
+        "count": 221
+      },
+      {
+        "label": 1,
+        "length_bin": 4,
+        "count": 148
+      },
+      {
+        "label": 1,
+        "length_bin": 5,
+        "count": 105
+      },
+      {
+        "label": 1,
+        "length_bin": 6,
+        "count": 60
+      },
+      {
+        "label": 1,
+        "length_bin": 7,
+        "count": 26
+      },
+      {
+        "label": 1,
+        "length_bin": 8,
+        "count": 38
+      }
+    ]
+  },
+  {
+    "name": "mix_diverse",
+    "seed": 17,
+    "n": 6534,
+    "background_n": 4900,
+    "target_n": 1634,
+    "positive": 3379,
+    "mean_words": 16.205846342209977,
+    "target_oof_gold_mean": 0.7999772429466248,
+    "target_oof_wrong_fraction": 0.08017135862913097,
+    "target_rare_idf_mean": 5.903371810913086,
+    "target_cluster_count": 64,
+    "target_cluster_largest_share": 0.033659730722154224,
+    "target_strata": [
+      {
+        "label": 0,
+        "length_bin": 2,
+        "count": 264
+      },
+      {
+        "label": 0,
+        "length_bin": 3,
+        "count": 151
+      },
+      {
+        "label": 0,
+        "length_bin": 4,
+        "count": 131
+      },
+      {
+        "label": 0,
+        "length_bin": 5,
+        "count": 78
+      },
+      {
+        "label": 0,
+        "length_bin": 6,
+        "count": 54
+      },
+      {
+        "label": 0,
+        "length_bin": 7,
+        "count": 36
+      },
+      {
+        "label": 0,
+        "length_bin": 8,
+        "count": 37
+      },
+      {
+        "label": 1,
+        "length_bin": 2,
+        "count": 285
+      },
+      {
+        "label": 1,
+        "length_bin": 3,
+        "count": 221
+      },
+      {
+        "label": 1,
+        "length_bin": 4,
+        "count": 148
+      },
+      {
+        "label": 1,
+        "length_bin": 5,
+        "count": 105
+      },
+      {
+        "label": 1,
+        "length_bin": 6,
+        "count": 60
+      },
+      {
+        "label": 1,
+        "length_bin": 7,
+        "count": 26
+      },
+      {
+        "label": 1,
+        "length_bin": 8,
+        "count": 38
+      }
+    ]
+  },
+  {
+    "name": "mix_random",
+    "seed": 42,
+    "n": 6534,
+    "background_n": 4900,
+    "target_n": 1634,
+    "positive": 3356,
+    "mean_words": 16.019742883379248,
+    "target_oof_gold_mean": 0.8025522232055664,
+    "target_oof_wrong_fraction": 0.08139534883720931,
+    "target_rare_idf_mean": 6.096952438354492,
+    "target_cluster_count": 38,
+    "target_cluster_largest_share": 0.5061199510403916,
+    "target_strata": [
+      {
+        "label": 0,
+        "length_bin": 2,
+        "count": 303
+      },
+      {
+        "label": 0,
+        "length_bin": 3,
+        "count": 190
+      },
+      {
+        "label": 0,
+        "length_bin": 4,
+        "count": 119
+      },
+      {
+        "label": 0,
+        "length_bin": 5,
+        "count": 72
+      },
+      {
+        "label": 0,
+        "length_bin": 6,
+        "count": 58
+      },
+      {
+        "label": 0,
+        "length_bin": 7,
+        "count": 42
+      },
+      {
+        "label": 0,
+        "length_bin": 8,
+        "count": 40
+      },
+      {
+        "label": 1,
+        "length_bin": 2,
+        "count": 283
+      },
+      {
+        "label": 1,
+        "length_bin": 3,
+        "count": 183
+      },
+      {
+        "label": 1,
+        "length_bin": 4,
+        "count": 135
+      },
+      {
+        "label": 1,
+        "length_bin": 5,
+        "count": 97
+      },
+      {
+        "label": 1,
+        "length_bin": 6,
+        "count": 45
+      },
+      {
+        "label": 1,
+        "length_bin": 7,
+        "count": 40
+      },
+      {
+        "label": 1,
+        "length_bin": 8,
+        "count": 27
+      }
+    ]
+  },
+  {
+    "name": "mix_hard",
+    "seed": 42,
+    "n": 6534,
+    "background_n": 4900,
+    "target_n": 1634,
+    "positive": 3356,
+    "mean_words": 16.026629935720845,
+    "target_oof_gold_mean": 0.31099340319633484,
+    "target_oof_wrong_fraction": 0.97796817625459,
+    "target_rare_idf_mean": 6.142544746398926,
+    "target_cluster_count": 32,
+    "target_cluster_largest_share": 0.4663402692778458,
+    "target_strata": [
+      {
+        "label": 0,
+        "length_bin": 2,
+        "count": 303
+      },
+      {
+        "label": 0,
+        "length_bin": 3,
+        "count": 190
+      },
+      {
+        "label": 0,
+        "length_bin": 4,
+        "count": 119
+      },
+      {
+        "label": 0,
+        "length_bin": 5,
+        "count": 72
+      },
+      {
+        "label": 0,
+        "length_bin": 6,
+        "count": 58
+      },
+      {
+        "label": 0,
+        "length_bin": 7,
+        "count": 42
+      },
+      {
+        "label": 0,
+        "length_bin": 8,
+        "count": 40
+      },
+      {
+        "label": 1,
+        "length_bin": 2,
+        "count": 283
+      },
+      {
+        "label": 1,
+        "length_bin": 3,
+        "count": 183
+      },
+      {
+        "label": 1,
+        "length_bin": 4,
+        "count": 135
+      },
+      {
+        "label": 1,
+        "length_bin": 5,
+        "count": 97
+      },
+      {
+        "label": 1,
+        "length_bin": 6,
+        "count": 45
+      },
+      {
+        "label": 1,
+        "length_bin": 7,
+        "count": 40
+      },
+      {
+        "label": 1,
+        "length_bin": 8,
+        "count": 27
+      }
+    ]
+  },
+  {
+    "name": "mix_uncertain",
+    "seed": 42,
+    "n": 6534,
+    "background_n": 4900,
+    "target_n": 1634,
+    "positive": 3356,
+    "mean_words": 16.011172329354146,
+    "target_oof_gold_mean": 0.5125634670257568,
+    "target_oof_wrong_fraction": 0.39657282741738065,
+    "target_rare_idf_mean": 6.113144397735596,
+    "target_cluster_count": 31,
+    "target_cluster_largest_share": 0.4694002447980416,
+    "target_strata": [
+      {
+        "label": 0,
+        "length_bin": 2,
+        "count": 303
+      },
+      {
+        "label": 0,
+        "length_bin": 3,
+        "count": 190
+      },
+      {
+        "label": 0,
+        "length_bin": 4,
+        "count": 119
+      },
+      {
+        "label": 0,
+        "length_bin": 5,
+        "count": 72
+      },
+      {
+        "label": 0,
+        "length_bin": 6,
+        "count": 58
+      },
+      {
+        "label": 0,
+        "length_bin": 7,
+        "count": 42
+      },
+      {
+        "label": 0,
+        "length_bin": 8,
+        "count": 40
+      },
+      {
+        "label": 1,
+        "length_bin": 2,
+        "count": 283
+      },
+      {
+        "label": 1,
+        "length_bin": 3,
+        "count": 183
+      },
+      {
+        "label": 1,
+        "length_bin": 4,
+        "count": 135
+      },
+      {
+        "label": 1,
+        "length_bin": 5,
+        "count": 97
+      },
+      {
+        "label": 1,
+        "length_bin": 6,
+        "count": 45
+      },
+      {
+        "label": 1,
+        "length_bin": 7,
+        "count": 40
+      },
+      {
+        "label": 1,
+        "length_bin": 8,
+        "count": 27
+      }
+    ]
+  },
+  {
+    "name": "mix_mid",
+    "seed": 42,
+    "n": 6534,
+    "background_n": 4900,
+    "target_n": 1634,
+    "positive": 3356,
+    "mean_words": 16.020661157024794,
+    "target_oof_gold_mean": 0.8620028495788574,
+    "target_oof_wrong_fraction": 0.0,
+    "target_rare_idf_mean": 6.099668025970459,
+    "target_cluster_count": 42,
+    "target_cluster_largest_share": 0.4810281517747858,
+    "target_strata": [
+      {
+        "label": 0,
+        "length_bin": 2,
+        "count": 303
+      },
+      {
+        "label": 0,
+        "length_bin": 3,
+        "count": 190
+      },
+      {
+        "label": 0,
+        "length_bin": 4,
+        "count": 119
+      },
+      {
+        "label": 0,
+        "length_bin": 5,
+        "count": 72
+      },
+      {
+        "label": 0,
+        "length_bin": 6,
+        "count": 58
+      },
+      {
+        "label": 0,
+        "length_bin": 7,
+        "count": 42
+      },
+      {
+        "label": 0,
+        "length_bin": 8,
+        "count": 40
+      },
+      {
+        "label": 1,
+        "length_bin": 2,
+        "count": 283
+      },
+      {
+        "label": 1,
+        "length_bin": 3,
+        "count": 183
+      },
+      {
+        "label": 1,
+        "length_bin": 4,
+        "count": 135
+      },
+      {
+        "label": 1,
+        "length_bin": 5,
+        "count": 97
+      },
+      {
+        "label": 1,
+        "length_bin": 6,
+        "count": 45
+      },
+      {
+        "label": 1,
+        "length_bin": 7,
+        "count": 40
+      },
+      {
+        "label": 1,
+        "length_bin": 8,
+        "count": 27
+      }
+    ]
+  },
+  {
+    "name": "mix_easy",
+    "seed": 42,
+    "n": 6534,
+    "background_n": 4900,
+    "target_n": 1634,
+    "positive": 3356,
+    "mean_words": 16.029996939087848,
+    "target_oof_gold_mean": 0.9763221740722656,
+    "target_oof_wrong_fraction": 0.0,
+    "target_rare_idf_mean": 5.958518028259277,
+    "target_cluster_count": 32,
+    "target_cluster_largest_share": 0.5556915544675642,
+    "target_strata": [
+      {
+        "label": 0,
+        "length_bin": 2,
+        "count": 303
+      },
+      {
+        "label": 0,
+        "length_bin": 3,
+        "count": 190
+      },
+      {
+        "label": 0,
+        "length_bin": 4,
+        "count": 119
+      },
+      {
+        "label": 0,
+        "length_bin": 5,
+        "count": 72
+      },
+      {
+        "label": 0,
+        "length_bin": 6,
+        "count": 58
+      },
+      {
+        "label": 0,
+        "length_bin": 7,
+        "count": 42
+      },
+      {
+        "label": 0,
+        "length_bin": 8,
+        "count": 40
+      },
+      {
+        "label": 1,
+        "length_bin": 2,
+        "count": 283
+      },
+      {
+        "label": 1,
+        "length_bin": 3,
+        "count": 183
+      },
+      {
+        "label": 1,
+        "length_bin": 4,
+        "count": 135
+      },
+      {
+        "label": 1,
+        "length_bin": 5,
+        "count": 97
+      },
+      {
+        "label": 1,
+        "length_bin": 6,
+        "count": 45
+      },
+      {
+        "label": 1,
+        "length_bin": 7,
+        "count": 40
+      },
+      {
+        "label": 1,
+        "length_bin": 8,
+        "count": 27
+      }
+    ]
+  },
+  {
+    "name": "mix_rare",
+    "seed": 42,
+    "n": 6534,
+    "background_n": 4900,
+    "target_n": 1634,
+    "positive": 3356,
+    "mean_words": 15.974900520355066,
+    "target_oof_gold_mean": 0.7778785228729248,
+    "target_oof_wrong_fraction": 0.10771113831089352,
+    "target_rare_idf_mean": 7.500490188598633,
+    "target_cluster_count": 27,
+    "target_cluster_largest_share": 0.8157894736842105,
+    "target_strata": [
+      {
+        "label": 0,
+        "length_bin": 2,
+        "count": 303
+      },
+      {
+        "label": 0,
+        "length_bin": 3,
+        "count": 190
+      },
+      {
+        "label": 0,
+        "length_bin": 4,
+        "count": 119
+      },
+      {
+        "label": 0,
+        "length_bin": 5,
+        "count": 72
+      },
+      {
+        "label": 0,
+        "length_bin": 6,
+        "count": 58
+      },
+      {
+        "label": 0,
+        "length_bin": 7,
+        "count": 42
+      },
+      {
+        "label": 0,
+        "length_bin": 8,
+        "count": 40
+      },
+      {
+        "label": 1,
+        "length_bin": 2,
+        "count": 283
+      },
+      {
+        "label": 1,
+        "length_bin": 3,
+        "count": 183
+      },
+      {
+        "label": 1,
+        "length_bin": 4,
+        "count": 135
+      },
+      {
+        "label": 1,
+        "length_bin": 5,
+        "count": 97
+      },
+      {
+        "label": 1,
+        "length_bin": 6,
+        "count": 45
+      },
+      {
+        "label": 1,
+        "length_bin": 7,
+        "count": 40
+      },
+      {
+        "label": 1,
+        "length_bin": 8,
+        "count": 27
+      }
+    ]
+  },
+  {
+    "name": "mix_diverse",
+    "seed": 42,
+    "n": 6534,
+    "background_n": 4900,
+    "target_n": 1634,
+    "positive": 3356,
+    "mean_words": 16.026936026936028,
+    "target_oof_gold_mean": 0.799297034740448,
+    "target_oof_wrong_fraction": 0.07833537331701346,
+    "target_rare_idf_mean": 5.910460948944092,
+    "target_cluster_count": 64,
+    "target_cluster_largest_share": 0.033047735618115054,
+    "target_strata": [
+      {
+        "label": 0,
+        "length_bin": 2,
+        "count": 303
+      },
+      {
+        "label": 0,
+        "length_bin": 3,
+        "count": 190
+      },
+      {
+        "label": 0,
+        "length_bin": 4,
+        "count": 119
+      },
+      {
+        "label": 0,
+        "length_bin": 5,
+        "count": 72
+      },
+      {
+        "label": 0,
+        "length_bin": 6,
+        "count": 58
+      },
+      {
+        "label": 0,
+        "length_bin": 7,
+        "count": 42
+      },
+      {
+        "label": 0,
+        "length_bin": 8,
+        "count": 40
+      },
+      {
+        "label": 1,
+        "length_bin": 2,
+        "count": 283
+      },
+      {
+        "label": 1,
+        "length_bin": 3,
+        "count": 183
+      },
+      {
+        "label": 1,
+        "length_bin": 4,
+        "count": 135
+      },
+      {
+        "label": 1,
+        "length_bin": 5,
+        "count": 97
+      },
+      {
+        "label": 1,
+        "length_bin": 6,
+        "count": 45
+      },
+      {
+        "label": 1,
+        "length_bin": 7,
+        "count": 40
+      },
+      {
+        "label": 1,
+        "length_bin": 8,
+        "count": 27
+      }
+    ]
+  },
+  {
+    "name": "mix_random",
+    "seed": 101,
+    "n": 6534,
+    "background_n": 4900,
+    "target_n": 1634,
+    "positive": 3467,
+    "mean_words": 16.163605754514844,
+    "target_oof_gold_mean": 0.8036530613899231,
+    "target_oof_wrong_fraction": 0.08384332925336598,
+    "target_rare_idf_mean": 6.058523178100586,
+    "target_cluster_count": 41,
+    "target_cluster_largest_share": 0.488984088127295,
+    "target_strata": [
+      {
+        "label": 0,
+        "length_bin": 2,
+        "count": 234
+      },
+      {
+        "label": 0,
+        "length_bin": 3,
+        "count": 179
+      },
+      {
+        "label": 0,
+        "length_bin": 4,
+        "count": 134
+      },
+      {
+        "label": 0,
+        "length_bin": 5,
+        "count": 85
+      },
+      {
+        "label": 0,
+        "length_bin": 6,
+        "count": 37
+      },
+      {
+        "label": 0,
+        "length_bin": 7,
+        "count": 25
+      },
+      {
+        "label": 0,
+        "length_bin": 8,
+        "count": 32
+      },
+      {
+        "label": 1,
+        "length_bin": 2,
+        "count": 318
+      },
+      {
+        "label": 1,
+        "length_bin": 3,
+        "count": 204
+      },
+      {
+        "label": 1,
+        "length_bin": 4,
+        "count": 145
+      },
+      {
+        "label": 1,
+        "length_bin": 5,
+        "count": 106
+      },
+      {
+        "label": 1,
+        "length_bin": 6,
+        "count": 51
+      },
+      {
+        "label": 1,
+        "length_bin": 7,
+        "count": 35
+      },
+      {
+        "label": 1,
+        "length_bin": 8,
+        "count": 49
+      }
+    ]
+  },
+  {
+    "name": "mix_hard",
+    "seed": 101,
+    "n": 6534,
+    "background_n": 4900,
+    "target_n": 1634,
+    "positive": 3467,
+    "mean_words": 16.159626568717478,
+    "target_oof_gold_mean": 0.3184964656829834,
+    "target_oof_wrong_fraction": 0.9749082007343941,
+    "target_rare_idf_mean": 6.154208660125732,
+    "target_cluster_count": 32,
+    "target_cluster_largest_share": 0.4865361077111383,
+    "target_strata": [
+      {
+        "label": 0,
+        "length_bin": 2,
+        "count": 234
+      },
+      {
+        "label": 0,
+        "length_bin": 3,
+        "count": 179
+      },
+      {
+        "label": 0,
+        "length_bin": 4,
+        "count": 134
+      },
+      {
+        "label": 0,
+        "length_bin": 5,
+        "count": 85
+      },
+      {
+        "label": 0,
+        "length_bin": 6,
+        "count": 37
+      },
+      {
+        "label": 0,
+        "length_bin": 7,
+        "count": 25
+      },
+      {
+        "label": 0,
+        "length_bin": 8,
+        "count": 32
+      },
+      {
+        "label": 1,
+        "length_bin": 2,
+        "count": 318
+      },
+      {
+        "label": 1,
+        "length_bin": 3,
+        "count": 204
+      },
+      {
+        "label": 1,
+        "length_bin": 4,
+        "count": 145
+      },
+      {
+        "label": 1,
+        "length_bin": 5,
+        "count": 106
+      },
+      {
+        "label": 1,
+        "length_bin": 6,
+        "count": 51
+      },
+      {
+        "label": 1,
+        "length_bin": 7,
+        "count": 35
+      },
+      {
+        "label": 1,
+        "length_bin": 8,
+        "count": 49
+      }
+    ]
+  },
+  {
+    "name": "mix_uncertain",
+    "seed": 101,
+    "n": 6534,
+    "background_n": 4900,
+    "target_n": 1634,
+    "positive": 3467,
+    "mean_words": 16.143097643097644,
+    "target_oof_gold_mean": 0.511497974395752,
+    "target_oof_wrong_fraction": 0.42533659730722156,
+    "target_rare_idf_mean": 6.088506698608398,
+    "target_cluster_count": 33,
+    "target_cluster_largest_share": 0.4694002447980416,
+    "target_strata": [
+      {
+        "label": 0,
+        "length_bin": 2,
+        "count": 234
+      },
+      {
+        "label": 0,
+        "length_bin": 3,
+        "count": 179
+      },
+      {
+        "label": 0,
+        "length_bin": 4,
+        "count": 134
+      },
+      {
+        "label": 0,
+        "length_bin": 5,
+        "count": 85
+      },
+      {
+        "label": 0,
+        "length_bin": 6,
+        "count": 37
+      },
+      {
+        "label": 0,
+        "length_bin": 7,
+        "count": 25
+      },
+      {
+        "label": 0,
+        "length_bin": 8,
+        "count": 32
+      },
+      {
+        "label": 1,
+        "length_bin": 2,
+        "count": 318
+      },
+      {
+        "label": 1,
+        "length_bin": 3,
+        "count": 204
+      },
+      {
+        "label": 1,
+        "length_bin": 4,
+        "count": 145
+      },
+      {
+        "label": 1,
+        "length_bin": 5,
+        "count": 106
+      },
+      {
+        "label": 1,
+        "length_bin": 6,
+        "count": 51
+      },
+      {
+        "label": 1,
+        "length_bin": 7,
+        "count": 35
+      },
+      {
+        "label": 1,
+        "length_bin": 8,
+        "count": 49
+      }
+    ]
+  },
+  {
+    "name": "mix_mid",
+    "seed": 101,
+    "n": 6534,
+    "background_n": 4900,
+    "target_n": 1634,
+    "positive": 3467,
+    "mean_words": 16.150443832262013,
+    "target_oof_gold_mean": 0.8629412055015564,
+    "target_oof_wrong_fraction": 0.0,
+    "target_rare_idf_mean": 6.100938320159912,
+    "target_cluster_count": 41,
+    "target_cluster_largest_share": 0.4694002447980416,
+    "target_strata": [
+      {
+        "label": 0,
+        "length_bin": 2,
+        "count": 234
+      },
+      {
+        "label": 0,
+        "length_bin": 3,
+        "count": 179
+      },
+      {
+        "label": 0,
+        "length_bin": 4,
+        "count": 134
+      },
+      {
+        "label": 0,
+        "length_bin": 5,
+        "count": 85
+      },
+      {
+        "label": 0,
+        "length_bin": 6,
+        "count": 37
+      },
+      {
+        "label": 0,
+        "length_bin": 7,
+        "count": 25
+      },
+      {
+        "label": 0,
+        "length_bin": 8,
+        "count": 32
+      },
+      {
+        "label": 1,
+        "length_bin": 2,
+        "count": 318
+      },
+      {
+        "label": 1,
+        "length_bin": 3,
+        "count": 204
+      },
+      {
+        "label": 1,
+        "length_bin": 4,
+        "count": 145
+      },
+      {
+        "label": 1,
+        "length_bin": 5,
+        "count": 106
+      },
+      {
+        "label": 1,
+        "length_bin": 6,
+        "count": 51
+      },
+      {
+        "label": 1,
+        "length_bin": 7,
+        "count": 35
+      },
+      {
+        "label": 1,
+        "length_bin": 8,
+        "count": 49
+      }
+    ]
+  },
+  {
+    "name": "mix_easy",
+    "seed": 101,
+    "n": 6534,
+    "background_n": 4900,
+    "target_n": 1634,
+    "positive": 3467,
+    "mean_words": 16.1558004285277,
+    "target_oof_gold_mean": 0.9771614074707031,
+    "target_oof_wrong_fraction": 0.0,
+    "target_rare_idf_mean": 5.944404125213623,
+    "target_cluster_count": 35,
+    "target_cluster_largest_share": 0.533047735618115,
+    "target_strata": [
+      {
+        "label": 0,
+        "length_bin": 2,
+        "count": 234
+      },
+      {
+        "label": 0,
+        "length_bin": 3,
+        "count": 179
+      },
+      {
+        "label": 0,
+        "length_bin": 4,
+        "count": 134
+      },
+      {
+        "label": 0,
+        "length_bin": 5,
+        "count": 85
+      },
+      {
+        "label": 0,
+        "length_bin": 6,
+        "count": 37
+      },
+      {
+        "label": 0,
+        "length_bin": 7,
+        "count": 25
+      },
+      {
+        "label": 0,
+        "length_bin": 8,
+        "count": 32
+      },
+      {
+        "label": 1,
+        "length_bin": 2,
+        "count": 318
+      },
+      {
+        "label": 1,
+        "length_bin": 3,
+        "count": 204
+      },
+      {
+        "label": 1,
+        "length_bin": 4,
+        "count": 145
+      },
+      {
+        "label": 1,
+        "length_bin": 5,
+        "count": 106
+      },
+      {
+        "label": 1,
+        "length_bin": 6,
+        "count": 51
+      },
+      {
+        "label": 1,
+        "length_bin": 7,
+        "count": 35
+      },
+      {
+        "label": 1,
+        "length_bin": 8,
+        "count": 49
+      }
+    ]
+  },
+  {
+    "name": "mix_rare",
+    "seed": 101,
+    "n": 6534,
+    "background_n": 4900,
+    "target_n": 1634,
+    "positive": 3467,
+    "mean_words": 16.11233547597184,
+    "target_oof_gold_mean": 0.7821606993675232,
+    "target_oof_wrong_fraction": 0.09853121175030599,
+    "target_rare_idf_mean": 7.4925971031188965,
+    "target_cluster_count": 27,
+    "target_cluster_largest_share": 0.8072215422276622,
+    "target_strata": [
+      {
+        "label": 0,
+        "length_bin": 2,
+        "count": 234
+      },
+      {
+        "label": 0,
+        "length_bin": 3,
+        "count": 179
+      },
+      {
+        "label": 0,
+        "length_bin": 4,
+        "count": 134
+      },
+      {
+        "label": 0,
+        "length_bin": 5,
+        "count": 85
+      },
+      {
+        "label": 0,
+        "length_bin": 6,
+        "count": 37
+      },
+      {
+        "label": 0,
+        "length_bin": 7,
+        "count": 25
+      },
+      {
+        "label": 0,
+        "length_bin": 8,
+        "count": 32
+      },
+      {
+        "label": 1,
+        "length_bin": 2,
+        "count": 318
+      },
+      {
+        "label": 1,
+        "length_bin": 3,
+        "count": 204
+      },
+      {
+        "label": 1,
+        "length_bin": 4,
+        "count": 145
+      },
+      {
+        "label": 1,
+        "length_bin": 5,
+        "count": 106
+      },
+      {
+        "label": 1,
+        "length_bin": 6,
+        "count": 51
+      },
+      {
+        "label": 1,
+        "length_bin": 7,
+        "count": 35
+      },
+      {
+        "label": 1,
+        "length_bin": 8,
+        "count": 49
+      }
+    ]
+  },
+  {
+    "name": "mix_diverse",
+    "seed": 101,
+    "n": 6534,
+    "background_n": 4900,
+    "target_n": 1634,
+    "positive": 3467,
+    "mean_words": 16.16131007040098,
+    "target_oof_gold_mean": 0.8031758666038513,
+    "target_oof_wrong_fraction": 0.08629130966952264,
+    "target_rare_idf_mean": 5.892842769622803,
+    "target_cluster_count": 64,
+    "target_cluster_largest_share": 0.033047735618115054,
+    "target_strata": [
+      {
+        "label": 0,
+        "length_bin": 2,
+        "count": 234
+      },
+      {
+        "label": 0,
+        "length_bin": 3,
+        "count": 179
+      },
+      {
+        "label": 0,
+        "length_bin": 4,
+        "count": 134
+      },
+      {
+        "label": 0,
+        "length_bin": 5,
+        "count": 85
+      },
+      {
+        "label": 0,
+        "length_bin": 6,
+        "count": 37
+      },
+      {
+        "label": 0,
+        "length_bin": 7,
+        "count": 25
+      },
+      {
+        "label": 0,
+        "length_bin": 8,
+        "count": 32
+      },
+      {
+        "label": 1,
+        "length_bin": 2,
+        "count": 318
+      },
+      {
+        "label": 1,
+        "length_bin": 3,
+        "count": 204
+      },
+      {
+        "label": 1,
+        "length_bin": 4,
+        "count": 145
+      },
+      {
+        "label": 1,
+        "length_bin": 5,
+        "count": 106
+      },
+      {
+        "label": 1,
+        "length_bin": 6,
+        "count": 51
+      },
+      {
+        "label": 1,
+        "length_bin": 7,
+        "count": 35
+      },
+      {
+        "label": 1,
+        "length_bin": 8,
+        "count": 49
+      }
+    ]
+  }
+]

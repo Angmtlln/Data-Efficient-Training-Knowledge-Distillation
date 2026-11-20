@@ -40,3 +40,28 @@
 ## Внешняя проверка
 
 Набор Rotten Tomatoes не используем для независимого теста: при предварительном аудите 706/1066 тестовых строк точно совпали после нормализации с текстами SST-2. Внешняя проверка на отзывах IMDb, если загрузка и проверка данных успешны, будет дополнительным стресс-тестом переноса на более длинные пользовательские отзывы, а не заменой SST-2 и не гарантированно независимой оценкой от предварительного обучения ModernBERT. Набор и правила отбора фиксируются до расчёта качества моделей.
+
+## Воспроизведение
+
+Установить зависимости из корневого `requirements.txt` и PyTorch для CUDA либо Apple MPS. Перед запуском необходимо получить и токенизировать SST-2 командами серии 04. Затем из корня репозитория:
+
+```bash
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python experiments/05_proxy_mixture/build_scores.py
+python experiments/05_proxy_mixture/prepare.py
+python -m unittest discover -s experiments/05_proxy_mixture/tests -v
+python experiments/05_proxy_mixture/prepare_imdb.py
+EXPERIMENT_PYTHON=python bash experiments/05_proxy_mixture/run_worker.sh 0
+EXPERIMENT_PYTHON=python bash experiments/05_proxy_mixture/run_worker.sh 1
+python experiments/05_proxy_mixture/analyze.py
+```
+
+Две очереди распределяют 21 запуск без пересечений; их можно запустить одновременно на одной GPU либо выполнить последовательно. В режиме одной очереди для всех вариантов используйте `WORKER_COUNT=1 EXPERIMENT_PYTHON=python bash experiments/05_proxy_mixture/run_worker.sh 0`. Завершённые запуски пропускаются; незавершённые продолжаются с последнего сохранённого чекпойнта либо начинаются заново, если он ещё не был создан. Используются обучения `experiments/04_len_forgetting/train.py`. Логи и временные чекпойнты — в игнорируемой `outputs/proxy_mixture/`, сырые результаты и индексы — `results/proxy_mixture/`. После успешного завершения каждого нового обучения сохраняется только лучший модельный чекпойнт без состояния оптимизатора, чтобы экономить место. До завершения чекпойнты остаются полными и позволяют продолжить обучение.
+
+Для IMDb после **всех 21** обучений нужен зафиксированный набор `stanfordnlp/imdb` и исходные веса baseline-моделей из `outputs/len_forgetting/checkpoints/`. Сначала проверка, затем оценка:
+
+```bash
+python experiments/05_proxy_mixture/eval_imdb.py --check-only
+PYTORCH_ENABLE_MPS_FALLBACK=1 python experiments/05_proxy_mixture/eval_imdb.py
+```
+
+`prepare_imdb.py` и `eval_imdb.py` могут получать `--source` с локальной копией test split IMDb, соответствующей зафиксированному hash; иначе данные скачиваются через `datasets` по закреплённой ревизии. `analyze.py --imdb-source <путь>` проверяет внешние предсказания и метки по исходным данным. Применяется та же усечённая до 64 токенов входная длина, что и для SST-2; 1958/2000 отзывов длиннее этого порога. IMDb — иной домен, точных совпадений с SST-2 при нормализации не найдено, но полное отсутствие близких дублей или данных IMDb в pretraining не установлено.

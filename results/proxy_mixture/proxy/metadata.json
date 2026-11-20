@@ -1,0 +1,47 @@
+{
+  "pool_sha256": "c0649daca41978a971b794e5a190068945eda3706c44338fc98c1aa0eaecaea3",
+  "seeds": [
+    {
+      "seed": 17,
+      "fold_accuracy": [
+        0.9049258596152964,
+        0.9046963228205481,
+        0.9075425790754258
+      ],
+      "seconds": 2.130758047103882,
+      "sha256": "75747e1c85197b9dafcad8c6a029511032b8ac73fdcec3f23138e23cd98c85b3",
+      "pool_sha256": "c0649daca41978a971b794e5a190068945eda3706c44338fc98c1aa0eaecaea3"
+    },
+    {
+      "seed": 42,
+      "fold_accuracy": [
+        0.9013450856172245,
+        0.9058440067942891,
+        0.9044667860257999
+      ],
+      "seconds": 2.062944173812866,
+      "sha256": "cfa846b6281e370073cd688083ede878bf4e15894b582b9ff31764748ce9648c",
+      "pool_sha256": "c0649daca41978a971b794e5a190068945eda3706c44338fc98c1aa0eaecaea3"
+    },
+    {
+      "seed": 101,
+      "fold_accuracy": [
+        0.904329063948951,
+        0.9055685626405913,
+        0.9068539686911812
+      ],
+      "seconds": 2.0855419635772705,
+      "sha256": "56503545da8c5f8234e2b444a6933d1fa053fa689340bca18fce1bfc4b5247b5",
+      "pool_sha256": "c0649daca41978a971b794e5a190068945eda3706c44338fc98c1aa0eaecaea3"
+    }
+  ],
+  "proxy": "TF-IDF unigrams+bigrams, SGDClassifier log-loss; 3-fold OOF, 8 epochs",
+  "cluster": "MiniBatchKMeans 64 on long-text TF-IDF, seed 1729",
+  "long_count": 30184,
+  "clusters_present": 64,
+  "cluster_largest_share": 0.49171746620726214,
+  "lexical_seconds": 2.3736469745635986,
+  "lexical_sha256": "548d25acc59816ccfb1539723667ebec058ae57e362f8217a0f0b3aae373044f",
+  "sklearn": "1.7.2",
+  "total_seconds": 8.697069883346558
+}

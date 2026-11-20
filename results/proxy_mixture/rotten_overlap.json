@@ -1,0 +1,13 @@
+{
+  "source": "cornell-movie-review-data/rotten_tomatoes",
+  "revision": "aa13bc287fa6fcab6daf52f0dfb9994269ffea28",
+  "split": "test",
+  "n": 1066,
+  "source_sha256": "5b65db91cecf015190952309c78082f265f143e030d357952b1de53cd6ab74d2",
+  "sst2_pool_sha256": "c0649daca41978a971b794e5a190068945eda3706c44338fc98c1aa0eaecaea3",
+  "normalization": "lowercase ASCII alphanumeric tokens joined by space",
+  "exact_pool": 689,
+  "exact_any_sst2_split": 706,
+  "contains_entire_sst2_phrase_ge8_tokens": 767,
+  "caveat": "Exact text and token containment are not a full audit of common source documents."
+}

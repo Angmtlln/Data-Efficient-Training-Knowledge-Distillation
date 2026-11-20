@@ -1,0 +1,182 @@
+{
+  "expected_new_runs": 21,
+  "completed_new_runs": 4,
+  "baseline_runs": 6,
+  "sst2": {
+    "runs": [
+      {
+        "name": "mix_random",
+        "seed": 17,
+        "accuracy": 0.9243119266055045,
+        "macro_f1": 0.9242545485175202,
+        "positive_f1": 0.9263392857142857,
+        "val_best_accuracy": 0.9215,
+        "seconds": 583.8070442676544
+      },
+      {
+        "name": "mix_hard",
+        "seed": 17,
+        "accuracy": 0.9288990825688074,
+        "macro_f1": 0.9288537965521779,
+        "positive_f1": 0.930648769574944,
+        "val_best_accuracy": 0.919,
+        "seconds": 583.8184781074524
+      },
+      {
+        "name": "mix_uncertain",
+        "seed": 17,
+        "accuracy": 0.9438073394495413,
+        "macro_f1": 0.9437983960813561,
+        "positive_f1": 0.9445073612684032,
+        "val_best_accuracy": 0.9305,
+        "seconds": 581.1758139133453
+      },
+      {
+        "name": "mix_mid",
+        "seed": 17,
+        "accuracy": 0.9357798165137615,
+        "macro_f1": 0.9357632585623556,
+        "positive_f1": 0.9367945823927766,
+        "val_best_accuracy": 0.9225,
+        "seconds": 580.0732281208038
+      },
+      {
+        "name": "random",
+        "seed": 17,
+        "accuracy": 0.9254587155963303,
+        "macro_f1": 0.9253242689538415,
+        "positive_f1": 0.9284928492849285,
+        "val_best_accuracy": 0.934,
+        "seconds": 564.8898229598999
+      },
+      {
+        "name": "random",
+        "seed": 42,
+        "accuracy": 0.9288990825688074,
+        "macro_f1": 0.9288616602454789,
+        "positive_f1": 0.9304932735426009,
+        "val_best_accuracy": 0.9295,
+        "seconds": 564.727970123291
+      },
+      {
+        "name": "random",
+        "seed": 101,
+        "accuracy": 0.9311926605504587,
+        "macro_f1": 0.9310998735777497,
+        "positive_f1": 0.9336283185840708,
+        "val_best_accuracy": 0.9315,
+        "seconds": 575.9978501796722
+      },
+      {
+        "name": "len8",
+        "seed": 17,
+        "accuracy": 0.9438073394495413,
+        "macro_f1": 0.9437948475102438,
+        "positive_f1": 0.9446327683615819,
+        "val_best_accuracy": 0.9235,
+        "seconds": 568.6729819774628
+      },
+      {
+        "name": "len8",
+        "seed": 42,
+        "accuracy": 0.9288990825688074,
+        "macro_f1": 0.9288451819407009,
+        "positive_f1": 0.9308035714285714,
+        "val_best_accuracy": 0.929,
+        "seconds": 549.5817732810974
+      },
+      {
+        "name": "len8",
+        "seed": 101,
+        "accuracy": 0.9369266055045872,
+        "macro_f1": 0.936874719483415,
+        "positive_f1": 0.9386845039018952,
+        "val_best_accuracy": 0.9195,
+        "seconds": 595.441220998764
+      }
+    ],
+    "summary": [
+      {
+        "name": "len8",
+        "n": 3,
+        "accuracy_mean": 0.9365443425076453,
+        "accuracy_sd": 0.007461476030559299,
+        "macro_f1_mean": 0.9365049163114533,
+        "macro_f1_sd": 0.007481690380508203,
+        "positive_f1_mean": 0.9380402812306828,
+        "positive_f1_sd": 0.006937069921124844
+      },
+      {
+        "name": "mix_hard",
+        "n": 1,
+        "accuracy_mean": 0.9288990825688074,
+        "accuracy_sd": null,
+        "macro_f1_mean": 0.9288537965521779,
+        "macro_f1_sd": null,
+        "positive_f1_mean": 0.930648769574944,
+        "positive_f1_sd": null
+      },
+      {
+        "name": "mix_mid",
+        "n": 1,
+        "accuracy_mean": 0.9357798165137615,
+        "accuracy_sd": null,
+        "macro_f1_mean": 0.9357632585623556,
+        "macro_f1_sd": null,
+        "positive_f1_mean": 0.9367945823927766,
+        "positive_f1_sd": null
+      },
+      {
+        "name": "mix_random",
+        "n": 1,
+        "accuracy_mean": 0.9243119266055045,
+        "accuracy_sd": null,
+        "macro_f1_mean": 0.9242545485175202,
+        "macro_f1_sd": null,
+        "positive_f1_mean": 0.9263392857142857,
+        "positive_f1_sd": null
+      },
+      {
+        "name": "mix_uncertain",
+        "n": 1,
+        "accuracy_mean": 0.9438073394495413,
+        "accuracy_sd": null,
+        "macro_f1_mean": 0.9437983960813561,
+        "macro_f1_sd": null,
+        "positive_f1_mean": 0.9445073612684032,
+        "positive_f1_sd": null
+      },
+      {
+        "name": "random",
+        "n": 3,
+        "accuracy_mean": 0.9285168195718655,
+        "accuracy_sd": 0.0028860223376416957,
+        "macro_f1_mean": 0.92842860092569,
+        "macro_f1_sd": 0.00291205382398224,
+        "positive_f1_mean": 0.9308714804705334,
+        "positive_f1_sd": 0.002588540436396626
+      }
+    ],
+    "paired_deltas": [
+      {
+        "name": "mix_hard",
+        "seed": 17,
+        "accuracy_delta_pp": 0.4587155963302836,
+        "macro_f1_delta_pp": 0.45992480346577214
+      },
+      {
+        "name": "mix_uncertain",
+        "seed": 17,
+        "accuracy_delta_pp": 1.9495412844036775,
+        "macro_f1_delta_pp": 1.954384756383587
+      },
+      {
+        "name": "mix_mid",
+        "seed": 17,
+        "accuracy_delta_pp": 1.1467889908256979,
+        "macro_f1_delta_pp": 1.1508710044835446
+      }
+    ]
+  },
+  "caveat": "Exploratory; repeated SST-2 evaluation, 3 linked seeds, multiple comparisons, OOF proxy uses all pool labels."
+}
