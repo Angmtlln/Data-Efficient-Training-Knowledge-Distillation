@@ -83,6 +83,10 @@ def main():
         for file in external_files:
             info=json.loads(file.read_text());name=info['name'];seed=info['selection_seed']
             if (name,seed) not in source or info['imdb_data_sha256']!=manifest['data_sha256']:raise ValueError('External run/source mismatch')
+            model_parent=ROOT/'runs' if name in METHODS else REPO/'results/len_forgetting/runs'
+            source_info=json.loads((model_parent/f'{name}__ss{seed}__ts{seed}'/'metrics.json').read_text())
+            if info['selection_sha256']!=source_info['selection_sha256'] or info['training_seed']!=source_info['training_seed']:
+                raise ValueError('External model identity mismatch')
             vals,_=validate_predictions(file.parent/'predictions.csv',ix,labels)
             for k,v in vals.items():
                 if abs(v-info['metrics'][k])>1e-10:raise ValueError(f'External metric mismatch {file}')

@@ -32,7 +32,9 @@ def main():
         for seed in SEEDS:
             runid=f'{name}__ss{seed}__ts{seed}';p=parent/runid/'metrics.json'
             if not p.exists():raise ValueError(f'Missing completed run: {p}')
-            info=json.loads(p.read_text());ckpt=Path(info['best_checkpoint'])
+            info=json.loads(p.read_text())
+            checkpoint_root=REPO/('outputs/proxy_mixture/checkpoints' if name in NEW else 'outputs/len_forgetting/checkpoints')
+            ckpt=checkpoint_root/runid/Path(info['best_checkpoint']).name
             if info['pilot'] or info['split']!='test' or not (ckpt/'model.safetensors').is_file():raise ValueError(f'Invalid run/checkpoint: {runid}')
             runs.append((runid,info,ckpt))
     print('Validated frozen IMDb sample and',len(runs),'completed model checkpoints',flush=True)
