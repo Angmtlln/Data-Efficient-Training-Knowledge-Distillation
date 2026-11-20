@@ -1,0 +1,1066 @@
+[
+  {
+    "seed": 17,
+    "name": "random",
+    "n": 6534,
+    "positive": 3615,
+    "mean_words": 9.399908172635445,
+    "nonzero_forgetting": 100,
+    "long_candidates": 30184,
+    "nonzero_long_candidates": 395,
+    "dose": 327,
+    "background_size": 6207,
+    "targeted_score_histogram": {
+      "1": 306,
+      "2": 19,
+      "3": 2
+    },
+    "paired_strata": [
+      {
+        "label": 0,
+        "length_bin": 2,
+        "count": 62
+      },
+      {
+        "label": 0,
+        "length_bin": 3,
+        "count": 49
+      },
+      {
+        "label": 0,
+        "length_bin": 4,
+        "count": 29
+      },
+      {
+        "label": 0,
+        "length_bin": 5,
+        "count": 21
+      },
+      {
+        "label": 0,
+        "length_bin": 6,
+        "count": 7
+      },
+      {
+        "label": 0,
+        "length_bin": 7,
+        "count": 6
+      },
+      {
+        "label": 0,
+        "length_bin": 8,
+        "count": 7
+      },
+      {
+        "label": 1,
+        "length_bin": 2,
+        "count": 55
+      },
+      {
+        "label": 1,
+        "length_bin": 3,
+        "count": 34
+      },
+      {
+        "label": 1,
+        "length_bin": 4,
+        "count": 21
+      },
+      {
+        "label": 1,
+        "length_bin": 5,
+        "count": 15
+      },
+      {
+        "label": 1,
+        "length_bin": 6,
+        "count": 7
+      },
+      {
+        "label": 1,
+        "length_bin": 7,
+        "count": 6
+      },
+      {
+        "label": 1,
+        "length_bin": 8,
+        "count": 8
+      }
+    ]
+  },
+  {
+    "seed": 17,
+    "name": "len8",
+    "n": 6534,
+    "positive": 3379,
+    "mean_words": 15.835935108662381,
+    "nonzero_forgetting": 70,
+    "long_candidates": 30184,
+    "nonzero_long_candidates": 395,
+    "dose": 327,
+    "background_size": 6207,
+    "targeted_score_histogram": {
+      "1": 306,
+      "2": 19,
+      "3": 2
+    },
+    "paired_strata": [
+      {
+        "label": 0,
+        "length_bin": 2,
+        "count": 62
+      },
+      {
+        "label": 0,
+        "length_bin": 3,
+        "count": 49
+      },
+      {
+        "label": 0,
+        "length_bin": 4,
+        "count": 29
+      },
+      {
+        "label": 0,
+        "length_bin": 5,
+        "count": 21
+      },
+      {
+        "label": 0,
+        "length_bin": 6,
+        "count": 7
+      },
+      {
+        "label": 0,
+        "length_bin": 7,
+        "count": 6
+      },
+      {
+        "label": 0,
+        "length_bin": 8,
+        "count": 7
+      },
+      {
+        "label": 1,
+        "length_bin": 2,
+        "count": 55
+      },
+      {
+        "label": 1,
+        "length_bin": 3,
+        "count": 34
+      },
+      {
+        "label": 1,
+        "length_bin": 4,
+        "count": 21
+      },
+      {
+        "label": 1,
+        "length_bin": 5,
+        "count": 15
+      },
+      {
+        "label": 1,
+        "length_bin": 6,
+        "count": 7
+      },
+      {
+        "label": 1,
+        "length_bin": 7,
+        "count": 6
+      },
+      {
+        "label": 1,
+        "length_bin": 8,
+        "count": 8
+      }
+    ]
+  },
+  {
+    "seed": 17,
+    "name": "len8_matched_random",
+    "n": 6534,
+    "positive": 3438,
+    "mean_words": 16.0154576063667,
+    "nonzero_forgetting": 14,
+    "long_candidates": 30184,
+    "nonzero_long_candidates": 395,
+    "dose": 327,
+    "background_size": 6207,
+    "targeted_score_histogram": {
+      "1": 306,
+      "2": 19,
+      "3": 2
+    },
+    "paired_strata": [
+      {
+        "label": 0,
+        "length_bin": 2,
+        "count": 62
+      },
+      {
+        "label": 0,
+        "length_bin": 3,
+        "count": 49
+      },
+      {
+        "label": 0,
+        "length_bin": 4,
+        "count": 29
+      },
+      {
+        "label": 0,
+        "length_bin": 5,
+        "count": 21
+      },
+      {
+        "label": 0,
+        "length_bin": 6,
+        "count": 7
+      },
+      {
+        "label": 0,
+        "length_bin": 7,
+        "count": 6
+      },
+      {
+        "label": 0,
+        "length_bin": 8,
+        "count": 7
+      },
+      {
+        "label": 1,
+        "length_bin": 2,
+        "count": 55
+      },
+      {
+        "label": 1,
+        "length_bin": 3,
+        "count": 34
+      },
+      {
+        "label": 1,
+        "length_bin": 4,
+        "count": 21
+      },
+      {
+        "label": 1,
+        "length_bin": 5,
+        "count": 15
+      },
+      {
+        "label": 1,
+        "length_bin": 6,
+        "count": 7
+      },
+      {
+        "label": 1,
+        "length_bin": 7,
+        "count": 6
+      },
+      {
+        "label": 1,
+        "length_bin": 8,
+        "count": 8
+      }
+    ]
+  },
+  {
+    "seed": 17,
+    "name": "len8_forgetting",
+    "n": 6534,
+    "positive": 3438,
+    "mean_words": 16.012090602999695,
+    "nonzero_forgetting": 341,
+    "long_candidates": 30184,
+    "nonzero_long_candidates": 395,
+    "dose": 327,
+    "background_size": 6207,
+    "targeted_score_histogram": {
+      "1": 306,
+      "2": 19,
+      "3": 2
+    },
+    "paired_strata": [
+      {
+        "label": 0,
+        "length_bin": 2,
+        "count": 62
+      },
+      {
+        "label": 0,
+        "length_bin": 3,
+        "count": 49
+      },
+      {
+        "label": 0,
+        "length_bin": 4,
+        "count": 29
+      },
+      {
+        "label": 0,
+        "length_bin": 5,
+        "count": 21
+      },
+      {
+        "label": 0,
+        "length_bin": 6,
+        "count": 7
+      },
+      {
+        "label": 0,
+        "length_bin": 7,
+        "count": 6
+      },
+      {
+        "label": 0,
+        "length_bin": 8,
+        "count": 7
+      },
+      {
+        "label": 1,
+        "length_bin": 2,
+        "count": 55
+      },
+      {
+        "label": 1,
+        "length_bin": 3,
+        "count": 34
+      },
+      {
+        "label": 1,
+        "length_bin": 4,
+        "count": 21
+      },
+      {
+        "label": 1,
+        "length_bin": 5,
+        "count": 15
+      },
+      {
+        "label": 1,
+        "length_bin": 6,
+        "count": 7
+      },
+      {
+        "label": 1,
+        "length_bin": 7,
+        "count": 6
+      },
+      {
+        "label": 1,
+        "length_bin": 8,
+        "count": 8
+      }
+    ]
+  },
+  {
+    "seed": 42,
+    "name": "random",
+    "n": 6534,
+    "positive": 3653,
+    "mean_words": 9.182124273033365,
+    "nonzero_forgetting": 86,
+    "long_candidates": 30184,
+    "nonzero_long_candidates": 365,
+    "dose": 327,
+    "background_size": 6207,
+    "targeted_score_histogram": {
+      "1": 313,
+      "2": 14
+    },
+    "paired_strata": [
+      {
+        "label": 0,
+        "length_bin": 2,
+        "count": 70
+      },
+      {
+        "label": 0,
+        "length_bin": 3,
+        "count": 56
+      },
+      {
+        "label": 0,
+        "length_bin": 4,
+        "count": 26
+      },
+      {
+        "label": 0,
+        "length_bin": 5,
+        "count": 21
+      },
+      {
+        "label": 0,
+        "length_bin": 6,
+        "count": 10
+      },
+      {
+        "label": 0,
+        "length_bin": 7,
+        "count": 3
+      },
+      {
+        "label": 0,
+        "length_bin": 8,
+        "count": 6
+      },
+      {
+        "label": 1,
+        "length_bin": 2,
+        "count": 57
+      },
+      {
+        "label": 1,
+        "length_bin": 3,
+        "count": 29
+      },
+      {
+        "label": 1,
+        "length_bin": 4,
+        "count": 17
+      },
+      {
+        "label": 1,
+        "length_bin": 5,
+        "count": 11
+      },
+      {
+        "label": 1,
+        "length_bin": 6,
+        "count": 8
+      },
+      {
+        "label": 1,
+        "length_bin": 7,
+        "count": 5
+      },
+      {
+        "label": 1,
+        "length_bin": 8,
+        "count": 8
+      }
+    ]
+  },
+  {
+    "seed": 42,
+    "name": "len8",
+    "n": 6534,
+    "positive": 3491,
+    "mean_words": 16.16023875114784,
+    "nonzero_forgetting": 84,
+    "long_candidates": 30184,
+    "nonzero_long_candidates": 365,
+    "dose": 327,
+    "background_size": 6207,
+    "targeted_score_histogram": {
+      "1": 313,
+      "2": 14
+    },
+    "paired_strata": [
+      {
+        "label": 0,
+        "length_bin": 2,
+        "count": 70
+      },
+      {
+        "label": 0,
+        "length_bin": 3,
+        "count": 56
+      },
+      {
+        "label": 0,
+        "length_bin": 4,
+        "count": 26
+      },
+      {
+        "label": 0,
+        "length_bin": 5,
+        "count": 21
+      },
+      {
+        "label": 0,
+        "length_bin": 6,
+        "count": 10
+      },
+      {
+        "label": 0,
+        "length_bin": 7,
+        "count": 3
+      },
+      {
+        "label": 0,
+        "length_bin": 8,
+        "count": 6
+      },
+      {
+        "label": 1,
+        "length_bin": 2,
+        "count": 57
+      },
+      {
+        "label": 1,
+        "length_bin": 3,
+        "count": 29
+      },
+      {
+        "label": 1,
+        "length_bin": 4,
+        "count": 17
+      },
+      {
+        "label": 1,
+        "length_bin": 5,
+        "count": 11
+      },
+      {
+        "label": 1,
+        "length_bin": 6,
+        "count": 8
+      },
+      {
+        "label": 1,
+        "length_bin": 7,
+        "count": 5
+      },
+      {
+        "label": 1,
+        "length_bin": 8,
+        "count": 8
+      }
+    ]
+  },
+  {
+    "seed": 42,
+    "name": "len8_matched_random",
+    "n": 6534,
+    "positive": 3334,
+    "mean_words": 16.134220997857362,
+    "nonzero_forgetting": 5,
+    "long_candidates": 30184,
+    "nonzero_long_candidates": 365,
+    "dose": 327,
+    "background_size": 6207,
+    "targeted_score_histogram": {
+      "1": 313,
+      "2": 14
+    },
+    "paired_strata": [
+      {
+        "label": 0,
+        "length_bin": 2,
+        "count": 70
+      },
+      {
+        "label": 0,
+        "length_bin": 3,
+        "count": 56
+      },
+      {
+        "label": 0,
+        "length_bin": 4,
+        "count": 26
+      },
+      {
+        "label": 0,
+        "length_bin": 5,
+        "count": 21
+      },
+      {
+        "label": 0,
+        "length_bin": 6,
+        "count": 10
+      },
+      {
+        "label": 0,
+        "length_bin": 7,
+        "count": 3
+      },
+      {
+        "label": 0,
+        "length_bin": 8,
+        "count": 6
+      },
+      {
+        "label": 1,
+        "length_bin": 2,
+        "count": 57
+      },
+      {
+        "label": 1,
+        "length_bin": 3,
+        "count": 29
+      },
+      {
+        "label": 1,
+        "length_bin": 4,
+        "count": 17
+      },
+      {
+        "label": 1,
+        "length_bin": 5,
+        "count": 11
+      },
+      {
+        "label": 1,
+        "length_bin": 6,
+        "count": 8
+      },
+      {
+        "label": 1,
+        "length_bin": 7,
+        "count": 5
+      },
+      {
+        "label": 1,
+        "length_bin": 8,
+        "count": 8
+      }
+    ]
+  },
+  {
+    "seed": 42,
+    "name": "len8_forgetting",
+    "n": 6534,
+    "positive": 3334,
+    "mean_words": 16.136057545148454,
+    "nonzero_forgetting": 332,
+    "long_candidates": 30184,
+    "nonzero_long_candidates": 365,
+    "dose": 327,
+    "background_size": 6207,
+    "targeted_score_histogram": {
+      "1": 313,
+      "2": 14
+    },
+    "paired_strata": [
+      {
+        "label": 0,
+        "length_bin": 2,
+        "count": 70
+      },
+      {
+        "label": 0,
+        "length_bin": 3,
+        "count": 56
+      },
+      {
+        "label": 0,
+        "length_bin": 4,
+        "count": 26
+      },
+      {
+        "label": 0,
+        "length_bin": 5,
+        "count": 21
+      },
+      {
+        "label": 0,
+        "length_bin": 6,
+        "count": 10
+      },
+      {
+        "label": 0,
+        "length_bin": 7,
+        "count": 3
+      },
+      {
+        "label": 0,
+        "length_bin": 8,
+        "count": 6
+      },
+      {
+        "label": 1,
+        "length_bin": 2,
+        "count": 57
+      },
+      {
+        "label": 1,
+        "length_bin": 3,
+        "count": 29
+      },
+      {
+        "label": 1,
+        "length_bin": 4,
+        "count": 17
+      },
+      {
+        "label": 1,
+        "length_bin": 5,
+        "count": 11
+      },
+      {
+        "label": 1,
+        "length_bin": 6,
+        "count": 8
+      },
+      {
+        "label": 1,
+        "length_bin": 7,
+        "count": 5
+      },
+      {
+        "label": 1,
+        "length_bin": 8,
+        "count": 8
+      }
+    ]
+  },
+  {
+    "seed": 101,
+    "name": "random",
+    "n": 6534,
+    "positive": 3618,
+    "mean_words": 9.33287419651056,
+    "nonzero_forgetting": 93,
+    "long_candidates": 30184,
+    "nonzero_long_candidates": 408,
+    "dose": 327,
+    "background_size": 6207,
+    "targeted_score_histogram": {
+      "1": 312,
+      "2": 14,
+      "3": 1
+    },
+    "paired_strata": [
+      {
+        "label": 0,
+        "length_bin": 2,
+        "count": 75
+      },
+      {
+        "label": 0,
+        "length_bin": 3,
+        "count": 60
+      },
+      {
+        "label": 0,
+        "length_bin": 4,
+        "count": 24
+      },
+      {
+        "label": 0,
+        "length_bin": 5,
+        "count": 13
+      },
+      {
+        "label": 0,
+        "length_bin": 6,
+        "count": 2
+      },
+      {
+        "label": 0,
+        "length_bin": 7,
+        "count": 3
+      },
+      {
+        "label": 0,
+        "length_bin": 8,
+        "count": 10
+      },
+      {
+        "label": 1,
+        "length_bin": 2,
+        "count": 60
+      },
+      {
+        "label": 1,
+        "length_bin": 3,
+        "count": 32
+      },
+      {
+        "label": 1,
+        "length_bin": 4,
+        "count": 16
+      },
+      {
+        "label": 1,
+        "length_bin": 5,
+        "count": 12
+      },
+      {
+        "label": 1,
+        "length_bin": 6,
+        "count": 14
+      },
+      {
+        "label": 1,
+        "length_bin": 7,
+        "count": 4
+      },
+      {
+        "label": 1,
+        "length_bin": 8,
+        "count": 2
+      }
+    ]
+  },
+  {
+    "seed": 101,
+    "name": "len8",
+    "n": 6534,
+    "positive": 3367,
+    "mean_words": 15.939240893786348,
+    "nonzero_forgetting": 75,
+    "long_candidates": 30184,
+    "nonzero_long_candidates": 408,
+    "dose": 327,
+    "background_size": 6207,
+    "targeted_score_histogram": {
+      "1": 312,
+      "2": 14,
+      "3": 1
+    },
+    "paired_strata": [
+      {
+        "label": 0,
+        "length_bin": 2,
+        "count": 75
+      },
+      {
+        "label": 0,
+        "length_bin": 3,
+        "count": 60
+      },
+      {
+        "label": 0,
+        "length_bin": 4,
+        "count": 24
+      },
+      {
+        "label": 0,
+        "length_bin": 5,
+        "count": 13
+      },
+      {
+        "label": 0,
+        "length_bin": 6,
+        "count": 2
+      },
+      {
+        "label": 0,
+        "length_bin": 7,
+        "count": 3
+      },
+      {
+        "label": 0,
+        "length_bin": 8,
+        "count": 10
+      },
+      {
+        "label": 1,
+        "length_bin": 2,
+        "count": 60
+      },
+      {
+        "label": 1,
+        "length_bin": 3,
+        "count": 32
+      },
+      {
+        "label": 1,
+        "length_bin": 4,
+        "count": 16
+      },
+      {
+        "label": 1,
+        "length_bin": 5,
+        "count": 12
+      },
+      {
+        "label": 1,
+        "length_bin": 6,
+        "count": 14
+      },
+      {
+        "label": 1,
+        "length_bin": 7,
+        "count": 4
+      },
+      {
+        "label": 1,
+        "length_bin": 8,
+        "count": 2
+      }
+    ]
+  },
+  {
+    "seed": 101,
+    "name": "len8_matched_random",
+    "n": 6534,
+    "positive": 3358,
+    "mean_words": 15.977502295684113,
+    "nonzero_forgetting": 13,
+    "long_candidates": 30184,
+    "nonzero_long_candidates": 408,
+    "dose": 327,
+    "background_size": 6207,
+    "targeted_score_histogram": {
+      "1": 312,
+      "2": 14,
+      "3": 1
+    },
+    "paired_strata": [
+      {
+        "label": 0,
+        "length_bin": 2,
+        "count": 75
+      },
+      {
+        "label": 0,
+        "length_bin": 3,
+        "count": 60
+      },
+      {
+        "label": 0,
+        "length_bin": 4,
+        "count": 24
+      },
+      {
+        "label": 0,
+        "length_bin": 5,
+        "count": 13
+      },
+      {
+        "label": 0,
+        "length_bin": 6,
+        "count": 2
+      },
+      {
+        "label": 0,
+        "length_bin": 7,
+        "count": 3
+      },
+      {
+        "label": 0,
+        "length_bin": 8,
+        "count": 10
+      },
+      {
+        "label": 1,
+        "length_bin": 2,
+        "count": 60
+      },
+      {
+        "label": 1,
+        "length_bin": 3,
+        "count": 32
+      },
+      {
+        "label": 1,
+        "length_bin": 4,
+        "count": 16
+      },
+      {
+        "label": 1,
+        "length_bin": 5,
+        "count": 12
+      },
+      {
+        "label": 1,
+        "length_bin": 6,
+        "count": 14
+      },
+      {
+        "label": 1,
+        "length_bin": 7,
+        "count": 4
+      },
+      {
+        "label": 1,
+        "length_bin": 8,
+        "count": 2
+      }
+    ]
+  },
+  {
+    "seed": 101,
+    "name": "len8_forgetting",
+    "n": 6534,
+    "positive": 3358,
+    "mean_words": 15.980104071013162,
+    "nonzero_forgetting": 340,
+    "long_candidates": 30184,
+    "nonzero_long_candidates": 408,
+    "dose": 327,
+    "background_size": 6207,
+    "targeted_score_histogram": {
+      "1": 312,
+      "2": 14,
+      "3": 1
+    },
+    "paired_strata": [
+      {
+        "label": 0,
+        "length_bin": 2,
+        "count": 75
+      },
+      {
+        "label": 0,
+        "length_bin": 3,
+        "count": 60
+      },
+      {
+        "label": 0,
+        "length_bin": 4,
+        "count": 24
+      },
+      {
+        "label": 0,
+        "length_bin": 5,
+        "count": 13
+      },
+      {
+        "label": 0,
+        "length_bin": 6,
+        "count": 2
+      },
+      {
+        "label": 0,
+        "length_bin": 7,
+        "count": 3
+      },
+      {
+        "label": 0,
+        "length_bin": 8,
+        "count": 10
+      },
+      {
+        "label": 1,
+        "length_bin": 2,
+        "count": 60
+      },
+      {
+        "label": 1,
+        "length_bin": 3,
+        "count": 32
+      },
+      {
+        "label": 1,
+        "length_bin": 4,
+        "count": 16
+      },
+      {
+        "label": 1,
+        "length_bin": 5,
+        "count": 12
+      },
+      {
+        "label": 1,
+        "length_bin": 6,
+        "count": 14
+      },
+      {
+        "label": 1,
+        "length_bin": 7,
+        "count": 4
+      },
+      {
+        "label": 1,
+        "length_bin": 8,
+        "count": 2
+      }
+    ]
+  }
+]

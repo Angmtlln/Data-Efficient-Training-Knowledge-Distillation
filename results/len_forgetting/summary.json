@@ -1,0 +1,92 @@
+{
+  "n_runs": 12,
+  "expected_runs": 12,
+  "summary": [
+    {
+      "name": "len8",
+      "n": 3,
+      "accuracy_mean": 0.9365443425076453,
+      "accuracy_sd": 0.007461476030559299,
+      "macro_f1_mean": 0.9365049163114533,
+      "macro_f1_sd": 0.007481690380508203,
+      "positive_f1_mean": 0.9380402812306828,
+      "positive_f1_sd": 0.006937069921124844,
+      "val_best_accuracy_mean": 0.924,
+      "val_best_accuracy_sd": 0.004769696007084762,
+      "seconds_mean": 571.2319920857748,
+      "seconds_sd": 23.036571702255998
+    },
+    {
+      "name": "len8_forgetting",
+      "n": 3,
+      "accuracy_mean": 0.9315749235474007,
+      "accuracy_sd": 0.001751749118866919,
+      "macro_f1_mean": 0.9315639551483423,
+      "macro_f1_sd": 0.001760058358540521,
+      "positive_f1_mean": 0.9323808083111483,
+      "positive_f1_sd": 0.0014012415890548673,
+      "val_best_accuracy_mean": 0.923,
+      "val_best_accuracy_sd": 0.006763874629234377,
+      "seconds_mean": 532.066333770752,
+      "seconds_sd": 113.1126491938509
+    },
+    {
+      "name": "len8_matched_random",
+      "n": 3,
+      "accuracy_mean": 0.9327217125382262,
+      "accuracy_sd": 0.0023872316507639038,
+      "macro_f1_mean": 0.9326896058494141,
+      "macro_f1_sd": 0.0023852743659723715,
+      "positive_f1_mean": 0.9340284038125094,
+      "positive_f1_sd": 0.0024278188512401135,
+      "val_best_accuracy_mean": 0.9256666666666667,
+      "val_best_accuracy_sd": 0.004752192476461061,
+      "seconds_mean": 507.76864496866864,
+      "seconds_sd": 158.56716462322714
+    },
+    {
+      "name": "random",
+      "n": 3,
+      "accuracy_mean": 0.9285168195718655,
+      "accuracy_sd": 0.0028860223376416957,
+      "macro_f1_mean": 0.9284286009256899,
+      "macro_f1_sd": 0.00291205382398224,
+      "positive_f1_mean": 0.9308714804705334,
+      "positive_f1_sd": 0.002588540436396626,
+      "val_best_accuracy_mean": 0.9316666666666666,
+      "val_best_accuracy_sd": 0.002254624876411478,
+      "seconds_mean": 568.5385477542877,
+      "seconds_sd": 6.460452274430184
+    }
+  ],
+  "paired_comparisons": [
+    {
+      "selection_seed": 17,
+      "training_seed": 17,
+      "accuracy_delta_pp": 0.0,
+      "macro_f1_delta_pp": 0.006550111793957036,
+      "different_predictions": 34,
+      "control_correct_only": 17,
+      "treatment_correct_only": 17
+    },
+    {
+      "selection_seed": 42,
+      "training_seed": 42,
+      "accuracy_delta_pp": -0.4587155963302725,
+      "macro_f1_delta_pp": -0.46008977685561003,
+      "different_predictions": 26,
+      "control_correct_only": 15,
+      "treatment_correct_only": 11
+    },
+    {
+      "selection_seed": 101,
+      "training_seed": 101,
+      "accuracy_delta_pp": 0.11467889908256534,
+      "macro_f1_delta_pp": 0.11584445474014382,
+      "different_predictions": 39,
+      "control_correct_only": 19,
+      "treatment_correct_only": 20
+    }
+  ],
+  "caveat": "Exploratory: one training seed per selection seed; fixed 872-row GLUE validation reused in prior experiments."
+}
