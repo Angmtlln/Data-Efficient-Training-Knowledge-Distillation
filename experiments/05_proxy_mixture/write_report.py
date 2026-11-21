@@ -55,18 +55,25 @@ def main():
         lines.append(f'| {LABELS[name]} | {vals[0]} | {vals[1]} |')
     # Observational description only, not proof of causal/significant benefit.
     best=max(METHODS[2:],key=lambda n:stats['sst2'][n]['accuracy_mean'])
+    mid_sst=[x['accuracy_delta_pp'] for x in groups['sst2']['paired_deltas'] if x['name']=='mix_mid']
+    mid_imdb=[x['accuracy_delta_pp'] for x in groups['imdb']['paired_deltas'] if x['name']=='mix_mid']
+    diverse_imdb=[x['accuracy_delta_pp'] for x in groups['imdb']['paired_deltas'] if x['name']=='mix_diverse']
+    long_best=stats['sst2']['len8']['accuracy_mean']>stats['sst2'][best]['accuracy_mean']
     lines+=['', '## Что видно в данных','',
         f'- Среди новых вариантов на использованной в проекте SST-2-оценке наибольшую среднюю accuracy получил `{best}` ({fmt(stats["sst2"][best]["accuracy_mean"])}); это результат поиска среди нескольких методов, а не подтверждение превосходства.',
+        f'- Простой случайный отбор длинных фраз из серии 04 дал {fmt(stats["sst2"]["len8"]["accuracy_mean"])} на SST-2; это {"выше" if long_best else "не выше"} среднего лучшего нового варианта. Выборки другие, поэтому это не парная оценка эффекта конкретного критерия.',
+        f'- Отбор средней по группе уверенности показал положительную разницу с контролем на {sum(x>0 for x in mid_sst)} из 3 сидов SST-2 и на {sum(x>0 for x in mid_imdb)} из 3 сидов IMDb. Этого недостаточно, чтобы утверждать перенос эффекта.',
+        f'- Кластерный отбор на IMDb показал отрицательную разницу с контролем на {sum(x<0 for x in diverse_imdb)} из 3 сидов; это наблюдение на длинных обрезанных отзывах, а не универсальный вывод о разнообразии.',
         '- Главный контроль — `mix_random`: он имеет тот же фон и те же квоты класса и длины, что и специальные варианты.',
         '- В таблице исходные `random` и `len8` взяты из серии 04, обученной с теми же моделью, сплитами и окружением; это полезные, но не идентично подобранные контроли.',
         '', '### Что реально выбрали методы','',
-        'В таблице — характеристики только добавленных 1634 целевых строк, усреднённые по трём сидам.',
+        'В таблице — средняя длина всей выборки и характеристики добавленных 1634 целевых строк, усреднённые по трём сидам.',
         'Ошибка proxy — несовпадение его OOF-ответа с существующей меткой, а не подтверждённая ошибка разметки.','',
-        '| Метод | Proxy не согласен с меткой | Средняя вероятность метки | Затронуто кластеров |',
-        '|---|---:|---:|---:|']
+        '| Метод | Средняя длина, слов | Proxy не согласен с меткой | Средняя вероятность метки | Затронуто кластеров |',
+        '|---|---:|---:|---:|---:|']
     for name in METHODS[2:]:
         rr=[r for r in audit if r['name']==name]
-        lines.append(f'| {LABELS[name]} | {100*np.mean([r["target_oof_wrong_fraction"] for r in rr]):.1f}% | {np.mean([r["target_oof_gold_mean"] for r in rr]):.3f} | {np.mean([r["target_cluster_count"] for r in rr]):.1f} из 64 |')
+        lines.append(f'| {LABELS[name]} | {np.mean([r["mean_words"] for r in rr]):.2f} | {100*np.mean([r["target_oof_wrong_fraction"] for r in rr]):.1f}% | {np.mean([r["target_oof_gold_mean"] for r in rr]):.3f} | {np.mean([r["target_cluster_count"] for r in rr]):.1f} из 64 |')
     lines+=['',f'Наибольший TF-IDF-кластер содержит {100*meta["cluster_largest_share"]:.1f}% всех допустимых длинных строк; равномерный отбор по кластерам меняет исходное распределение.',
         '', '## Внешняя оценка и совпадения','',
         f'IMDb: {external["n"]} отзывов, по 1000 каждого класса, случайная фиксированная выборка test split;',

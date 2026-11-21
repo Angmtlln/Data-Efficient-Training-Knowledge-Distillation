@@ -1,0 +1,17 @@
+{
+  "name": "len8",
+  "selection_seed": 101,
+  "training_seed": 101,
+  "selection_sha256": "87fdf948fd36c25c80a45b5a8daeb0a8d9f247da87e52c11b98fa6f68dbd2157",
+  "imdb_data_sha256": "f19848b181aa8f2fe204d7ea245bf9fba92def36424d584647b723ab227ea3ec",
+  "n": 2000,
+  "max_length": 64,
+  "checkpoint": "/Users/abikineev/Desktop/study/efficientNN/project/outputs/len_forgetting/checkpoints/len8__ss101__ts101/checkpoint-615",
+  "metrics": {
+    "accuracy": 0.81,
+    "macro_f1": 0.8098811757348343,
+    "positive_f1": 0.8146341463414634
+  },
+  "seconds": 9.777281045913696,
+  "device": "mps"
+}

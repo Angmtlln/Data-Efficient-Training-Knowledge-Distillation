@@ -1,0 +1,17 @@
+{
+  "name": "mix_diverse",
+  "selection_seed": 42,
+  "training_seed": 42,
+  "selection_sha256": "cb072b9e54b2183c996604c638baeb190e3ffce2291d5ae37afeb30960939764",
+  "imdb_data_sha256": "f19848b181aa8f2fe204d7ea245bf9fba92def36424d584647b723ab227ea3ec",
+  "n": 2000,
+  "max_length": 64,
+  "checkpoint": "/Users/abikineev/Desktop/study/efficientNN/project/outputs/proxy_mixture/checkpoints/mix_diverse__ss42__ts42/checkpoint-615",
+  "metrics": {
+    "accuracy": 0.817,
+    "macro_f1": 0.8169470977112385,
+    "positive_f1": 0.8200589970501475
+  },
+  "seconds": 9.847316980361938,
+  "device": "mps"
+}

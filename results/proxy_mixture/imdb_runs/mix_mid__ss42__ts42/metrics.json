@@ -1,0 +1,17 @@
+{
+  "name": "mix_mid",
+  "selection_seed": 42,
+  "training_seed": 42,
+  "selection_sha256": "97331fe9d5f3f50beeef4d782a6109b47a9655a346e6a89e36795ddcdd501f22",
+  "imdb_data_sha256": "f19848b181aa8f2fe204d7ea245bf9fba92def36424d584647b723ab227ea3ec",
+  "n": 2000,
+  "max_length": 64,
+  "checkpoint": "/Users/abikineev/Desktop/study/efficientNN/project/outputs/proxy_mixture/checkpoints/mix_mid__ss42__ts42/checkpoint-615",
+  "metrics": {
+    "accuracy": 0.8185,
+    "macro_f1": 0.8184236925567969,
+    "positive_f1": 0.8147013782542113
+  },
+  "seconds": 9.940824031829834,
+  "device": "mps"
+}

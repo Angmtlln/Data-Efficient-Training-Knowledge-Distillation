@@ -1,0 +1,17 @@
+{
+  "name": "mix_uncertain",
+  "selection_seed": 101,
+  "training_seed": 101,
+  "selection_sha256": "39556acdbb160c8d0b99138f09f27da44a32d3ea4e7458675fd7355ea3d3aa5f",
+  "imdb_data_sha256": "f19848b181aa8f2fe204d7ea245bf9fba92def36424d584647b723ab227ea3ec",
+  "n": 2000,
+  "max_length": 64,
+  "checkpoint": "/Users/abikineev/Desktop/study/efficientNN/project/outputs/proxy_mixture/checkpoints/mix_uncertain__ss101__ts101/checkpoint-615",
+  "metrics": {
+    "accuracy": 0.817,
+    "macro_f1": 0.8169470977112385,
+    "positive_f1": 0.8138351983723296
+  },
+  "seconds": 9.995163917541504,
+  "device": "mps"
+}

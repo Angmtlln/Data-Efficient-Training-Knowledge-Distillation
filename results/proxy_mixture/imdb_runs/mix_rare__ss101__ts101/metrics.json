@@ -1,0 +1,17 @@
+{
+  "name": "mix_rare",
+  "selection_seed": 101,
+  "training_seed": 101,
+  "selection_sha256": "2757b7e2ae4e78a9e2841a832e5829a7d9bd5a174f170d5a55aa209d29e88bb2",
+  "imdb_data_sha256": "f19848b181aa8f2fe204d7ea245bf9fba92def36424d584647b723ab227ea3ec",
+  "n": 2000,
+  "max_length": 64,
+  "checkpoint": "/Users/abikineev/Desktop/study/efficientNN/project/outputs/proxy_mixture/checkpoints/mix_rare__ss101__ts101/checkpoint-615",
+  "metrics": {
+    "accuracy": 0.816,
+    "macro_f1": 0.8159850947926781,
+    "positive_f1": 0.817641228939544
+  },
+  "seconds": 9.948333024978638,
+  "device": "mps"
+}

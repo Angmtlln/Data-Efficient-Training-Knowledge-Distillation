@@ -1,0 +1,17 @@
+{
+  "name": "random",
+  "selection_seed": 101,
+  "training_seed": 101,
+  "selection_sha256": "d1b50997544e3535e901d6c38b8f1cd4ed8ad2d8203a0e69d3cd5be4ed3301f2",
+  "imdb_data_sha256": "f19848b181aa8f2fe204d7ea245bf9fba92def36424d584647b723ab227ea3ec",
+  "n": 2000,
+  "max_length": 64,
+  "checkpoint": "/Users/abikineev/Desktop/study/efficientNN/project/outputs/len_forgetting/checkpoints/random__ss101__ts101/checkpoint-615",
+  "metrics": {
+    "accuracy": 0.816,
+    "macro_f1": 0.8159688987438878,
+    "positive_f1": 0.8135764944275583
+  },
+  "seconds": 9.871722936630249,
+  "device": "mps"
+}
