@@ -10,6 +10,7 @@ RESULTS_CSV = RESULTS_DIR / "results.csv"
 MODEL_NAME = "answerdotai/ModernBERT-base"
 EMBED_MODEL_NAME = "sentence-transformers/all-MiniLM-L6-v2"
 PPL_MODEL_NAME = "openai-community/gpt2"
+LLM_MODEL_NAME = "Qwen/Qwen2.5-3B-Instruct"
 
 # SST-2 test labels are hidden, so: GLUE validation -> our test set,
 # a stratified slice of GLUE train -> our validation set, rest of train -> selection pool.

@@ -25,9 +25,13 @@ AXIS = {
     "ccs_b03": "coreset", "ccs_b10": "coreset", "moderate": "coreset", "d2": "coreset", "d2_b10": "coreset",
     "ccs_b10_cheap": "coreset", "ccs_len8": "hybrid", "ccs_len8_cheap": "hybrid",
     "ccs_b10_bal": "coreset", "ccs_b10_cheap_bal": "coreset", "dsir": "quality", "domain_clf": "quality",
+    "llm_quality_top": "llm", "llm_quality_top_bal": "llm", "llm_top_bal": "llm", "llm_filter_bal": "llm",
+    "llm_clean": "llm", "llm_filter_len8_bal": "hybrid",
+    "roots": "source", "one_per_sent": "source", "one_per_sent_len8": "source", "all_per_sent": "source",
+    "roots_mix50": "source",
 }
 COLORS = {"quality": "#2a78d6", "diversity": "#eb6834", "importance": "#1baf7a", "hybrid": "#6250d6", "coreset": "#e87ba4",
-          "baseline": "#8a8985"}
+          "llm": "#c9a227", "source": "#2fa8b5", "baseline": "#8a8985"}
 INK, INK2, GRID, SURFACE = "#0b0b0b", "#52514e", "#e4e3df", "#fcfcfb"
 
 
@@ -50,6 +54,11 @@ def subset_features(scores, idx, emb, test_centroid):
         # spread of the subset in embedding space: 1 - |mean embedding|
         embed_spread=1 - np.linalg.norm(e.mean(0)),
         test_sim=float(e.mean(0) @ test_centroid),
+        # source diversity: distinct parent sentences per selected phrase (src/analysis/nested.py)
+        sent_coverage=sub.sent_id[sub.sent_id >= 0].nunique() / len(sub) if "sent_id" in sub else np.nan,
+        root_share=sub.is_root.mean() if "is_root" in sub else np.nan,
+        llm_gold_prob=sub.llm_gold_prob.mean() if "llm_gold_prob" in sub else np.nan,
+        llm_neutral=sub.llm_neutral.mean() if "llm_neutral" in sub else np.nan,
     )
 
 

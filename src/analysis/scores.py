@@ -42,9 +42,10 @@ def main():
     oof = oof_scores(df["label"].to_numpy())
     if oof is not None:
         df = pd.concat([df, oof], axis=1)
-    cheap = DATA_DIR / "cheap_scores.parquet"
-    if cheap.exists():
-        df = df.merge(pd.read_parquet(cheap), on="pool_idx")
+    for extra in ("cheap_scores", "llm_scores", "nested"):
+        path = DATA_DIR / f"{extra}.parquet"
+        if path.exists():
+            df = df.merge(pd.read_parquet(path), on="pool_idx")
     df.to_parquet(DATA_DIR / "scores.parquet")
     print(df.drop(columns=["pool_idx", "cluster"]).describe().round(3).to_string())
     print("\nSpearman correlations between scores:")

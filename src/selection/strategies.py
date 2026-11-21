@@ -12,7 +12,7 @@ import torch
 
 from src.config import BUDGET_FRACTION, DATA_DIR
 from src.data import save_subset
-from src.selection import coreset, domain, dsir
+from src.selection import coreset, domain, dsir, llm, nested
 
 
 def _random_from(candidates, budget, rng):
@@ -156,10 +156,25 @@ STRATEGIES = dict(
     # principled version of the length filter: importance resampling towards unlabeled target sentences
     dsir=dsir.dsir,
     domain_clf=domain.domain_clf,
+    # LLM-as-judge quality (src/selection/llm.py); top-k / filters within each class
+    llm_quality_top=llm.llm_quality_top,
+    llm_quality_top_bal=class_balanced(llm.llm_quality_top),
+    llm_top_bal=class_balanced(llm.llm_top),
+    llm_filter_bal=class_balanced(llm.llm_filter),
+    llm_clean=llm.llm_clean,
+    llm_filter_len8_bal=restrict(lambda df: df.n_words >= 8, class_balanced(llm.llm_filter)),
+    # source sentence of each phrase (src/selection/nested.py): length vs source diversity
+    roots=nested.roots,
+    one_per_sent=nested.one_per_sent(),
+    one_per_sent_len8=nested.one_per_sent(min_words=8),
+    all_per_sent=nested.all_per_sent,
+    roots_mix50=nested.roots_mix(0.5),
 )
 NEEDS_OOF = {"clean", "clean_kmeans", "clean_ambiguous_bal", "clean_len5_kmeans", "rank_agg",
              "clean_len8", "mix_ambig20"}
 NEEDS_CHEAP = {"ccs_b10_cheap", "ccs_len8_cheap", "ccs_b10_cheap_bal"}
+NEEDS_COLUMN = {name: "llm_quality" for name in STRATEGIES if name.startswith("llm_")} | {
+    name: "sent_id" for name in ("roots", "one_per_sent", "one_per_sent_len8", "all_per_sent", "roots_mix50")}
 
 
 def main():
@@ -179,6 +194,9 @@ def main():
             continue
         if name in NEEDS_CHEAP and "el2n_cheap" not in df:
             print(f"skip {name}: run cheap_scores + scores first")
+            continue
+        if name in NEEDS_COLUMN and NEEDS_COLUMN[name] not in df:
+            print(f"skip {name}: column {NEEDS_COLUMN[name]} missing, run llm_scores / nested + scores first")
             continue
         for s in args.seeds:
             idx = STRATEGIES[name](df, budget, np.random.default_rng(s))
