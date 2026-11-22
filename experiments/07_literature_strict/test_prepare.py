@@ -77,6 +77,32 @@ class SelectionTests(unittest.TestCase):
             target = np.setdiff1d(ids, bg)
             self.assertEqual(Counter(zip(labels[target].tolist(), np.minimum(lengths[target] // 4, 8).tolist())), quota)
 
+    def test_root_enrichment_and_strict_eligibility(self):
+        ds, meta = mod.read_data()
+        scores = np.load(mod.ROOT / 'scores.npz')
+        roots = np.load(mod.ROOT / 'inferred_roots.npz')['is_root']
+        labels = np.asarray(ds['pool']['label'])
+        lengths = np.asarray([len(t.split()) for t in ds['pool']['sentence']])
+        from collections import Counter
+        for seed in mod.SEEDS:
+            _, bg, quota = mod.select(labels, lengths, scores['eligible'], scores['gold_probability'], scores['fd_bin'], seed)
+            for name in ('long_roots_matched', 'long_roots_max'):
+                manifest = json.loads((mod.ROOT / 'selections' / f'{name}__s{seed}.json').read_text())
+                checksum = manifest.pop('sha256')
+                self.assertEqual(mod.digest(manifest), checksum)
+                self.assertEqual(manifest['pool_sha256'], meta['splits']['pool']['sha256'])
+                ids = np.asarray(manifest['indices'])
+                self.assertEqual(len(set(ids)), mod.N)
+                self.assertTrue(scores['eligible'][ids].all())
+                self.assertTrue((lengths[ids] >= 8).all())
+                if name == 'long_roots_matched':
+                    self.assertTrue(np.isin(bg, ids).all())
+                    target = np.setdiff1d(ids, bg)
+                    self.assertTrue(roots[target].all())
+                    self.assertEqual(Counter(zip(labels[target].tolist(), np.minimum(lengths[target] // 4, 8).tolist())), quota)
+                else:
+                    self.assertEqual(int(roots[ids].sum()), int((roots & scores['eligible'] & (lengths >= 8)).sum()))
+
 
 if __name__ == '__main__':
     unittest.main()

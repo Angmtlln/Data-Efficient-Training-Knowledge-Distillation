@@ -14,7 +14,8 @@ sys.path.insert(0, str(REPO / 'experiments/01_cpu_selection/code'))
 from common import digest, read_data
 
 SEEDS = (17, 42, 101)
-METHODS = ('long_random', 'long_mid', 'long_fd', 'long_fd_mid', 'pool_random', 'long_gsnr')
+METHODS = ('long_random', 'long_mid', 'long_fd', 'long_fd_mid', 'pool_random', 'long_gsnr',
+           'long_roots_matched', 'long_roots_max')
 
 
 def main():

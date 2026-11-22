@@ -1,0 +1,50 @@
+[
+  {
+    "name": "long_roots_matched",
+    "seed": 17,
+    "n_roots": 2653,
+    "mean_words": 15.831955922865014,
+    "positive_fraction": 0.5260177532904806,
+    "shared_background": 4900
+  },
+  {
+    "name": "long_roots_max",
+    "seed": 17,
+    "n_roots": 5419,
+    "mean_words": 19.35001530456076,
+    "positive_fraction": 0.5280073461891643,
+    "shared_background": 1213
+  },
+  {
+    "name": "long_roots_matched",
+    "seed": 42,
+    "n_roots": 2654,
+    "mean_words": 15.813590449954086,
+    "positive_fraction": 0.5205081114172023,
+    "shared_background": 4900
+  },
+  {
+    "name": "long_roots_max",
+    "seed": 42,
+    "n_roots": 5419,
+    "mean_words": 19.348331802877258,
+    "positive_fraction": 0.529537802265075,
+    "shared_background": 1218
+  },
+  {
+    "name": "long_roots_matched",
+    "seed": 101,
+    "n_roots": 2618,
+    "mean_words": 15.881083562901745,
+    "positive_fraction": 0.5208142026323844,
+    "shared_background": 4900
+  },
+  {
+    "name": "long_roots_max",
+    "seed": 101,
+    "n_roots": 5419,
+    "mean_words": 19.30410162228344,
+    "positive_fraction": 0.522038567493113,
+    "shared_background": 1220
+  }
+]

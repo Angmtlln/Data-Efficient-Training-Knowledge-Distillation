@@ -1,0 +1,11 @@
+{
+  "method": "contiguous whitespace-token containment in original pool + val, no labels",
+  "caveat": "Heuristic roots are not authoritative SST parse trees or guaranteed full sentences.",
+  "pool_root_rows": 6670,
+  "eligible_root_rows": 6060,
+  "eligible_long_root_rows": 5419,
+  "eligible_root_positive_fraction": 0.5229372937293729,
+  "eligible_root_mean_words": 18.713036303630364,
+  "root_mask_sha256": "c37843d9e9dc97f6543e7926a7473b44d8de94b95ec1262ff99e429ee3fea539",
+  "seconds": 1.2468793392181396
+}
