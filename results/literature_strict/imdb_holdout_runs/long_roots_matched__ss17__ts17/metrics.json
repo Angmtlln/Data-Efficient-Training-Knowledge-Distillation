@@ -1,0 +1,13 @@
+{
+  "name": "long_roots_matched",
+  "selection_seed": 17,
+  "selection_sha256": "955d31334d26d4759720cd48a01b4d8915ed517cc197261aa49a5a8906d81170",
+  "data_sha256": "c203a5ba4cb7895009a773e9af002d3b60b7b23a517894d858c1b78e1f7b6f84",
+  "n": 2000,
+  "max_length": 64,
+  "accuracy": 0.8215,
+  "macro_f1": 0.8214721050164089,
+  "seconds": 17.216776847839355,
+  "checkpoint": "/Users/abikineev/Desktop/study/efficientNN/project/outputs/literature_strict/checkpoints/long_roots_matched__ss17__ts17/checkpoint-410",
+  "device": "mps"
+}

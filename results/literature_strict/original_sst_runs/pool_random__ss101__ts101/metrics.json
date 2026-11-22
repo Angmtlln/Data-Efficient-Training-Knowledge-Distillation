@@ -1,0 +1,16 @@
+{
+  "name": "pool_random",
+  "selection_seed": 101,
+  "selection_sha256": "750c2f1c8acc51a939394f4ef1e9f2e1a223418b9d880fc196b284b731c8fd02",
+  "data_sha256": "4469710d9b7941cf97a3103ea6b34b177a77d0526150b6818fbe58120140cd82",
+  "n": 1821,
+  "n_clean": 1818,
+  "accuracy": 0.942888522789676,
+  "macro_f1": 0.9428719668906934,
+  "clean_accuracy": 0.9433443344334433,
+  "clean_macro_f1": 0.9433278564041786,
+  "max_length": 64,
+  "seconds": 13.30733585357666,
+  "device": "mps",
+  "checkpoint": "/Users/abikineev/Desktop/study/efficientNN/project/outputs/literature_strict/checkpoints/pool_random__ss101__ts101/checkpoint-410"
+}

@@ -1,0 +1,13 @@
+{
+  "name": "long_gsnr",
+  "selection_seed": 101,
+  "selection_sha256": "e4aa45fe3bc2209823efee0258b515ffee4d823c7fc6d2f57b6d52f98ed0f9ac",
+  "data_sha256": "c203a5ba4cb7895009a773e9af002d3b60b7b23a517894d858c1b78e1f7b6f84",
+  "n": 2000,
+  "max_length": 64,
+  "accuracy": 0.8095,
+  "macro_f1": 0.8090320808561178,
+  "seconds": 17.049931049346924,
+  "checkpoint": "/Users/abikineev/Desktop/study/efficientNN/project/outputs/literature_strict/checkpoints/long_gsnr__ss101__ts101/checkpoint-615",
+  "device": "mps"
+}

@@ -1,0 +1,13 @@
+{
+  "name": "long_fd",
+  "selection_seed": 101,
+  "selection_sha256": "5a5b7143e9edeac058318960f9969928f55c64fb5cd28073e7f185330c1dcf75",
+  "data_sha256": "c203a5ba4cb7895009a773e9af002d3b60b7b23a517894d858c1b78e1f7b6f84",
+  "n": 2000,
+  "max_length": 64,
+  "accuracy": 0.8075,
+  "macro_f1": 0.8067450980392157,
+  "seconds": 17.41852378845215,
+  "checkpoint": "/Users/abikineev/Desktop/study/efficientNN/project/outputs/literature_strict/checkpoints/long_fd__ss101__ts101/checkpoint-615",
+  "device": "mps"
+}

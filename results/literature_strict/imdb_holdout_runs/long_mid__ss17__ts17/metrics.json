@@ -1,0 +1,13 @@
+{
+  "name": "long_mid",
+  "selection_seed": 17,
+  "selection_sha256": "8e4701ba082924e5f3070b30f719ded45c2336abf95dd9cf7544db98dc23a360",
+  "data_sha256": "c203a5ba4cb7895009a773e9af002d3b60b7b23a517894d858c1b78e1f7b6f84",
+  "n": 2000,
+  "max_length": 64,
+  "accuracy": 0.808,
+  "macro_f1": 0.807999231996928,
+  "seconds": 17.024378776550293,
+  "checkpoint": "/Users/abikineev/Desktop/study/efficientNN/project/outputs/literature_strict/checkpoints/long_mid__ss17__ts17/checkpoint-615",
+  "device": "mps"
+}

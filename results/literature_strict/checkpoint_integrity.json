@@ -1,4 +1,11 @@
 {
+  "long_fd__ss101__ts101": {
+    "sha256": "27e06c45a505a6d561992cfb3ea62b2a8da3fc4016e79ac1468b037fd9f386b4",
+    "bytes": 598439784,
+    "mtime_ns": 1795343170918651616,
+    "checkpoint": "outputs/literature_strict/checkpoints/long_fd__ss101__ts101/checkpoint-615/model.safetensors",
+    "selection_sha256": "5a5b7143e9edeac058318960f9969928f55c64fb5cd28073e7f185330c1dcf75"
+  },
   "long_fd__ss17__ts17": {
     "sha256": "098689941bc0790c9c52bbc01265453bc128fb148e92bb4368f822848511848d",
     "bytes": 598439784,
@@ -13,12 +20,54 @@
     "checkpoint": "outputs/literature_strict/checkpoints/long_fd__ss42__ts42/checkpoint-615/model.safetensors",
     "selection_sha256": "1493ac77575d8da99b4974310503dcc6e4878b1c7a151968e316b22c08ddf345"
   },
+  "long_fd_mid__ss101__ts101": {
+    "sha256": "5d95fafd75a3c824efe32156d58ba38a69ae3f60a993110ceaa2ec73fd86cd6b",
+    "bytes": 598439784,
+    "mtime_ns": 1795343563069333792,
+    "checkpoint": "outputs/literature_strict/checkpoints/long_fd_mid__ss101__ts101/checkpoint-410/model.safetensors",
+    "selection_sha256": "2456edc7f995db4cd481b51979e440418c2c3312bd51e3cd9399a816eb46a507"
+  },
   "long_fd_mid__ss17__ts17": {
     "sha256": "8956b22fbb8173b50ce647580c235c25ff6c2d1e165a6d5ae8cb0b6c122b7bff",
     "bytes": 598439784,
     "mtime_ns": 1795338655264961192,
     "checkpoint": "outputs/literature_strict/checkpoints/long_fd_mid__ss17__ts17/checkpoint-410/model.safetensors",
     "selection_sha256": "9fa8bdae4dde40f670c0ef499ba2a889636fd160e1f0fa523aac5ed839386430"
+  },
+  "long_fd_mid__ss42__ts42": {
+    "sha256": "491a6f9da28fd6be73b518e2234224890b6d316603092ef2655a50192bc67c86",
+    "bytes": 598439784,
+    "mtime_ns": 1795342230360334036,
+    "checkpoint": "outputs/literature_strict/checkpoints/long_fd_mid__ss42__ts42/checkpoint-615/model.safetensors",
+    "selection_sha256": "78d51af63f1c6d5afbcb9551a2d8602decddf8a58efb56ab6cea1a2279d3d524"
+  },
+  "long_gsnr__ss101__ts101": {
+    "sha256": "a0a71ae203ea38bc115176a5833f58752e990aa4fa8def1d13abe834439dfeb6",
+    "bytes": 598439784,
+    "mtime_ns": 1795344111497170200,
+    "checkpoint": "outputs/literature_strict/checkpoints/long_gsnr__ss101__ts101/checkpoint-615/model.safetensors",
+    "selection_sha256": "e4aa45fe3bc2209823efee0258b515ffee4d823c7fc6d2f57b6d52f98ed0f9ac"
+  },
+  "long_gsnr__ss17__ts17": {
+    "sha256": "df37e76971d7b2c990eb3f62d9804b2c4b112a9fed1e02c9a9022b6b0d001d01",
+    "bytes": 598439784,
+    "mtime_ns": 1795342965976328926,
+    "checkpoint": "outputs/literature_strict/checkpoints/long_gsnr__ss17__ts17/checkpoint-615/model.safetensors",
+    "selection_sha256": "ac59fd51739267f63ed775034c83f549a7391c4b415895bd775bfbe6a5e55fc3"
+  },
+  "long_gsnr__ss42__ts42": {
+    "sha256": "6672c94ff46f51379a6f3766412f2b79b41f5fff1ddd0e0eb731e1fa5e65e130",
+    "bytes": 598439784,
+    "mtime_ns": 1795343551247211321,
+    "checkpoint": "outputs/literature_strict/checkpoints/long_gsnr__ss42__ts42/checkpoint-615/model.safetensors",
+    "selection_sha256": "533310055345a25b002e968cdf79865fe0adb4c21f893d7ea4674eaa1168967e"
+  },
+  "long_mid__ss101__ts101": {
+    "sha256": "2ddc65c0e56cf0d173a46602da82ffa58aa7b9110bba4b674c92e0c0e0144f28",
+    "bytes": 598439784,
+    "mtime_ns": 1795342175367944222,
+    "checkpoint": "outputs/literature_strict/checkpoints/long_mid__ss101__ts101/checkpoint-615/model.safetensors",
+    "selection_sha256": "dce86ecf0e2afe6feb663e8d318e4502635e6bd93567d4d995f316733eaa6ed3"
   },
   "long_mid__ss17__ts17": {
     "sha256": "45e1db4681b8dbb46bde58e9941aec60803f4e63feae8f60aa40b82a03adc43a",
@@ -97,11 +146,25 @@
     "checkpoint": "outputs/literature_strict/checkpoints/long_roots_max__ss42__ts42/checkpoint-615/model.safetensors",
     "selection_sha256": "21b0ac312a9522f300402019f962804d5f8367275891b8e8fd41eeedeca08628"
   },
+  "pool_random__ss101__ts101": {
+    "sha256": "c4a04624d267aabaa43521509febba1874e287186cb14885c3bfc887a6ecb441",
+    "bytes": 598439784,
+    "mtime_ns": 1795344112696972800,
+    "checkpoint": "outputs/literature_strict/checkpoints/pool_random__ss101__ts101/checkpoint-410/model.safetensors",
+    "selection_sha256": "750c2f1c8acc51a939394f4ef1e9f2e1a223418b9d880fc196b284b731c8fd02"
+  },
   "pool_random__ss17__ts17": {
     "sha256": "d324a7d4b0f974ae744c710de74ff9669aa1ea5695c5edde88fb743479e03e92",
     "bytes": 598439784,
     "mtime_ns": 1795339400764649384,
     "checkpoint": "outputs/literature_strict/checkpoints/pool_random__ss17__ts17/checkpoint-615/model.safetensors",
     "selection_sha256": "8d0116c1be1dcc39556537cb40eaa52f110eedbbc55d7ed8ac2c224976e1de80"
+  },
+  "pool_random__ss42__ts42": {
+    "sha256": "c7ab02f7b4c2983e3ff58da08f5a0d8edd2bbe713adbce2252a9b8065b10e8e7",
+    "bytes": 598439784,
+    "mtime_ns": 1795342762960503887,
+    "checkpoint": "outputs/literature_strict/checkpoints/pool_random__ss42__ts42/checkpoint-615/model.safetensors",
+    "selection_sha256": "71e3816b8c621399aba1789335a2c81aa569a85009185ea4649fe5b0d9852ca2"
   }
 }

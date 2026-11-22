@@ -90,7 +90,8 @@ def main():
         group = [r for r in difficulty_audit if r['name'] == name]
         if len(group) != len(SEEDS):
             raise ValueError(f'Incomplete difficulty audit: {name}')
-        difficulty_rows.append(f"| {NAMES[name]} | {group[0]['scope']} | "
+        scope = 'Вся выборка' if group[0]['scope'] == 'full sample' else '1634 добавленные строки'
+        difficulty_rows.append(f"| {NAMES[name]} | {scope} | "
                                f"{np.mean([r['mean_gold_probability'] for r in group]):.3f} | "
                                f"{100*np.mean([r['proxy_disagreement_fraction'] for r in group]):.1f} |")
     difficulty_table = '\n'.join(difficulty_rows)
@@ -122,6 +123,10 @@ def main():
         rho = float(spearmanr(values, target_accuracy).statistic) if np.ptp(values) and np.ptp(target_accuracy) else float('nan')
         corr_rows.append(f"| {title} | {rho:+.2f} |" if np.isfinite(rho) else f"| {title} | не определено |")
     correlation_table = '\n'.join(corr_rows)
+    fd_test = by_original['long_fd']
+    control_test = by_original['long_random']
+    roots_test = by_original['long_roots_max']
+    pool_test = by_original['pool_random']
     slice_names = ('short_lt8', 'length_8_15', 'length_16_plus', 'negative', 'positive')
     slice_rows = []
     for name in METHODS:
@@ -147,7 +152,11 @@ def main():
 
 ## Качество и стоимость
 
-Среднее ± выборочное стандартное отклонение по трём запускам. Δ — средняя разница accuracy к `long_random` на тех же seed, в процентных пунктах; у методов без общего фона она не является строго парной заменой части выборки. Число токенов — сумма необёрнутых attention-padding токенов выбранных строк за эпоху после обрезки, а не реальное количество FLOPs.
+Среднее ± выборочное стандартное отклонение по трём запускам. Δ — средняя разница accuracy к `long_random` на тех же seed, в процентных пунктах; у методов без общего фона она не является строго парной заменой части выборки. Число токенов — сумма токенов выбранных строк за эпоху после обрезки, без учёта дополнительного padding; это не количество FLOPs.
+
+На открытом SST-2 test наиболее высокое среднее в этой серии показал частотный отбор: {100*fd_test['accuracy_mean']:.2f}% против {100*control_test['accuracy_mean']:.2f}% у случайных длинных фраз. Разница с контролем по seed составила {formatted(fd_test['delta_vs_long_random_pp'])} п.п.; одновременно на GLUE validation средняя разница равна {np.mean(by_sst['long_fd']['delta_vs_long_random_pp']):+.2f} п.п., а на IMDb {np.mean(by_imdb['long_fd']['delta_vs_long_random_pp']):+.2f} п.п. Малый эффект, три seed и множественные сравнения не подтверждают устойчивое превосходство.
+
+Максимальная доля предполагаемых целых предложений дала {100*roots_test['accuracy_mean']:.2f}% на открытом test против {100*control_test['accuracy_mean']:.2f}% у контроля. В этих условиях воспроизвести заметный выигрыш над длинными фразами не удалось; строгая очистка и доля целых предложений отличаются от опыта коллеги. Случайный отбор всего пула дал {100*pool_test['accuracy_mean']:.2f}% на том же test, при меньшем количестве токенов за эпоху; из этого нельзя заключить статистическую эквивалентность методов.
 
 | Метод | GLUE val accuracy ± SD, % | macro-F1, % | Δ val, п.п. | IMDb accuracy ± SD, % | macro-F1, % | Δ IMDb, п.п. | SST-2 test accuracy ± SD, % | macro-F1, % | Δ test, п.п. | Токенов / эпоха |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|

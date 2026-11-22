@@ -1,0 +1,16 @@
+{
+  "name": "long_fd",
+  "selection_seed": 17,
+  "selection_sha256": "dadbbf65c4f31e70efe14bd21b559717c2c81a2e97a52789e36a1edc8df15984",
+  "data_sha256": "4469710d9b7941cf97a3103ea6b34b177a77d0526150b6818fbe58120140cd82",
+  "n": 1821,
+  "n_clean": 1818,
+  "accuracy": 0.943437671609006,
+  "macro_f1": 0.9434352152675429,
+  "clean_accuracy": 0.9438943894389439,
+  "clean_macro_f1": 0.9438919448831763,
+  "max_length": 64,
+  "seconds": 13.50283694267273,
+  "device": "mps",
+  "checkpoint": "/Users/abikineev/Desktop/study/efficientNN/project/outputs/literature_strict/checkpoints/long_fd__ss17__ts17/checkpoint-615"
+}

@@ -1,0 +1,13 @@
+{
+  "name": "long_random",
+  "selection_seed": 42,
+  "selection_sha256": "9b5b317188c2d24bb13355e16dfd426d339c1139af536a81d82fdf3fdd8b635c",
+  "data_sha256": "c203a5ba4cb7895009a773e9af002d3b60b7b23a517894d858c1b78e1f7b6f84",
+  "n": 2000,
+  "max_length": 64,
+  "accuracy": 0.805,
+  "macro_f1": 0.8046043237556051,
+  "seconds": 13.896968841552734,
+  "checkpoint": "/Users/abikineev/Desktop/study/efficientNN/project/outputs/literature_strict/checkpoints/long_random__ss42__ts42/checkpoint-615",
+  "device": "mps"
+}

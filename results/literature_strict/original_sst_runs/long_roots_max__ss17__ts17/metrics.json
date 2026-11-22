@@ -1,0 +1,16 @@
+{
+  "name": "long_roots_max",
+  "selection_seed": 17,
+  "selection_sha256": "a8b4634370ac594f2b3b4f1fe664105adee62fc2900a95e8bd864a6be627dced",
+  "data_sha256": "4469710d9b7941cf97a3103ea6b34b177a77d0526150b6818fbe58120140cd82",
+  "n": 1821,
+  "n_clean": 1818,
+  "accuracy": 0.941790225151016,
+  "macro_f1": 0.9417754584942085,
+  "clean_accuracy": 0.9422442244224423,
+  "clean_macro_f1": 0.9422295245292247,
+  "max_length": 64,
+  "seconds": 13.509074211120605,
+  "device": "mps",
+  "checkpoint": "/Users/abikineev/Desktop/study/efficientNN/project/outputs/literature_strict/checkpoints/long_roots_max__ss17__ts17/checkpoint-615"
+}

@@ -1,0 +1,13 @@
+{
+  "name": "long_roots_max",
+  "selection_seed": 42,
+  "selection_sha256": "21b0ac312a9522f300402019f962804d5f8367275891b8e8fd41eeedeca08628",
+  "data_sha256": "c203a5ba4cb7895009a773e9af002d3b60b7b23a517894d858c1b78e1f7b6f84",
+  "n": 2000,
+  "max_length": 64,
+  "accuracy": 0.814,
+  "macro_f1": 0.8135338345864662,
+  "seconds": 9.95531702041626,
+  "checkpoint": "/Users/abikineev/Desktop/study/efficientNN/project/outputs/literature_strict/checkpoints/long_roots_max__ss42__ts42/checkpoint-615",
+  "device": "mps"
+}

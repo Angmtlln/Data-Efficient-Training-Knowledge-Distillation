@@ -1,0 +1,16 @@
+{
+  "name": "long_gsnr",
+  "selection_seed": 42,
+  "selection_sha256": "533310055345a25b002e968cdf79865fe0adb4c21f893d7ea4674eaa1168967e",
+  "data_sha256": "4469710d9b7941cf97a3103ea6b34b177a77d0526150b6818fbe58120140cd82",
+  "n": 1821,
+  "n_clean": 1818,
+  "accuracy": 0.9297089511257551,
+  "macro_f1": 0.9296733004260249,
+  "clean_accuracy": 0.9301430143014301,
+  "clean_macro_f1": 0.9301074666643256,
+  "max_length": 64,
+  "seconds": 13.537887334823608,
+  "device": "mps",
+  "checkpoint": "/Users/abikineev/Desktop/study/efficientNN/project/outputs/literature_strict/checkpoints/long_gsnr__ss42__ts42/checkpoint-615"
+}
