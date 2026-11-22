@@ -15,6 +15,7 @@ from transformers import AutoModelForSequenceClassification, AutoTokenizer, Data
 
 import prepare as base
 from analyze import METHODS, SEEDS
+from hash_checkpoints import file_hash
 
 sys.path.insert(0, str(base.REPO / 'experiments/05_proxy_mixture'))
 from prepare_imdb import clean, REV
@@ -36,6 +37,7 @@ def main():
     if len(ids) != 2000 or len(set(ids)) != 2000 or set(ids) & set(old['indices']):
         raise ValueError('IMDb sample overlap or size mismatch')
     jobs = []
+    integrity = json.loads((base.ROOT / 'checkpoint_integrity.json').read_text())
     for name in METHODS:
         for seed in SEEDS:
             runid = f'{name}__ss{seed}__ts{seed}'
@@ -44,6 +46,8 @@ def main():
             ckpt = base.REPO / 'outputs/literature_strict/checkpoints' / runid / Path(info['best_checkpoint']).name
             if info['pilot'] or info['split'] != 'test' or not (ckpt / 'model.safetensors').is_file():
                 raise ValueError(f'Invalid checkpoint: {runid}')
+            if integrity[runid]['selection_sha256'] != info['selection_sha256'] or file_hash(ckpt / 'model.safetensors') != integrity[runid]['sha256']:
+                raise ValueError(f'Checkpoint checksum mismatch: {runid}')
             jobs.append((runid, info, ckpt))
     print('Validated sample and', len(jobs), 'completed checkpoints', flush=True)
     if args.check_only:

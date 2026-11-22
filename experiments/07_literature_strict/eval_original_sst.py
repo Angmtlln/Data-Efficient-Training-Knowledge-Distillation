@@ -15,6 +15,7 @@ from transformers import AutoModelForSequenceClassification, AutoTokenizer, Data
 import audit_original_sst as audit
 import prepare as base
 from analyze import METHODS, SEEDS
+from hash_checkpoints import file_hash
 
 
 def main():
@@ -29,6 +30,7 @@ def main():
     if len(rows) != manifest['n'] or base.digest([(i, text, label) for i, (text, label) in enumerate(rows)]) != manifest['data_sha256']:
         raise ValueError('Normalized source records mismatch')
     jobs = []
+    integrity = json.loads((base.ROOT / 'checkpoint_integrity.json').read_text())
     for name in METHODS:
         for seed in SEEDS:
             runid = f'{name}__ss{seed}__ts{seed}'
@@ -36,6 +38,8 @@ def main():
             ckpt = base.REPO / 'outputs/literature_strict/checkpoints' / runid / Path(info['best_checkpoint']).name
             if info['pilot'] or info['split'] != 'test' or not (ckpt / 'model.safetensors').is_file():
                 raise ValueError(f'Invalid checkpoint {runid}')
+            if integrity[runid]['selection_sha256'] != info['selection_sha256'] or file_hash(ckpt / 'model.safetensors') != integrity[runid]['sha256']:
+                raise ValueError(f'Checkpoint checksum mismatch: {runid}')
             jobs.append((runid, info, ckpt))
     print('Verified source and', len(jobs), 'checkpoints', flush=True)
     if args.check_only:

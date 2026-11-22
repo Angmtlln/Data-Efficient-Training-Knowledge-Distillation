@@ -32,6 +32,10 @@ def main():
             for path in (directory / 'metrics.json', directory / 'predictions.csv'):
                 if not path.is_file():
                     raise ValueError(f'Incomplete series: {path}')
+    # Freeze a full-file checksum for every completed best checkpoint before
+    # any further external evaluation.
+    import hash_checkpoints
+    hash_checkpoints.main()
     for seed in SEEDS:
         for name in METHODS:
             runid = f'{name}__ss{seed}__ts{seed}'
