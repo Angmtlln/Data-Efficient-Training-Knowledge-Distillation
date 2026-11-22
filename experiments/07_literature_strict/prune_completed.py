@@ -24,7 +24,8 @@ def prune(runid):
     root = unresolved_root.resolve()
     if root.parent != parent:
         raise ValueError('Checkpoint root escapes experiment directory')
-    best = Path(info['best_checkpoint']).resolve()
+    # The saved path belongs to the training machine; only its name is portable.
+    best = (root / Path(info['best_checkpoint']).name).resolve()
     if best.parent != root or not (best / 'config.json').is_file() or not (best / 'model.safetensors').is_file():
         raise ValueError(f'Invalid checkpoint {runid}')
     folders = list(root.glob('checkpoint-*'))

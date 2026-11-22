@@ -15,7 +15,7 @@ from sklearn.model_selection import StratifiedGroupKFold
 HERE = Path(__file__).resolve().parent
 REPO = HERE.parents[1]
 ROOT = REPO / 'results/literature_strict'
-sys.path.insert(0, str(REPO / 'experiments/01_cpu_selection/code'))
+sys.path.append(str(REPO / 'experiments/01_cpu_selection/code'))
 from common import digest, read_data
 
 SEEDS = (17, 42, 101)

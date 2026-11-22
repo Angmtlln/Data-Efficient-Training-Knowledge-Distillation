@@ -2,6 +2,10 @@
 # AC power by default. An explicit user instruction can allow battery above 40%.
 ensure_power() {
   local battery percent
+  # pmset is specific to macOS; other platforms manage power themselves.
+  if ! command -v pmset >/dev/null 2>&1; then
+    return 0
+  fi
   battery=$(pmset -g batt)
   if printf '%s\n' "$battery" | grep -q 'AC Power'; then
     return 0

@@ -24,7 +24,8 @@ class PruningTests(unittest.TestCase):
                 for file in ('config.json', 'model.safetensors', 'optimizer.pt'):
                     (best / file).write_text('test')
                 (run / 'metrics.json').write_text(json.dumps({'name': 'long_random', 'selection_seed': 17,
-                    'training_seed': 17, 'pilot': False, 'split': 'test', 'best_checkpoint': str(best)}))
+                    'training_seed': 17, 'pilot': False, 'split': 'test',
+                    'best_checkpoint': '/old/machine/checkpoint-2'}))
                 with self.assertRaises(ValueError):
                     tool.prune(runid)
                 self.assertTrue(old.exists())

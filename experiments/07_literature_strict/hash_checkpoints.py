@@ -7,6 +7,13 @@ REPO = Path(__file__).resolve().parents[2]
 ROOT = REPO / 'results/literature_strict'
 
 
+def evaluation_matches(saved, data_sha256, selection_sha256, checkpoint_sha256):
+    """Only reuse predictions when the dataset, selection and weights match."""
+    return (saved.get('data_sha256') == data_sha256 and
+            saved.get('selection_sha256') == selection_sha256 and
+            saved.get('checkpoint_sha256') == checkpoint_sha256)
+
+
 def file_hash(path):
     digest = hashlib.sha256()
     with path.open('rb') as file:

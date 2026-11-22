@@ -15,7 +15,7 @@ from transformers import AutoModelForSequenceClassification, AutoTokenizer, Data
 
 import prepare as base
 from analyze import METHODS, SEEDS
-from hash_checkpoints import file_hash
+from hash_checkpoints import evaluation_matches, file_hash
 
 sys.path.insert(0, str(base.REPO / 'experiments/05_proxy_mixture'))
 from prepare_imdb import clean, REV
@@ -67,8 +67,8 @@ def main():
         metric_path = target / 'metrics.json'
         if metric_path.exists():
             saved = json.loads(metric_path.read_text())
-            if saved['data_sha256'] != manifest['data_sha256'] or saved['selection_sha256'] != info['selection_sha256']:
-                raise ValueError('Saved evaluation mismatch')
+            if not evaluation_matches(saved, manifest['data_sha256'], info['selection_sha256'], integrity[runid]['sha256']):
+                raise ValueError(f'Saved evaluation cannot be matched to checkpoint: {runid}')
             continue
         start = time.time()
         model = AutoModelForSequenceClassification.from_pretrained(str(ckpt), attn_implementation='sdpa').to(device).eval()
@@ -86,7 +86,8 @@ def main():
         result = {'name': info['name'], 'selection_seed': info['selection_seed'], 'selection_sha256': info['selection_sha256'],
                   'data_sha256': manifest['data_sha256'], 'n': len(ids), 'max_length': 64,
                   'accuracy': float(accuracy_score(truth, pred)), 'macro_f1': float(f1_score(truth, pred, average='macro')),
-                  'seconds': time.time() - start, 'checkpoint': str(ckpt), 'device': device}
+                  'seconds': time.time() - start, 'checkpoint': str(ckpt), 'device': device,
+                  'checkpoint_sha256': integrity[runid]['sha256']}
         metric_path.write_text(json.dumps(result, indent=2) + '\n')
         print(runid, 'accuracy', result['accuracy'], flush=True)
         del model
