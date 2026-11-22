@@ -1,0 +1,37 @@
+{
+  "seconds": 6.123884916305542,
+  "score_sha256": "b47c7c46a899b62312349536bdfea908577cbd6f3637bd4099476fe98e9320d2",
+  "score_quantiles": [
+    -2362.182496513421,
+    -444.20674392913213,
+    -65.89531640945195,
+    120.77262589831739,
+    486.07397921245513
+  ],
+  "selection": [
+    {
+      "seed": 17,
+      "selected_score_mean": 227.3109756848122,
+      "selected_gold_mean": 0.8127784258284808,
+      "selected_proxy_disagreement": 0.017135862913096694,
+      "shared_background": 4900,
+      "target": 1634
+    },
+    {
+      "seed": 42,
+      "selected_score_mean": 228.61066114960138,
+      "selected_gold_mean": 0.816511856748313,
+      "selected_proxy_disagreement": 0.014075887392900856,
+      "shared_background": 4900,
+      "target": 1634
+    },
+    {
+      "seed": 101,
+      "selected_score_mean": 226.80756531575182,
+      "selected_gold_mean": 0.8139597958916401,
+      "selected_proxy_disagreement": 0.01835985312117503,
+      "shared_background": 4900,
+      "target": 1634
+    }
+  ]
+}

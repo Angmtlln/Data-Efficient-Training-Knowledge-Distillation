@@ -45,6 +45,31 @@ class SelectionTests(unittest.TestCase):
                     actual = Counter(zip(labels[target].tolist(), np.minimum(lengths[target] // 4, 8).tolist()))
                     self.assertEqual(actual, quotas)
 
+    def test_gsnr_uses_same_background_and_quotas(self):
+        ds, meta = mod.read_data()
+        original_scores = np.load(mod.ROOT / 'scores.npz')
+        path = mod.ROOT / 'gsnr_scores.npz'
+        gsnr = np.load(path)
+        labels = np.asarray(ds['pool']['label'])
+        lengths = np.array([len(t.split()) for t in ds['pool']['sentence']])
+        eligible = original_scores['eligible']
+        self.assertTrue(np.isfinite(gsnr['score'][eligible]).all())
+        from collections import Counter
+        for seed in mod.SEEDS:
+            _, bg, quota = mod.select(labels, lengths, eligible, original_scores['gold_probability'], original_scores['fd_bin'], seed)
+            manifest = json.loads((mod.ROOT / 'selections' / f'long_gsnr__s{seed}.json').read_text())
+            expected = manifest.pop('sha256')
+            self.assertEqual(mod.digest(manifest), expected)
+            self.assertEqual(manifest['pool_sha256'], meta['splits']['pool']['sha256'])
+            self.assertEqual(manifest['provenance']['scores_sha256'], mod.sha(path))
+            ids = np.asarray(manifest['indices'])
+            self.assertEqual(len(set(ids)), mod.N)
+            self.assertTrue(eligible[ids].all())
+            self.assertTrue((lengths[ids] >= 8).all())
+            self.assertTrue(np.isin(bg, ids).all())
+            target = np.setdiff1d(ids, bg)
+            self.assertEqual(Counter(zip(labels[target].tolist(), np.minimum(lengths[target] // 4, 8).tolist())), quota)
+
 
 if __name__ == '__main__':
     unittest.main()
