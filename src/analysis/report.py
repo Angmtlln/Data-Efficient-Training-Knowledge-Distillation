@@ -31,12 +31,18 @@ AXIS = {
     "roots_mix50": "source",
 }
 COLORS = {"quality": "#2a78d6", "diversity": "#eb6834", "importance": "#1baf7a", "hybrid": "#6250d6", "coreset": "#e87ba4",
-          "llm": "#c9a227", "source": "#2fa8b5", "baseline": "#8a8985"}
+          "llm": "#c9a227", "source": "#2fa8b5", "distill": "#b5452f",
+          "baseline": "#8a8985"}
 INK, INK2, GRID, SURFACE = "#0b0b0b", "#52514e", "#e4e3df", "#fcfcfb"
 
 
 def strategy_of(subset):
     return re.sub(r"_s\d+$", "", subset)
+
+
+def axis_of(strategy):
+    # distillation runs are named <strategy>@<tag>, e.g. roots@kd_llm
+    return "distill" if "@" in strategy else AXIS.get(strategy, "hybrid")
 
 
 def subset_features(scores, idx, emb, test_centroid):
@@ -76,7 +82,7 @@ def style(ax):
 def _strategy_panel(ax, s, xlim, refs):
     style(ax)
     y = np.arange(len(s))
-    colors = [COLORS[AXIS.get(n, "hybrid")] for n in s.strategy]
+    colors = [COLORS[axis_of(n)] for n in s.strategy]
     # dot + error bar: bars from an arbitrary zoomed baseline would exaggerate differences
     ax.errorbar(s.test_acc_mean * 100, y, xerr=s.test_acc_std * 100, fmt="none", ecolor=INK2,
                 elinewidth=1, capsize=2, zorder=2)
@@ -123,7 +129,7 @@ def plot_correlations(per_strategy, feats):
         ax.grid(axis="y", color=GRID, linewidth=0.8)
         d = per_strategy.dropna(subset=[f])
         for _, r in d.iterrows():
-            ax.scatter(r[f], r.test_acc * 100, s=40, color=COLORS[AXIS.get(r.strategy, "hybrid")],
+            ax.scatter(r[f], r.test_acc * 100, s=40, color=COLORS[axis_of(r.strategy)],
                        edgecolor=SURFACE, linewidth=1, zorder=3)
         rho, p = spearmanr(d[f], d.test_acc)
         ax.set_title(f"{f}   ρ={rho:+.2f} (p={p:.2g})", color=INK, fontsize=9, loc="left")
@@ -164,7 +170,7 @@ def plot_val_vs_test(summary, label=("len_ge8", "ccs_len8", "ccs_b10", "ccs_b10_
     ax.grid(axis="y", color=GRID, linewidth=0.8)
     for _, r in s.iterrows():
         ax.scatter(r.val_acc_mean * 100, r.test_acc_mean * 100, s=60, zorder=3,
-                   color=COLORS[AXIS.get(r.strategy, "hybrid")], edgecolor=SURFACE, linewidth=2)
+                   color=COLORS[axis_of(r.strategy)], edgecolor=SURFACE, linewidth=2)
         if r.strategy in label:
             left = r.strategy == "ccs_len8"  # sits right next to len_ge8
             ax.annotate(r.strategy, (r.val_acc_mean * 100, r.test_acc_mean * 100),
@@ -221,7 +227,10 @@ def budget_sweep(res, full_acc):
 def main():
     FIG_DIR.mkdir(parents=True, exist_ok=True)
     res_all = pd.read_csv(RESULTS_CSV)
-    res_all["strategy"] = res_all.subset.map(strategy_of)
+    # teacher runs (src.train --save-probs) repeat existing baselines; distillation runs get "@<tag>"
+    res_all = res_all[res_all.tag.fillna("") != "teacher"].copy()
+    tag = res_all.tag.fillna("")
+    res_all["strategy"] = res_all.subset.map(strategy_of) + tag.where(tag == "", "@" + tag)
     # the main analysis is at the 10% budget; other budgets only feed the sweep figure
     res = res_all[~res_all.strategy.str.contains(r"_b\d\d$", regex=True)
                   | res_all.strategy.str.match(BETA_NAMES)].copy()
@@ -244,7 +253,7 @@ def main():
     summary["p_val_vs_random"] = summary.strategy.map(
         lambda n: ttest_ind(res[res.strategy == n].val_acc, rand_val, equal_var=False).pvalue
         if n not in ("random", "full") else np.nan)
-    summary["axis"] = summary.strategy.map(lambda n: AXIS.get(n, "hybrid"))
+    summary["axis"] = summary.strategy.map(lambda n: axis_of(n))
     summary = summary.sort_values("test_acc_mean", ascending=False)
     summary.to_csv(RESULTS_DIR / "summary.csv", index=False)
     print(summary.round(4).to_string(index=False))
@@ -261,7 +270,8 @@ def main():
         idx = np.load(SUBSETS_DIR / f"{subset}.npy")
         rows.append(dict(subset=subset, **subset_features(scores, idx, emb, test_centroid)))
     feats_df = pd.DataFrame(rows)
-    per_run = res.merge(feats_df, on="subset")
+    # subset characteristics describe the selection, so distillation runs (same subsets, other loss) are left out
+    per_run = res[res.tag.fillna("") == ""].merge(feats_df, on="subset")
     feats = [c for c in feats_df.columns if c != "subset"]
     per_strategy = per_run.groupby("strategy")[feats + ["test_acc"]].mean().reset_index()
     per_strategy.to_csv(RESULTS_DIR / "subset_features.csv", index=False)
