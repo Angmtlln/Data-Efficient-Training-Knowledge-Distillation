@@ -1,0 +1,14 @@
+{
+  "val": {
+    "examples_with_shared_8gram": 856,
+    "evaluation_examples": 2000,
+    "eligible_pool_with_shared_8gram": 4106,
+    "caveat": "Shared 8-token fragments can be boilerplate; not proof of a shared source."
+  },
+  "test": {
+    "examples_with_shared_8gram": 4,
+    "evaluation_examples": 872,
+    "eligible_pool_with_shared_8gram": 27,
+    "caveat": "Shared 8-token fragments can be boilerplate; not proof of a shared source."
+  }
+}
