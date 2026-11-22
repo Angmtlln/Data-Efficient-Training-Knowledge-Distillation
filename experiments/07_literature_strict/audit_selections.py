@@ -31,6 +31,7 @@ def main():
             rows.append({'name': name, 'seed': seed, 'n': len(ids), 'positive_fraction': float(labels[ids].mean()),
                          'mean_words': float(lengths[ids].mean()), 'mean_tokens_truncated': float(token_len[ids].mean()),
                          'tokens_total_per_epoch': int(token_len[ids].sum()),
+                         'unique_normalized_texts': len({base.norm(text[int(i)]) for i in ids}),
                          'tokenized_at_max64_fraction': float((token_len[ids] >= 64).mean())})
         for idx, name in enumerate(METHODS):
             for other in METHODS[idx + 1:]:

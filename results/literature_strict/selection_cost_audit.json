@@ -8,6 +8,7 @@
       "mean_words": 8.959136822773186,
       "mean_tokens_truncated": 14.101928374655648,
       "tokens_total_per_epoch": 92142,
+      "unique_normalized_texts": 6529,
       "tokenized_at_max64_fraction": 0.0
     },
     {
@@ -18,6 +19,7 @@
       "mean_words": 15.796296296296296,
       "mean_tokens_truncated": 21.944138353229263,
       "tokens_total_per_epoch": 143383,
+      "unique_normalized_texts": 6534,
       "tokenized_at_max64_fraction": 0.0
     },
     {
@@ -28,6 +30,7 @@
       "mean_words": 15.79384756657484,
       "mean_tokens_truncated": 21.94092439546985,
       "tokens_total_per_epoch": 143362,
+      "unique_normalized_texts": 6534,
       "tokenized_at_max64_fraction": 0.00015304560759106213
     },
     {
@@ -38,6 +41,7 @@
       "mean_words": 15.78665442301806,
       "mean_tokens_truncated": 21.860881542699726,
       "tokens_total_per_epoch": 142839,
+      "unique_normalized_texts": 6534,
       "tokenized_at_max64_fraction": 0.0
     },
     {
@@ -48,6 +52,7 @@
       "mean_words": 15.80257116620753,
       "mean_tokens_truncated": 21.913682277318642,
       "tokens_total_per_epoch": 143184,
+      "unique_normalized_texts": 6534,
       "tokenized_at_max64_fraction": 0.0
     },
     {
@@ -58,6 +63,7 @@
       "mean_words": 15.7996632996633,
       "mean_tokens_truncated": 21.968778696051423,
       "tokens_total_per_epoch": 143544,
+      "unique_normalized_texts": 6534,
       "tokenized_at_max64_fraction": 0.00015304560759106213
     },
     {
@@ -68,6 +74,7 @@
       "mean_words": 15.831955922865014,
       "mean_tokens_truncated": 22.01561065197429,
       "tokens_total_per_epoch": 143850,
+      "unique_normalized_texts": 6534,
       "tokenized_at_max64_fraction": 0.0
     },
     {
@@ -78,6 +85,7 @@
       "mean_words": 19.35001530456076,
       "mean_tokens_truncated": 26.262779308233853,
       "tokens_total_per_epoch": 171601,
+      "unique_normalized_texts": 6534,
       "tokenized_at_max64_fraction": 0.0004591368227731864
     },
     {
@@ -88,6 +96,7 @@
       "mean_words": 8.789256198347108,
       "mean_tokens_truncated": 13.902662993572084,
       "tokens_total_per_epoch": 90840,
+      "unique_normalized_texts": 6533,
       "tokenized_at_max64_fraction": 0.0
     },
     {
@@ -98,6 +107,7 @@
       "mean_words": 15.774410774410775,
       "mean_tokens_truncated": 21.872513008876645,
       "tokens_total_per_epoch": 142915,
+      "unique_normalized_texts": 6534,
       "tokenized_at_max64_fraction": 0.00015304560759106213
     },
     {
@@ -108,6 +118,7 @@
       "mean_words": 15.761861034588307,
       "mean_tokens_truncated": 21.880165289256198,
       "tokens_total_per_epoch": 142965,
+      "unique_normalized_texts": 6534,
       "tokenized_at_max64_fraction": 0.00015304560759106213
     },
     {
@@ -118,6 +129,7 @@
       "mean_words": 15.777624732170187,
       "mean_tokens_truncated": 21.845117845117844,
       "tokens_total_per_epoch": 142736,
+      "unique_normalized_texts": 6534,
       "tokenized_at_max64_fraction": 0.00030609121518212427
     },
     {
@@ -128,6 +140,7 @@
       "mean_words": 15.754361799816346,
       "mean_tokens_truncated": 21.845117845117844,
       "tokens_total_per_epoch": 142736,
+      "unique_normalized_texts": 6534,
       "tokenized_at_max64_fraction": 0.00030609121518212427
     },
     {
@@ -138,6 +151,7 @@
       "mean_words": 15.764156718702173,
       "mean_tokens_truncated": 21.897459442913988,
       "tokens_total_per_epoch": 143078,
+      "unique_normalized_texts": 6534,
       "tokenized_at_max64_fraction": 0.00030609121518212427
     },
     {
@@ -148,6 +162,7 @@
       "mean_words": 15.813590449954086,
       "mean_tokens_truncated": 21.956688093051728,
       "tokens_total_per_epoch": 143465,
+      "unique_normalized_texts": 6534,
       "tokenized_at_max64_fraction": 0.00015304560759106213
     },
     {
@@ -158,6 +173,7 @@
       "mean_words": 19.348331802877258,
       "mean_tokens_truncated": 26.275941230486684,
       "tokens_total_per_epoch": 171687,
+      "unique_normalized_texts": 6534,
       "tokenized_at_max64_fraction": 0.0004591368227731864
     },
     {
@@ -168,6 +184,7 @@
       "mean_words": 8.764462809917354,
       "mean_tokens_truncated": 13.883838383838384,
       "tokens_total_per_epoch": 90717,
+      "unique_normalized_texts": 6528,
       "tokenized_at_max64_fraction": 0.00015304560759106213
     },
     {
@@ -178,6 +195,7 @@
       "mean_words": 15.86883991429446,
       "mean_tokens_truncated": 21.992347719620447,
       "tokens_total_per_epoch": 143698,
+      "unique_normalized_texts": 6534,
       "tokenized_at_max64_fraction": 0.00015304560759106213
     },
     {
@@ -188,6 +206,7 @@
       "mean_words": 15.846801346801346,
       "mean_tokens_truncated": 21.975053565962657,
       "tokens_total_per_epoch": 143585,
+      "unique_normalized_texts": 6534,
       "tokenized_at_max64_fraction": 0.00015304560759106213
     },
     {
@@ -198,6 +217,7 @@
       "mean_words": 15.84863789409244,
       "mean_tokens_truncated": 21.914600550964188,
       "tokens_total_per_epoch": 143190,
+      "unique_normalized_texts": 6534,
       "tokenized_at_max64_fraction": 0.00030609121518212427
     },
     {
@@ -208,6 +228,7 @@
       "mean_words": 15.84022038567493,
       "mean_tokens_truncated": 21.920875420875422,
       "tokens_total_per_epoch": 143231,
+      "unique_normalized_texts": 6534,
       "tokenized_at_max64_fraction": 0.00030609121518212427
     },
     {
@@ -218,6 +239,7 @@
       "mean_words": 15.857055402509948,
       "mean_tokens_truncated": 22.01010101010101,
       "tokens_total_per_epoch": 143814,
+      "unique_normalized_texts": 6534,
       "tokenized_at_max64_fraction": 0.00030609121518212427
     },
     {
@@ -228,6 +250,7 @@
       "mean_words": 15.881083562901745,
       "mean_tokens_truncated": 22.039791857973675,
       "tokens_total_per_epoch": 144008,
+      "unique_normalized_texts": 6534,
       "tokenized_at_max64_fraction": 0.00015304560759106213
     },
     {
@@ -238,6 +261,7 @@
       "mean_words": 19.30410162228344,
       "mean_tokens_truncated": 26.202785430058157,
       "tokens_total_per_epoch": 171209,
+      "unique_normalized_texts": 6534,
       "tokenized_at_max64_fraction": 0.0004591368227731864
     }
   ],

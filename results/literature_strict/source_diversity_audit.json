@@ -1,0 +1,203 @@
+{
+  "definition": "Unlabelled contiguous-whitespace-token containment inferred from pool + inner val",
+  "caveat": "Lexical candidates are not verified parse trees and short phrases can have several parents.",
+  "seconds": 1.7981469631195068,
+  "roots_total": 6885,
+  "pool_unique_parent_fraction": 0.9367090544614302,
+  "val_unique_parent_fraction": 0.9335,
+  "val_distinct_unique_parents": 1586,
+  "selections": [
+    {
+      "name": "long_random",
+      "seed": 17,
+      "parent_unique_assignment_fraction": 1.0,
+      "distinct_uniquely_assigned_parents": 3643,
+      "shared_with_uniquely_assigned_val_parent": 1067,
+      "inferred_root_fraction": 0.20691766146311602
+    },
+    {
+      "name": "long_random",
+      "seed": 42,
+      "parent_unique_assignment_fraction": 1.0,
+      "distinct_uniquely_assigned_parents": 3651,
+      "shared_with_uniquely_assigned_val_parent": 1081,
+      "inferred_root_fraction": 0.2037037037037037
+    },
+    {
+      "name": "long_random",
+      "seed": 101,
+      "parent_unique_assignment_fraction": 0.9998469543924089,
+      "distinct_uniquely_assigned_parents": 3663,
+      "shared_with_uniquely_assigned_val_parent": 1045,
+      "inferred_root_fraction": 0.2041628405264769
+    },
+    {
+      "name": "long_mid",
+      "seed": 17,
+      "parent_unique_assignment_fraction": 1.0,
+      "distinct_uniquely_assigned_parents": 3574,
+      "shared_with_uniquely_assigned_val_parent": 1070,
+      "inferred_root_fraction": 0.2004897459442914
+    },
+    {
+      "name": "long_mid",
+      "seed": 42,
+      "parent_unique_assignment_fraction": 1.0,
+      "distinct_uniquely_assigned_parents": 3605,
+      "shared_with_uniquely_assigned_val_parent": 1064,
+      "inferred_root_fraction": 0.19895928986838077
+    },
+    {
+      "name": "long_mid",
+      "seed": 101,
+      "parent_unique_assignment_fraction": 1.0,
+      "distinct_uniquely_assigned_parents": 3557,
+      "shared_with_uniquely_assigned_val_parent": 1064,
+      "inferred_root_fraction": 0.19788797061524335
+    },
+    {
+      "name": "long_fd",
+      "seed": 17,
+      "parent_unique_assignment_fraction": 0.9998469543924089,
+      "distinct_uniquely_assigned_parents": 3620,
+      "shared_with_uniquely_assigned_val_parent": 1086,
+      "inferred_root_fraction": 0.2056932966023875
+    },
+    {
+      "name": "long_fd",
+      "seed": 42,
+      "parent_unique_assignment_fraction": 0.9998469543924089,
+      "distinct_uniquely_assigned_parents": 3598,
+      "shared_with_uniquely_assigned_val_parent": 1038,
+      "inferred_root_fraction": 0.20875420875420875
+    },
+    {
+      "name": "long_fd",
+      "seed": 101,
+      "parent_unique_assignment_fraction": 0.9996939087848179,
+      "distinct_uniquely_assigned_parents": 3585,
+      "shared_with_uniquely_assigned_val_parent": 1031,
+      "inferred_root_fraction": 0.20584634220997858
+    },
+    {
+      "name": "long_fd_mid",
+      "seed": 17,
+      "parent_unique_assignment_fraction": 1.0,
+      "distinct_uniquely_assigned_parents": 3568,
+      "shared_with_uniquely_assigned_val_parent": 1059,
+      "inferred_root_fraction": 0.20431588613406795
+    },
+    {
+      "name": "long_fd_mid",
+      "seed": 42,
+      "parent_unique_assignment_fraction": 1.0,
+      "distinct_uniquely_assigned_parents": 3567,
+      "shared_with_uniquely_assigned_val_parent": 1051,
+      "inferred_root_fraction": 0.20309152127333946
+    },
+    {
+      "name": "long_fd_mid",
+      "seed": 101,
+      "parent_unique_assignment_fraction": 1.0,
+      "distinct_uniquely_assigned_parents": 3579,
+      "shared_with_uniquely_assigned_val_parent": 1037,
+      "inferred_root_fraction": 0.20171411080501989
+    },
+    {
+      "name": "pool_random",
+      "seed": 17,
+      "parent_unique_assignment_fraction": 0.9377104377104377,
+      "distinct_uniquely_assigned_parents": 3852,
+      "shared_with_uniquely_assigned_val_parent": 1316,
+      "inferred_root_fraction": 0.09794918885827977
+    },
+    {
+      "name": "pool_random",
+      "seed": 42,
+      "parent_unique_assignment_fraction": 0.933578206305479,
+      "distinct_uniquely_assigned_parents": 3829,
+      "shared_with_uniquely_assigned_val_parent": 1313,
+      "inferred_root_fraction": 0.09641873278236915
+    },
+    {
+      "name": "pool_random",
+      "seed": 101,
+      "parent_unique_assignment_fraction": 0.9369452096724824,
+      "distinct_uniquely_assigned_parents": 3815,
+      "shared_with_uniquely_assigned_val_parent": 1327,
+      "inferred_root_fraction": 0.10315273951637588
+    },
+    {
+      "name": "long_gsnr",
+      "seed": 17,
+      "parent_unique_assignment_fraction": 1.0,
+      "distinct_uniquely_assigned_parents": 3568,
+      "shared_with_uniquely_assigned_val_parent": 1064,
+      "inferred_root_fraction": 0.2086011631466177
+    },
+    {
+      "name": "long_gsnr",
+      "seed": 42,
+      "parent_unique_assignment_fraction": 1.0,
+      "distinct_uniquely_assigned_parents": 3555,
+      "shared_with_uniquely_assigned_val_parent": 1037,
+      "inferred_root_fraction": 0.2073767982858892
+    },
+    {
+      "name": "long_gsnr",
+      "seed": 101,
+      "parent_unique_assignment_fraction": 1.0,
+      "distinct_uniquely_assigned_parents": 3560,
+      "shared_with_uniquely_assigned_val_parent": 1042,
+      "inferred_root_fraction": 0.204468931741659
+    },
+    {
+      "name": "long_roots_matched",
+      "seed": 17,
+      "parent_unique_assignment_fraction": 1.0,
+      "distinct_uniquely_assigned_parents": 4200,
+      "shared_with_uniquely_assigned_val_parent": 992,
+      "inferred_root_fraction": 0.40602999693908787
+    },
+    {
+      "name": "long_roots_matched",
+      "seed": 42,
+      "parent_unique_assignment_fraction": 1.0,
+      "distinct_uniquely_assigned_parents": 4213,
+      "shared_with_uniquely_assigned_val_parent": 972,
+      "inferred_root_fraction": 0.4061830425466789
+    },
+    {
+      "name": "long_roots_matched",
+      "seed": 101,
+      "parent_unique_assignment_fraction": 1.0,
+      "distinct_uniquely_assigned_parents": 4173,
+      "shared_with_uniquely_assigned_val_parent": 973,
+      "inferred_root_fraction": 0.4006734006734007
+    },
+    {
+      "name": "long_roots_max",
+      "seed": 17,
+      "parent_unique_assignment_fraction": 0.9998469543924089,
+      "distinct_uniquely_assigned_parents": 5453,
+      "shared_with_uniquely_assigned_val_parent": 924,
+      "inferred_root_fraction": 0.8293541475359657
+    },
+    {
+      "name": "long_roots_max",
+      "seed": 42,
+      "parent_unique_assignment_fraction": 1.0,
+      "distinct_uniquely_assigned_parents": 5452,
+      "shared_with_uniquely_assigned_val_parent": 920,
+      "inferred_root_fraction": 0.8293541475359657
+    },
+    {
+      "name": "long_roots_max",
+      "seed": 101,
+      "parent_unique_assignment_fraction": 1.0,
+      "distinct_uniquely_assigned_parents": 5450,
+      "shared_with_uniquely_assigned_val_parent": 916,
+      "inferred_root_fraction": 0.8293541475359657
+    }
+  ]
+}
