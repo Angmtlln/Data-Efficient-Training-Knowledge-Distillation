@@ -7,7 +7,8 @@ import numpy as np
 
 import prepare as base
 
-METHODS = ('pool_random', 'long_random', 'long_mid', 'long_fd', 'long_fd_mid', 'long_gsnr')
+METHODS = ('pool_random', 'long_random', 'long_mid', 'long_fd', 'long_fd_mid', 'long_gsnr',
+           'long_roots_matched', 'long_roots_max')
 
 
 def main():

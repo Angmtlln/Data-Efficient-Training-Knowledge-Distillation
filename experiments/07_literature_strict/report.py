@@ -1,0 +1,105 @@
+"""Create a reproducible research report from validated SST-2 and IMDb results."""
+import json
+from pathlib import Path
+
+import matplotlib
+matplotlib.use('Agg')
+import matplotlib.pyplot as plt
+import numpy as np
+
+import prepare as base
+from analyze import METHODS, SEEDS
+
+NAMES = {
+    'pool_random': 'Случайные из всего пула',
+    'long_random': 'Случайные длинные — контроль',
+    'long_mid': '25% средней сложности',
+    'long_fd': '25% по частотному расстоянию',
+    'long_fd_mid': '25% расстояние + средняя сложность',
+    'long_gsnr': '25% динамика proxy',
+    'long_roots_matched': '25% предполагаемых предложений',
+    'long_roots_max': 'Максимум предполагаемых предложений',
+}
+
+
+def load(name):
+    return json.loads((base.ROOT / name).read_text())
+
+
+def main():
+    sst = load('analysis.json')
+    imdb = load('imdb_holdout_analysis.json')
+    by_sst = {r['method']: r for r in sst['summary']}
+    by_imdb = {r['method']: r for r in imdb['summary']}
+    if set(by_sst) != set(METHODS) or set(by_imdb) != set(METHODS):
+        raise ValueError('Incomplete summary')
+    audit = load('audit.json')['scores']
+    cost = load('selection_cost_audit.json')['selections']
+    root = load('inferred_roots_audit.json')
+    ext = imdb['sample']
+    entries = []
+    for name in METHODS:
+        x, y = by_sst[name], by_imdb[name]
+        delta_x = np.mean(x['delta_vs_long_random_pp'])
+        delta_y = np.mean(y['delta_vs_long_random_pp'])
+        tokens = np.mean([r['tokens_total_per_epoch'] for r in cost if r['name'] == name])
+        entries.append(f"| {NAMES[name]} | {100*x['accuracy_mean']:.2f} ± {100*x['accuracy_sd']:.2f} | "
+                       f"{100*x['macro_f1_mean']:.2f} | {delta_x:+.2f} | "
+                       f"{100*y['accuracy_mean']:.2f} ± {100*y['accuracy_sd']:.2f} | "
+                       f"{100*y['macro_f1_mean']:.2f} | {delta_y:+.2f} | {tokens/1000:.1f} тыс. |")
+    figure, axes = plt.subplots(1, 2, figsize=(12, 6), sharey=True)
+    ordered = list(METHODS)
+    offsets = [-.13, 0, .13]
+    for ax, data, title in zip(axes, (by_sst, by_imdb), ('SST-2 validation', 'IMDb: новая выборка')):
+        for pos, name in enumerate(ordered):
+            d = np.asarray(data[name]['delta_vs_long_random_pp'])
+            ax.scatter(d, np.full(3, pos) + offsets, color='#326ca8', s=27, zorder=3)
+            ax.scatter([d.mean()], [pos], color='#d25b31', marker='D', s=33, zorder=4)
+        ax.axvline(0, color='#777', linewidth=1)
+        ax.grid(axis='x', color='#ddd')
+        ax.set_title(title)
+        ax.set_xlabel('Разница accuracy с контролем, п.п.')
+        ax.set_yticks(range(len(ordered)), [NAMES[n] for n in ordered])
+        ax.invert_yaxis()
+    axes[1].tick_params(labelleft=False)
+    figure.suptitle('Парные разницы по трём запускам (ромб — среднее)')
+    figure.tight_layout()
+    figure.savefig(base.ROOT / 'comparison.png', dpi=160, bbox_inches='tight')
+    plt.close(figure)
+    rows = '\n'.join(entries)
+    report = f'''# Отбор 10% SST-2: статьи 2025–2026 и эксперименты
+
+## Постановка
+
+24 обучения ModernBERT-base, 8 вариантов × 3 связанных seed (17/42/101), одинаковая модель и гиперпараметры. Каждый вариант содержит 6534 строки — около 10% исходного пула 65 349, или {100*6534/audit['eligible_count']:.2f}% пула после очистки. Взвешивания нет. Макро-F1 и accuracy рассчитаны независимо по сохранённым предсказаниям. Epoch выбирается по внутренним 2000 строкам train; SST-2 validation (872 строки) ранее многократно использовался для исследования и здесь не является слепым тестом.
+
+До построения proxy и отбора исключены {audit['excluded_total']} строк, совпадающих по нормализованному тексту или имеющих общий восьмисловный фрагмент с внутренней val либо GLUE validation; осталось {audit['eligible_count']}. После очистки аудит обнаружил ноль таких пересечений. Более короткие или изменённые фрагменты могут остаться. Метки всего допустимого пула доступны proxy: бюджет 10% относится к финальному обучению, а не к разметке или proxy-обучению.
+
+У `long_random`, `long_mid`, `long_fd`, `long_fd_mid`, `long_gsnr` и `long_roots_matched` внутри каждого seed одни и те же 4900 случайных длинных строк; 1634 оставшиеся имеют одинаковые квоты по метке и группам длины. `pool_random` и `long_roots_max` не имеют этого общего фона. `long_roots_max` включает все {root['eligible_long_root_rows']} допустимых предполагаемых корней длиной ≥8 слов и случайные другие длинные фразы. Корни восстановлены по лексической вложенности, а не по исходным деревьям; больше подробностей в `PROTOCOL_ROOTS.md`.
+
+## Качество и стоимость
+
+Среднее ± выборочное стандартное отклонение по трём запускам. Δ — средняя разница accuracy к `long_random` на тех же seed, в процентных пунктах; у методов без общего фона она не является строго парной заменой части выборки. Число токенов — сумма необёрнутых attention-padding токенов выбранных строк за эпоху после обрезки, а не реальное количество FLOPs.
+
+| Метод | SST-2 accuracy ± SD, % | SST-2 macro-F1, % | Δ SST-2, п.п. | IMDb accuracy ± SD, % | IMDb macro-F1, % | Δ IMDb, п.п. | Токенов / эпоха |
+|---|---:|---:|---:|---:|---:|---:|---:|
+{rows}
+
+![Разницы с контролем по сидам](comparison.png)
+
+Методы 2025/2026 — адаптации: `long_fd` вдохновлён [SCDP, COLING 2025](https://aclanthology.org/2025.coling-main.49/) и использует иные настройки TF-IDF, долю отбора и ограничения; `long_gsnr` вдохновлён [GRADFILTERING, EMNLP 2026](https://aclanthology.org/2026.emnlp-main.2297/), но применяет ансамбль линейных моделей, а не LoRA к генеративной модели. Результаты не являются воспроизведением этих работ.
+
+## Перенос и ограничения
+
+IMDb: новая фиксированная выборка {ext['n']} отзывов, отдельная от 2000 IMDb-примеров серии 05, по 1000 каждого класса. Точных нормализованных совпадений с SST-2: {ext['normalized_exact_sst2_any_split']}; отзывов с общим 8-граммом: {ext['containing_any_8token_ngram_from_sst2']}. Обрезаны до 64 токенов {ext['over_64_tokens']} из {ext['n']} отзывов. IMDb — иной домен, а пересечение с данными предварительного обучения неизвестно. Это проверка переноса, не новый слепой SST-2 тест.
+
+Выборки и инициализации связаны seed; три повтора не разделяют вариативность выбора данных и обучения. Сравниваются несколько стратегий без поправки на множественные проверки. Уверенные выводы о малых разницах и превосходстве над коллегами без новых независимых повторов и оценки невозможны. Время CPU-просчёта proxy и время GPU-обучения сохранены раздельно, а часть моделей обучалась параллельно; wall time не является честным сравнением FLOPs или ускорения. Равное число примеров не означает равную стоимость по токенам.
+
+Разбор статей — `experiments/07_literature_strict/LITERATURE.md`; результаты коллеги — `COLLABORATOR.md`; протоколы, манифесты, хэши, прогнозы и исходные метрики сохранены в ветке проекта.
+'''
+    (base.ROOT / 'REPORT.md').write_text(report)
+    print('Wrote', base.ROOT / 'REPORT.md')
+
+
+if __name__ == '__main__':
+    main()

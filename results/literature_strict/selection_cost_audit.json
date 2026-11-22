@@ -61,6 +61,26 @@
       "tokenized_at_max64_fraction": 0.00015304560759106213
     },
     {
+      "name": "long_roots_matched",
+      "seed": 17,
+      "n": 6534,
+      "positive_fraction": 0.5260177532904806,
+      "mean_words": 15.831955922865014,
+      "mean_tokens_truncated": 22.01561065197429,
+      "tokens_total_per_epoch": 143850,
+      "tokenized_at_max64_fraction": 0.0
+    },
+    {
+      "name": "long_roots_max",
+      "seed": 17,
+      "n": 6534,
+      "positive_fraction": 0.5280073461891643,
+      "mean_words": 19.35001530456076,
+      "mean_tokens_truncated": 26.262779308233853,
+      "tokens_total_per_epoch": 171601,
+      "tokenized_at_max64_fraction": 0.0004591368227731864
+    },
+    {
       "name": "pool_random",
       "seed": 42,
       "n": 6534,
@@ -121,6 +141,26 @@
       "tokenized_at_max64_fraction": 0.00030609121518212427
     },
     {
+      "name": "long_roots_matched",
+      "seed": 42,
+      "n": 6534,
+      "positive_fraction": 0.5205081114172023,
+      "mean_words": 15.813590449954086,
+      "mean_tokens_truncated": 21.956688093051728,
+      "tokens_total_per_epoch": 143465,
+      "tokenized_at_max64_fraction": 0.00015304560759106213
+    },
+    {
+      "name": "long_roots_max",
+      "seed": 42,
+      "n": 6534,
+      "positive_fraction": 0.529537802265075,
+      "mean_words": 19.348331802877258,
+      "mean_tokens_truncated": 26.275941230486684,
+      "tokens_total_per_epoch": 171687,
+      "tokenized_at_max64_fraction": 0.0004591368227731864
+    },
+    {
       "name": "pool_random",
       "seed": 101,
       "n": 6534,
@@ -179,6 +219,26 @@
       "mean_tokens_truncated": 22.01010101010101,
       "tokens_total_per_epoch": 143814,
       "tokenized_at_max64_fraction": 0.00030609121518212427
+    },
+    {
+      "name": "long_roots_matched",
+      "seed": 101,
+      "n": 6534,
+      "positive_fraction": 0.5208142026323844,
+      "mean_words": 15.881083562901745,
+      "mean_tokens_truncated": 22.039791857973675,
+      "tokens_total_per_epoch": 144008,
+      "tokenized_at_max64_fraction": 0.00015304560759106213
+    },
+    {
+      "name": "long_roots_max",
+      "seed": 101,
+      "n": 6534,
+      "positive_fraction": 0.522038567493113,
+      "mean_words": 19.30410162228344,
+      "mean_tokens_truncated": 26.202785430058157,
+      "tokens_total_per_epoch": 171209,
+      "tokenized_at_max64_fraction": 0.0004591368227731864
     }
   ],
   "overlap": [
@@ -214,6 +274,18 @@
     },
     {
       "seed": 17,
+      "a": "pool_random",
+      "b": "long_roots_matched",
+      "intersection": 717
+    },
+    {
+      "seed": 17,
+      "a": "pool_random",
+      "b": "long_roots_max",
+      "intersection": 710
+    },
+    {
+      "seed": 17,
       "a": "long_random",
       "b": "long_mid",
       "intersection": 5026
@@ -238,6 +310,18 @@
     },
     {
       "seed": 17,
+      "a": "long_random",
+      "b": "long_roots_matched",
+      "intersection": 5028
+    },
+    {
+      "seed": 17,
+      "a": "long_random",
+      "b": "long_roots_max",
+      "intersection": 1621
+    },
+    {
+      "seed": 17,
       "a": "long_mid",
       "b": "long_fd",
       "intersection": 5027
@@ -256,6 +340,18 @@
     },
     {
       "seed": 17,
+      "a": "long_mid",
+      "b": "long_roots_matched",
+      "intersection": 5013
+    },
+    {
+      "seed": 17,
+      "a": "long_mid",
+      "b": "long_roots_max",
+      "intersection": 1587
+    },
+    {
+      "seed": 17,
       "a": "long_fd",
       "b": "long_fd_mid",
       "intersection": 5214
@@ -268,9 +364,51 @@
     },
     {
       "seed": 17,
+      "a": "long_fd",
+      "b": "long_roots_matched",
+      "intersection": 5018
+    },
+    {
+      "seed": 17,
+      "a": "long_fd",
+      "b": "long_roots_max",
+      "intersection": 1604
+    },
+    {
+      "seed": 17,
       "a": "long_fd_mid",
       "b": "long_gsnr",
       "intersection": 5048
+    },
+    {
+      "seed": 17,
+      "a": "long_fd_mid",
+      "b": "long_roots_matched",
+      "intersection": 5007
+    },
+    {
+      "seed": 17,
+      "a": "long_fd_mid",
+      "b": "long_roots_max",
+      "intersection": 1597
+    },
+    {
+      "seed": 17,
+      "a": "long_gsnr",
+      "b": "long_roots_matched",
+      "intersection": 5027
+    },
+    {
+      "seed": 17,
+      "a": "long_gsnr",
+      "b": "long_roots_max",
+      "intersection": 1631
+    },
+    {
+      "seed": 17,
+      "a": "long_roots_matched",
+      "b": "long_roots_max",
+      "intersection": 2847
     },
     {
       "seed": 42,
@@ -304,6 +442,18 @@
     },
     {
       "seed": 42,
+      "a": "pool_random",
+      "b": "long_roots_matched",
+      "intersection": 677
+    },
+    {
+      "seed": 42,
+      "a": "pool_random",
+      "b": "long_roots_max",
+      "intersection": 674
+    },
+    {
+      "seed": 42,
       "a": "long_random",
       "b": "long_mid",
       "intersection": 5028
@@ -328,6 +478,18 @@
     },
     {
       "seed": 42,
+      "a": "long_random",
+      "b": "long_roots_matched",
+      "intersection": 5020
+    },
+    {
+      "seed": 42,
+      "a": "long_random",
+      "b": "long_roots_max",
+      "intersection": 1615
+    },
+    {
+      "seed": 42,
       "a": "long_mid",
       "b": "long_fd",
       "intersection": 5031
@@ -346,6 +508,18 @@
     },
     {
       "seed": 42,
+      "a": "long_mid",
+      "b": "long_roots_matched",
+      "intersection": 4991
+    },
+    {
+      "seed": 42,
+      "a": "long_mid",
+      "b": "long_roots_max",
+      "intersection": 1571
+    },
+    {
+      "seed": 42,
       "a": "long_fd",
       "b": "long_fd_mid",
       "intersection": 5220
@@ -358,9 +532,51 @@
     },
     {
       "seed": 42,
+      "a": "long_fd",
+      "b": "long_roots_matched",
+      "intersection": 5030
+    },
+    {
+      "seed": 42,
+      "a": "long_fd",
+      "b": "long_roots_max",
+      "intersection": 1640
+    },
+    {
+      "seed": 42,
       "a": "long_fd_mid",
       "b": "long_gsnr",
       "intersection": 5054
+    },
+    {
+      "seed": 42,
+      "a": "long_fd_mid",
+      "b": "long_roots_matched",
+      "intersection": 5015
+    },
+    {
+      "seed": 42,
+      "a": "long_fd_mid",
+      "b": "long_roots_max",
+      "intersection": 1608
+    },
+    {
+      "seed": 42,
+      "a": "long_gsnr",
+      "b": "long_roots_matched",
+      "intersection": 5026
+    },
+    {
+      "seed": 42,
+      "a": "long_gsnr",
+      "b": "long_roots_max",
+      "intersection": 1620
+    },
+    {
+      "seed": 42,
+      "a": "long_roots_matched",
+      "b": "long_roots_max",
+      "intersection": 2852
     },
     {
       "seed": 101,
@@ -394,6 +610,18 @@
     },
     {
       "seed": 101,
+      "a": "pool_random",
+      "b": "long_roots_matched",
+      "intersection": 707
+    },
+    {
+      "seed": 101,
+      "a": "pool_random",
+      "b": "long_roots_max",
+      "intersection": 713
+    },
+    {
+      "seed": 101,
       "a": "long_random",
       "b": "long_mid",
       "intersection": 5040
@@ -418,6 +646,18 @@
     },
     {
       "seed": 101,
+      "a": "long_random",
+      "b": "long_roots_matched",
+      "intersection": 5039
+    },
+    {
+      "seed": 101,
+      "a": "long_random",
+      "b": "long_roots_max",
+      "intersection": 1631
+    },
+    {
+      "seed": 101,
       "a": "long_mid",
       "b": "long_fd",
       "intersection": 5021
@@ -436,6 +676,18 @@
     },
     {
       "seed": 101,
+      "a": "long_mid",
+      "b": "long_roots_matched",
+      "intersection": 5008
+    },
+    {
+      "seed": 101,
+      "a": "long_mid",
+      "b": "long_roots_max",
+      "intersection": 1600
+    },
+    {
+      "seed": 101,
       "a": "long_fd",
       "b": "long_fd_mid",
       "intersection": 5227
@@ -448,9 +700,51 @@
     },
     {
       "seed": 101,
+      "a": "long_fd",
+      "b": "long_roots_matched",
+      "intersection": 5025
+    },
+    {
+      "seed": 101,
+      "a": "long_fd",
+      "b": "long_roots_max",
+      "intersection": 1655
+    },
+    {
+      "seed": 101,
       "a": "long_fd_mid",
       "b": "long_gsnr",
       "intersection": 5051
+    },
+    {
+      "seed": 101,
+      "a": "long_fd_mid",
+      "b": "long_roots_matched",
+      "intersection": 5021
+    },
+    {
+      "seed": 101,
+      "a": "long_fd_mid",
+      "b": "long_roots_max",
+      "intersection": 1630
+    },
+    {
+      "seed": 101,
+      "a": "long_gsnr",
+      "b": "long_roots_matched",
+      "intersection": 5045
+    },
+    {
+      "seed": 101,
+      "a": "long_gsnr",
+      "b": "long_roots_max",
+      "intersection": 1637
+    },
+    {
+      "seed": 101,
+      "a": "long_roots_matched",
+      "b": "long_roots_max",
+      "intersection": 2854
     }
   ]
 }

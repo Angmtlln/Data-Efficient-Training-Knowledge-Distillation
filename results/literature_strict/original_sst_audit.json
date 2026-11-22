@@ -1,0 +1,24 @@
+{
+  "source": "AcademiaSinicaNLPLab/sentiment_dataset/data/stsa.binary.{dev,test}",
+  "test_blob_sha1": "bb5d021fbc75d277a92c6a0fb1b0786984776007",
+  "dev_blob_sha1": "a80b081639ae8ac506f0285de4af86d276e8f983",
+  "dev_sha256": "02fedc82855dbdcabe82c65ed1af6c6570788eaac51073cdb35ee8c7784426d1",
+  "test_sha256": "6a80dc9b9a0db2d3b37f2f809304febad31c90ab67a5b4157b7d9f881c53ef5b",
+  "dev_size": 872,
+  "dev_exact_text_match_glue_validation": 872,
+  "dev_exact_text_and_label_match_glue_validation": 872,
+  "test_size": 1821,
+  "test_class_counts": {
+    "0": 912,
+    "1": 909
+  },
+  "test_exact_text_match_glue_unlabeled_test": 1814,
+  "test_unique_normalized": 1821,
+  "test_ambiguous_normalized_labels": 0,
+  "test_exact_with_eligible_pool": 1,
+  "test_shared_8gram_with_eligible_pool": 2,
+  "test_clean_of_pool_exact_or_shared_8gram": 1818,
+  "test_exact_with_prior_evaluation": 0,
+  "pool_sha256": "c0649daca41978a971b794e5a190068945eda3706c44338fc98c1aa0eaecaea3",
+  "limitation": "Public third-party SST binary mirror, not an official GLUE leaderboard submission; pretraining exposure unknown."
+}
