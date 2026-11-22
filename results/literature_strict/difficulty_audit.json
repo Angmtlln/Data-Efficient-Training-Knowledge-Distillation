@@ -1,0 +1,197 @@
+{
+  "caveat": "OOF proxy disagreement is not a verified annotation error. Full-sample rows differ in scope from target-only rows.",
+  "selections": [
+    {
+      "name": "long_random",
+      "seed": 17,
+      "scope": "1634 selected positions",
+      "n": 1634,
+      "mean_gold_probability": 0.808430951485937,
+      "proxy_disagreement_fraction": 0.07099143206854346
+    },
+    {
+      "name": "long_mid",
+      "seed": 17,
+      "scope": "1634 selected positions",
+      "n": 1634,
+      "mean_gold_probability": 0.8650079709857278,
+      "proxy_disagreement_fraction": 0.0
+    },
+    {
+      "name": "long_fd",
+      "seed": 17,
+      "scope": "1634 selected positions",
+      "n": 1634,
+      "mean_gold_probability": 0.8061470932850475,
+      "proxy_disagreement_fraction": 0.07588739290085679
+    },
+    {
+      "name": "long_fd_mid",
+      "seed": 17,
+      "scope": "1634 selected positions",
+      "n": 1634,
+      "mean_gold_probability": 0.8762375846152723,
+      "proxy_disagreement_fraction": 0.0
+    },
+    {
+      "name": "pool_random",
+      "seed": 17,
+      "scope": "full sample",
+      "n": 6534,
+      "mean_gold_probability": 0.7881904315356041,
+      "proxy_disagreement_fraction": 0.09749005203550658
+    },
+    {
+      "name": "long_gsnr",
+      "seed": 17,
+      "scope": "1634 selected positions",
+      "n": 1634,
+      "mean_gold_probability": 0.8156250530795731,
+      "proxy_disagreement_fraction": 0.01591187270501836
+    },
+    {
+      "name": "long_roots_matched",
+      "seed": 17,
+      "scope": "1634 selected positions",
+      "n": 1634,
+      "mean_gold_probability": 0.793881025733873,
+      "proxy_disagreement_fraction": 0.09363525091799266
+    },
+    {
+      "name": "long_roots_max",
+      "seed": 17,
+      "scope": "full sample",
+      "n": 6534,
+      "mean_gold_probability": 0.7999099700786401,
+      "proxy_disagreement_fraction": 0.08830731558004286
+    },
+    {
+      "name": "long_random",
+      "seed": 42,
+      "scope": "1634 selected positions",
+      "n": 1634,
+      "mean_gold_probability": 0.8047753509930186,
+      "proxy_disagreement_fraction": 0.07160342717258263
+    },
+    {
+      "name": "long_mid",
+      "seed": 42,
+      "scope": "1634 selected positions",
+      "n": 1634,
+      "mean_gold_probability": 0.8660685671908067,
+      "proxy_disagreement_fraction": 0.0
+    },
+    {
+      "name": "long_fd",
+      "seed": 42,
+      "scope": "1634 selected positions",
+      "n": 1634,
+      "mean_gold_probability": 0.8056316743682481,
+      "proxy_disagreement_fraction": 0.07833537331701346
+    },
+    {
+      "name": "long_fd_mid",
+      "seed": 42,
+      "scope": "1634 selected positions",
+      "n": 1634,
+      "mean_gold_probability": 0.8770602603492804,
+      "proxy_disagreement_fraction": 0.0
+    },
+    {
+      "name": "pool_random",
+      "seed": 42,
+      "scope": "full sample",
+      "n": 6534,
+      "mean_gold_probability": 0.7889312147604963,
+      "proxy_disagreement_fraction": 0.09243954698500154
+    },
+    {
+      "name": "long_gsnr",
+      "seed": 42,
+      "scope": "1634 selected positions",
+      "n": 1634,
+      "mean_gold_probability": 0.8189401135082798,
+      "proxy_disagreement_fraction": 0.017747858017135864
+    },
+    {
+      "name": "long_roots_matched",
+      "seed": 42,
+      "scope": "1634 selected positions",
+      "n": 1634,
+      "mean_gold_probability": 0.794887350417588,
+      "proxy_disagreement_fraction": 0.09730722154222766
+    },
+    {
+      "name": "long_roots_max",
+      "seed": 42,
+      "scope": "full sample",
+      "n": 6534,
+      "mean_gold_probability": 0.7996068397297992,
+      "proxy_disagreement_fraction": 0.08999081726354453
+    },
+    {
+      "name": "long_random",
+      "seed": 101,
+      "scope": "1634 selected positions",
+      "n": 1634,
+      "mean_gold_probability": 0.8066110620707047,
+      "proxy_disagreement_fraction": 0.07466340269277846
+    },
+    {
+      "name": "long_mid",
+      "seed": 101,
+      "scope": "1634 selected positions",
+      "n": 1634,
+      "mean_gold_probability": 0.8661970415039469,
+      "proxy_disagreement_fraction": 0.0
+    },
+    {
+      "name": "long_fd",
+      "seed": 101,
+      "scope": "1634 selected positions",
+      "n": 1634,
+      "mean_gold_probability": 0.8054204637976653,
+      "proxy_disagreement_fraction": 0.07527539779681762
+    },
+    {
+      "name": "long_fd_mid",
+      "seed": 101,
+      "scope": "1634 selected positions",
+      "n": 1634,
+      "mean_gold_probability": 0.877040927727416,
+      "proxy_disagreement_fraction": 0.0
+    },
+    {
+      "name": "pool_random",
+      "seed": 101,
+      "scope": "full sample",
+      "n": 6534,
+      "mean_gold_probability": 0.7899313723665194,
+      "proxy_disagreement_fraction": 0.0901438628711356
+    },
+    {
+      "name": "long_gsnr",
+      "seed": 101,
+      "scope": "1634 selected positions",
+      "n": 1634,
+      "mean_gold_probability": 0.8192612296055236,
+      "proxy_disagreement_fraction": 0.015299877600979192
+    },
+    {
+      "name": "long_roots_matched",
+      "seed": 101,
+      "scope": "1634 selected positions",
+      "n": 1634,
+      "mean_gold_probability": 0.7929685445309586,
+      "proxy_disagreement_fraction": 0.09608323133414932
+    },
+    {
+      "name": "long_roots_max",
+      "seed": 101,
+      "scope": "full sample",
+      "n": 6534,
+      "mean_gold_probability": 0.7993047806102409,
+      "proxy_disagreement_fraction": 0.09029690847872666
+    }
+  ]
+}

@@ -26,11 +26,15 @@ class ReportTests(unittest.TestCase):
                         'normalized_exact_sst2_any_split': 0, 'containing_any_8token_ngram_from_sst2': 3,
                         'over_64_tokens': 1952}},
                     'audit.json': {'scores': {'eligible_count': 61199, 'excluded_total': 4150}},
-                    'selection_cost_audit.json': {'selections': [{'name': name, 'tokens_total_per_epoch': 100000}
+                    'selection_cost_audit.json': {'selections': [{'name': name, 'tokens_total_per_epoch': 100000,
+                                                                  'mean_words': 12., 'positive_fraction': .5}
                                                                   for name in report.METHODS]},
                     'inferred_roots_audit.json': {'eligible_long_root_rows': 5419},
                     'source_diversity_audit.json': {'selections': [{'name': name, 'inferred_root_fraction': .2,
                         'distinct_uniquely_assigned_parents': 3500, 'shared_with_uniquely_assigned_val_parent': 1000}
+                        for name in report.METHODS for _ in report.SEEDS]},
+                    'difficulty_audit.json': {'selections': [{'name': name, 'scope': 'sample',
+                        'mean_gold_probability': .8, 'proxy_disagreement_fraction': .05}
                         for name in report.METHODS for _ in report.SEEDS]},
                 }
                 for name, doc in documents.items():

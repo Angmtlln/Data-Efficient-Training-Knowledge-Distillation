@@ -6,6 +6,7 @@ import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import numpy as np
+from scipy.stats import spearmanr
 
 import prepare as base
 from analyze import METHODS, SEEDS
@@ -39,6 +40,7 @@ def main():
     cost = load('selection_cost_audit.json')['selections']
     root = load('inferred_roots_audit.json')
     source_audit = load('source_diversity_audit.json')
+    difficulty_audit = load('difficulty_audit.json')['selections']
     ext = imdb['sample']
     entries = []
     for name in METHODS:
@@ -82,6 +84,15 @@ def main():
                            f"{np.mean([r['distinct_uniquely_assigned_parents'] for r in groups]):.0f} | "
                            f"{np.mean([r['shared_with_uniquely_assigned_val_parent'] for r in groups]):.0f} |")
     source_table = '\n'.join(source_rows)
+    difficulty_rows = []
+    for name in METHODS:
+        group = [r for r in difficulty_audit if r['name'] == name]
+        if len(group) != len(SEEDS):
+            raise ValueError(f'Incomplete difficulty audit: {name}')
+        difficulty_rows.append(f"| {NAMES[name]} | {group[0]['scope']} | "
+                               f"{np.mean([r['mean_gold_probability'] for r in group]):.3f} | "
+                               f"{100*np.mean([r['proxy_disagreement_fraction'] for r in group]):.1f} |")
+    difficulty_table = '\n'.join(difficulty_rows)
     def formatted(values):
         return ' / '.join(f'{v:+.2f}' for v in values)
     pair_rows = '\n'.join(
@@ -95,6 +106,21 @@ def main():
         f"{100*by_original[name]['clean_accuracy_mean']:.2f} |"
         for name in METHODS
     )
+    def method_mean(name, records, field):
+        values = [r[field] for r in records if r['name'] == name]
+        if not values:
+            raise ValueError(f'Missing audit feature {name}: {field}')
+        return float(np.mean(values))
+    features = [('Средняя длина, слова', [method_mean(n, cost, 'mean_words') for n in METHODS]),
+                ('Доля позитивных меток', [method_mean(n, cost, 'positive_fraction') for n in METHODS]),
+                ('Доля предполагаемых целых предложений', [method_mean(n, source_audit['selections'], 'inferred_root_fraction') for n in METHODS]),
+                ('Разные предполагаемые источники', [method_mean(n, source_audit['selections'], 'distinct_uniquely_assigned_parents') for n in METHODS])]
+    target_accuracy = [by_original[n]['accuracy_mean'] for n in METHODS]
+    corr_rows = []
+    for title, values in features:
+        rho = float(spearmanr(values, target_accuracy).statistic) if np.ptp(values) and np.ptp(target_accuracy) else float('nan')
+        corr_rows.append(f"| {title} | {rho:+.2f} |" if np.isfinite(rho) else f"| {title} | не определено |")
+    correlation_table = '\n'.join(corr_rows)
     report = f'''# Отбор 10% SST-2: статьи 2025–2026 и эксперименты
 
 ## Постановка
@@ -132,6 +158,20 @@ def main():
 | Метод | Предполагаемых целых предложений, % | Разных однозначно сопоставленных источников | Строк с предполагаемым родителем из внутренней val |
 |---|---:|---:|---:|
 {source_table}
+
+Вероятность исходной метки и доля несовпадений ответа OOF proxy с меткой позволяют увидеть, какие данные реально попали в выборку. Несовпадение не является подтверждённой ошибкой разметки. Для всех методов с общим фоном измерены 1634 добавленные позиции; для `pool_random` и `long_roots_max` — всё подмножество, поэтому строки этих двух методов не вполне сопоставимы с остальными.
+
+| Метод | Область расчёта | P(исходная метка) | Несогласие proxy, % |
+|---|---|---:|---:|
+{difficulty_table}
+
+### Исследовательская связь с качеством
+
+Ниже — корреляция Спирмена между характеристиками и средней accuracy на открытом SST-2 test на уровне восьми стратегий. Подмножества сильно пересекаются, характеристики зависят друг от друга, а сравниваемых методов мало; коэффициенты описывают лишь эту серию и не доказывают причину или перенос на другие задачи.
+
+| Характеристика | Спирмен ρ |
+|---|---:|
+{correlation_table}
 
 ## Перенос и ограничения
 
