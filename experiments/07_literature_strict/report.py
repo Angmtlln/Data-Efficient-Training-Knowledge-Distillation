@@ -122,6 +122,19 @@ def main():
         rho = float(spearmanr(values, target_accuracy).statistic) if np.ptp(values) and np.ptp(target_accuracy) else float('nan')
         corr_rows.append(f"| {title} | {rho:+.2f} |" if np.isfinite(rho) else f"| {title} | не определено |")
     correlation_table = '\n'.join(corr_rows)
+    slice_names = ('short_lt8', 'length_8_15', 'length_16_plus', 'negative', 'positive')
+    slice_rows = []
+    for name in METHODS:
+        subset = [r for r in sst['runs'] if r['method'] == name]
+        if len(subset) != len(SEEDS):
+            raise ValueError(f'Incomplete slice data: {name}')
+        cells = []
+        for key in slice_names:
+            values = [r['slices'][key]['accuracy'] for r in subset if key in r['slices']]
+            cells.append(f'{100*np.mean(values):.2f}' if values else '—')
+        slice_rows.append(f"| {NAMES[name]} | " + ' | '.join(cells) + ' |')
+    slice_table = '\n'.join(slice_rows)
+    slice_counts = {key: sst['runs'][0]['slices'].get(key, {}).get('n', 0) for key in slice_names}
     report = f'''# Отбор 10% SST-2: статьи 2025–2026 и эксперименты
 
 ## Постановка
@@ -149,6 +162,14 @@ def main():
 | Метод | GLUE validation | Открытый SST-2 test | IMDb |
 |---|---|---|---|
 {pair_rows}
+
+### Срезы GLUE validation
+
+Средняя accuracy в процентах по трём seed. Размеры срезов: <8 слов — {slice_counts['short_lt8']}, 8–15 — {slice_counts['length_8_15']}, 16+ — {slice_counts['length_16_plus']}, отрицательные — {slice_counts['negative']}, положительные — {slice_counts['positive']}. Все срезы исследовательские, а GLUE validation многократно использовалась при разработке проекта.
+
+| Метод | <8 слов | 8–15 слов | 16+ слов | Отрицательные | Положительные |
+|---|---:|---:|---:|---:|---:|
+{slice_table}
 
 Методы 2025/2026 — адаптации: `long_fd` вдохновлён [SCDP, COLING 2025](https://aclanthology.org/2025.coling-main.49/) и использует иные настройки TF-IDF, долю отбора и ограничения; `long_gsnr` вдохновлён [GRADFILTERING, EMNLP 2026](https://aclanthology.org/2026.emnlp-main.2297/), но применяет ансамбль линейных моделей, а не LoRA к генеративной модели. Результаты не являются воспроизведением этих работ.
 
@@ -186,7 +207,7 @@ def main():
 
 IMDb: новая фиксированная выборка {ext['n']} отзывов, отдельная от 2000 IMDb-примеров серии 05, по 1000 каждого класса. Точных нормализованных совпадений с SST-2: {ext['normalized_exact_sst2_any_split']}; отзывов с общим 8-граммом: {ext['containing_any_8token_ngram_from_sst2']}. Обрезаны до 64 токенов {ext['over_64_tokens']} из {ext['n']} отзывов. IMDb — иной домен, а пересечение с данными предварительного обучения неизвестно. Это проверка переноса, не новый слепой SST-2 тест.
 
-Выборки и инициализации связаны seed; три повтора не разделяют вариативность выбора данных и обучения. Сравниваются несколько стратегий без поправки на множественные проверки. Уверенные выводы о малых разницах и превосходстве над коллегами без новых независимых повторов и оценки невозможны. Время CPU-просчёта proxy и время GPU-обучения сохранены раздельно, а часть моделей обучалась параллельно; wall time не является честным сравнением FLOPs или ускорения. Равное число примеров не означает равную стоимость по токенам.
+Выборки и инициализации связаны seed; три повтора не разделяют вариативность выбора данных и обучения. Сравниваются несколько стратегий без поправки на множественные проверки. Уверенные выводы о малых разницах и превосходстве над коллегами без новых независимых повторов и оценки невозможны. Время CPU-просчёта proxy и время GPU-обучения сохранены раздельно, а часть моделей обучалась параллельно; `long_fd` seed 101 был продолжен с полного чекпоинта после первой эпохи. Wall time не является честным сравнением FLOPs или ускорения. Равное число примеров не означает равную стоимость по токенам.
 
 Разбор статей — `experiments/07_literature_strict/LITERATURE.md`; результаты коллеги — `COLLABORATOR.md`; протоколы, манифесты, хэши, прогнозы и исходные метрики сохранены в ветке проекта.
 '''

@@ -20,7 +20,9 @@ class ReportTests(unittest.TestCase):
                             'clean_accuracy_mean': .901, 'delta_vs_long_random_pp': [0., .1, -.1]}
                            for name in report.METHODS]
                 documents = {
-                    'analysis.json': {'summary': entries},
+                    'analysis.json': {'summary': entries, 'runs': [{'method': name, 'slices': {
+                        k: {'accuracy': .9, 'n': 20} for k in ('short_lt8', 'length_8_15', 'length_16_plus', 'negative', 'positive')}}
+                        for name in report.METHODS for _ in report.SEEDS]},
                     'original_sst_analysis.json': {'summary': entries},
                     'imdb_holdout_analysis.json': {'summary': entries, 'sample': {'n': 2000,
                         'normalized_exact_sst2_any_split': 0, 'containing_any_8token_ngram_from_sst2': 3,
