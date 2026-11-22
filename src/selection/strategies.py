@@ -169,12 +169,16 @@ STRATEGIES = dict(
     one_per_sent_len8=nested.one_per_sent(min_words=8),
     all_per_sent=nested.all_per_sent,
     roots_mix50=nested.roots_mix(0.5),
+    # is it full sentences or just their length? (round 8)
+    len_match=nested.len_match,
+    longest_child=nested.longest_child,
 )
 NEEDS_OOF = {"clean", "clean_kmeans", "clean_ambiguous_bal", "clean_len5_kmeans", "rank_agg",
              "clean_len8", "mix_ambig20"}
 NEEDS_CHEAP = {"ccs_b10_cheap", "ccs_len8_cheap", "ccs_b10_cheap_bal"}
 NEEDS_COLUMN = {name: "llm_quality" for name in STRATEGIES if name.startswith("llm_")} | {
-    name: "sent_id" for name in ("roots", "one_per_sent", "one_per_sent_len8", "all_per_sent", "roots_mix50")}
+    name: "sent_id" for name in ("roots", "one_per_sent", "one_per_sent_len8", "all_per_sent", "roots_mix50",
+                                 "len_match", "longest_child")}
 
 
 def main():

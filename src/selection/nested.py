@@ -1,6 +1,9 @@
 """Selection by source sentence (src/analysis/nested.py): separate phrase length from source diversity.
 
-  roots              random full sentences
+  roots              random full sentences; above 6 670 (all of them) filled with one phrase per other sentence
+  len_match          control for roots: non-root phrases with the same length distribution (~2 per sentence)
+  longest_child      control for roots: the longest proper sub-phrase of each of `budget` random sentences,
+                     one per sentence like roots but shorter (15.7 vs 19.4 words)
   one_per_sent       one random phrase from each of `budget` random sentences (max source diversity)
   one_per_sent_len8  the same, among phrases of >= 8 words
   all_per_sent       all phrases of random sentences until the budget is filled (min source diversity)
@@ -12,7 +15,35 @@ import numpy as np
 
 
 def roots(df, budget, rng):
-    return rng.choice(np.flatnonzero(df.is_root), size=budget, replace=False)
+    full = np.flatnonzero(df.is_root)
+    if budget <= len(full):
+        return rng.choice(full, size=budget, replace=False)
+    rest = one_per_sent()(df[~df.is_root].reset_index(drop=True), budget - len(full), rng)
+    return np.concatenate([full, np.flatnonzero(~df.is_root)[rest]])
+
+
+def len_match(df, budget, rng):
+    """Non-root phrases drawn to the length histogram of a random roots subset. Lengths with too few non-roots
+    (long ones) borrow from the next shorter length. Long phrases come ~2 per sentence: with one per sentence
+    the length cannot be matched (that control is longest_child)."""
+    want = df.n_words.to_numpy()[roots(df, budget, rng)]
+    lengths = df.n_words.to_numpy()
+    out, carry = [], 0
+    for n in range(want.max(), 0, -1):
+        k = (want == n).sum() + carry
+        cand = np.flatnonzero(~df.is_root & (lengths == n))
+        take = min(k, len(cand))
+        out.append(rng.choice(cand, size=take, replace=False))
+        carry = k - take
+    return np.concatenate(out)
+
+
+def longest_child(df, budget, rng):
+    sub = df[(df.sent_id >= 0) & ~df.is_root]
+    # longest phrase per sentence, ties broken at random
+    order = np.lexsort((rng.random(len(sub)), sub.n_words.to_numpy()))
+    longest = sub.iloc[order].groupby("sent_id").tail(1).index.to_numpy()
+    return rng.choice(longest, size=budget, replace=False)
 
 
 def _one_per_sentence(df, sents, rng, mask=None):

@@ -28,7 +28,8 @@ def main():
         df = pd.read_csv(RESULTS_CSV)
         done = set(zip(df.subset, df.seed, df.tag.fillna("")))
 
-    jobs = [(f"{strat}_s{s}", s) for strat in args.strategies for s in args.seeds]
+    # "full" is the whole pool, not a saved subset: the seed only changes the training run
+    jobs = [(strat if strat == "full" else f"{strat}_s{s}", s) for strat in args.strategies for s in args.seeds]
     for i, (subset, s) in enumerate(jobs, 1):
         if (subset, s, args.tag) in done:
             print(f"[{i}/{len(jobs)}] skip {subset} {args.tag} (already in results.csv)", flush=True)

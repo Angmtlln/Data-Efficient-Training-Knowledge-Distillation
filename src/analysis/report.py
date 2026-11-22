@@ -28,7 +28,7 @@ AXIS = {
     "llm_quality_top": "llm", "llm_quality_top_bal": "llm", "llm_top_bal": "llm", "llm_filter_bal": "llm",
     "llm_clean": "llm", "llm_filter_len8_bal": "hybrid",
     "roots": "source", "one_per_sent": "source", "one_per_sent_len8": "source", "all_per_sent": "source",
-    "roots_mix50": "source",
+    "roots_mix50": "source", "len_match": "source", "longest_child": "source",
 }
 COLORS = {"quality": "#2a78d6", "diversity": "#eb6834", "importance": "#1baf7a", "hybrid": "#6250d6", "coreset": "#e87ba4",
           "llm": "#c9a227", "source": "#2fa8b5", "distill": "#b5452f",
@@ -162,7 +162,7 @@ def plot_cartography(scores):
     plt.close(fig)
 
 
-def plot_val_vs_test(summary, label=("len_ge8", "ccs_len8", "ccs_b10", "ccs_b10_cheap", "d2_b10",
+def plot_val_vs_test(summary, label=("roots", "len_ge8", "ccs_len8", "ccs_b10", "ccs_b10_cheap", "d2_b10",
                                       "longest", "rank_agg", "kcenter", "random")):
     s = summary[(summary.test_acc_mean > 0.9) & (summary.strategy != "full")]
     fig, ax = plt.subplots(figsize=(6.5, 5.2), facecolor=SURFACE)
@@ -205,7 +205,7 @@ def budget_sweep(res, full_acc):
     style(ax)
     ax.grid(axis="y", color=GRID, linewidth=0.8)
     colors = {"random": COLORS["baseline"], "len_ge8": COLORS["quality"], "domain_clf": COLORS["hybrid"],
-              "ccs_b10_cheap": COLORS["coreset"]}
+              "ccs_b10_cheap": COLORS["coreset"], "roots": COLORS["source"]}
     for name, g in sweep.groupby("base"):
         g = g.sort_values("budget")
         c = colors.get(name, COLORS["diversity"])
@@ -227,8 +227,12 @@ def budget_sweep(res, full_acc):
 def main():
     FIG_DIR.mkdir(parents=True, exist_ok=True)
     res_all = pd.read_csv(RESULTS_CSV)
-    # teacher runs (src.train --save-probs) repeat existing baselines; distillation runs get "@<tag>"
-    res_all = res_all[res_all.tag.fillna("") != "teacher"].copy()
+    # teacher / rerun runs repeat a baseline in the current environment (src/analysis/same_env.py): keep the latest
+    # run of each (subset, seed); distillation runs get "@<tag>"
+    tag = res_all.tag.fillna("")
+    plain = tag.isin(["", "teacher", "rerun"])
+    latest = res_all[plain].sort_values("timestamp").groupby(["subset", "seed"]).tail(1).assign(tag="")
+    res_all = pd.concat([latest, res_all[~plain]], ignore_index=True)
     tag = res_all.tag.fillna("")
     res_all["strategy"] = res_all.subset.map(strategy_of) + tag.where(tag == "", "@" + tag)
     # the main analysis is at the 10% budget; other budgets only feed the sweep figure
