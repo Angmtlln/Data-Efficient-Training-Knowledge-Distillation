@@ -41,6 +41,7 @@ def main():
     root = load('inferred_roots_audit.json')
     source_audit = load('source_diversity_audit.json')
     difficulty_audit = load('difficulty_audit.json')['selections']
+    original_audit = load('original_sst_audit.json')
     ext = imdb['sample']
     entries = []
     for name in METHODS:
@@ -175,7 +176,7 @@ def main():
 
 ## Перенос и ограничения
 
-Исходный SST-2 test: 1821 размеченное предложение из открытого [зеркала](https://github.com/AcademiaSinicaNLPLab/sentiment_dataset/blob/master/data/stsa.binary.test), не официальная отправка на GLUE leaderboard. Из них 1814 после нормализации текстов совпадают с неразмеченным GLUE test; у семи различается запись. Открытый dev этого источника совпал по тексту и метке со всеми 872 примерами GLUE validation. Варианты отбирались после изучения предыдущих экспериментов на validation; публичный test и возможное использование тех же данных на pretraining ограничивают независимость этой проверки.
+Исходный SST-2 test: 1821 размеченное предложение из открытого [зеркала](https://github.com/AcademiaSinicaNLPLab/sentiment_dataset/blob/master/data/stsa.binary.test), не официальная отправка на GLUE leaderboard. Из них 1814 после нормализации текстов совпадают с неразмеченным GLUE test; у семи различается запись. Открытый dev этого источника совпал по тексту и метке со всеми 872 примерами GLUE validation. Длину в 64 токена превышает {original_audit['test_over_64_tokens']} предложение теста. Варианты отбирались после изучения предыдущих экспериментов на validation; публичный test и возможное использование тех же данных на pretraining ограничивают независимость этой проверки.
 
 Ниже — accuracy на всех 1821 примере и на 1818 примерах без точного совпадения или общего восьмисловного фрагмента с допустимым пулом. Для каждого метода показано среднее по трём seed.
 

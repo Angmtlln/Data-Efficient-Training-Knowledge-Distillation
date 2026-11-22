@@ -8,6 +8,7 @@ import re
 
 from datasets import Dataset
 import numpy as np
+from transformers import AutoTokenizer
 import prepare as base
 
 
@@ -57,6 +58,8 @@ def main():
     clean_ids = [i for i, (text, _) in enumerate(test)
                  if base.norm(text) not in pool_norm and not (base.eightgrams(text) & pool_grams)]
     previous_eval = {base.norm(text) for split in ('val', 'test') for text in ds[split]['sentence']}
+    tokenizer = AutoTokenizer.from_pretrained(str(base.REPO / 'experiments/01_cpu_selection/data/tokenizer'), local_files_only=True)
+    token_lengths = [len(ids) for ids in tokenizer([text for text, _ in test], truncation=False, verbose=False)['input_ids']]
     report = {'source': 'AcademiaSinicaNLPLab/sentiment_dataset/data/stsa.binary.{dev,test}',
               'test_blob_sha1': 'bb5d021fbc75d277a92c6a0fb1b0786984776007',
               'dev_blob_sha1': 'a80b081639ae8ac506f0285de4af86d276e8f983',
@@ -72,6 +75,8 @@ def main():
               'test_shared_8gram_with_eligible_pool': gram_pool,
               'test_clean_of_pool_exact_or_shared_8gram': len(clean_ids),
               'test_exact_with_prior_evaluation': sum(base.norm(t) in previous_eval for t, _ in test),
+              'test_over_64_tokens': int(sum(length > 64 for length in token_lengths)),
+              'test_max_tokens_untruncated': max(token_lengths),
               'pool_sha256': meta['splits']['pool']['sha256'],
               'limitation': 'Public third-party SST binary mirror, not an official GLUE leaderboard submission; pretraining exposure unknown.'}
     (base.ROOT / 'original_sst_audit.json').write_text(json.dumps(report, indent=2) + '\n')

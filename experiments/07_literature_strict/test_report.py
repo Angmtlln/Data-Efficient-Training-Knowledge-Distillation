@@ -30,6 +30,7 @@ class ReportTests(unittest.TestCase):
                                                                   'mean_words': 12., 'positive_fraction': .5}
                                                                   for name in report.METHODS]},
                     'inferred_roots_audit.json': {'eligible_long_root_rows': 5419},
+                    'original_sst_audit.json': {'test_over_64_tokens': 1},
                     'source_diversity_audit.json': {'selections': [{'name': name, 'inferred_root_fraction': .2,
                         'distinct_uniquely_assigned_parents': 3500, 'shared_with_uniquely_assigned_val_parent': 1000}
                         for name in report.METHODS for _ in report.SEEDS]},
