@@ -5,12 +5,10 @@ set -euo pipefail
 cd "$(dirname "$0")/../.."
 : "${EXPERIMENT_PYTHON:=python}"
 export TOKENIZERS_PARALLELISM=false PYTORCH_ENABLE_MPS_FALLBACK=1
+source experiments/07_literature_strict/power_guard.sh
 mkdir -p outputs/literature_strict/logs
 for method in long_random long_mid long_fd long_fd_mid pool_random; do
-  if ! pmset -g batt | grep -q 'AC Power'; then
-    echo 'Stopped before next job: external power is absent.' >&2
-    exit 2
-  fi
+  ensure_power || exit 2
   printf '%s backfill starting %s seed 101\n' "$(date '+%F %T')" "$method"
   "$EXPERIMENT_PYTHON" experiments/04_len_forgetting/train.py \
     --selection "results/literature_strict/selections/${method}__s101.json" \
