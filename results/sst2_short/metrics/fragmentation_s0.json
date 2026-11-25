@@ -1,0 +1,19 @@
+{
+  "timestamp": "2026-11-23T21:02:16",
+  "subset": "fragmentation_s0",
+  "tag": "sst2_short_v1",
+  "seed": 0,
+  "n_train": 6534,
+  "val_acc": 0.9155,
+  "val_f1": 0.92404,
+  "test_acc": 0.93234,
+  "test_f1": 0.93481,
+  "best_epoch": 1,
+  "train_time_s": 357.1,
+  "config": "{\"lr\": 5e-05, \"batch_size\": 32, \"epochs\": 3, \"warmup_ratio\": 0.06, \"weight_decay\": 0.01, \"max_length\": 64, \"eval_batch_size\": 256}",
+  "subset_sha256": "8b05d37620e3ef1a66a9775892b8bccbc8fd57f0dfd84e47ae2f9c61ed5d88a2",
+  "inputs_sha256": "8c8f1f182661e47a4480ec598eef39a813f4b4c5e01ab90e750f4c86091ae4d6",
+  "gpu": "Tesla T4",
+  "torch_version": "2.11.0+cu130",
+  "transformers_version": "4.49.0"
+}
