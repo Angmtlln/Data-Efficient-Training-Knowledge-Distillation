@@ -1,0 +1,9 @@
+{
+  "url": "https://huggingface.co/datasets/stanfordnlp/sst/resolve/refs%2Fconvert%2Fparquet/ptb/train/0000.parquet",
+  "sha256": "4e55a3cf2c4de55a121b51af013250841c92f0abf1aae93e289b09df01814144",
+  "trees": 8544,
+  "roots": 6658,
+  "candidate_pairs": 276,
+  "disjoint_pairs": 166,
+  "excluded_roots": 0
+}

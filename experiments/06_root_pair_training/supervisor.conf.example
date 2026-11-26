@@ -1,0 +1,10 @@
+[program:enn_root_pairs]
+directory=/workspace/06_root_pair_training
+command=/workspace/venv/bin/python -u /workspace/06_root_pair_training/run_queue.py --output /workspace/06_root_pair_training/outputs --local /workspace/06_root_pair_training/local_checkpoints
+autostart=false
+autorestart=false
+stopasgroup=true
+killasgroup=true
+stdout_logfile=/workspace/06_root_pair_training/queue.log
+redirect_stderr=true
+environment=USE_TF="0",USE_FLAX="0",TOKENIZERS_PARALLELISM="false"

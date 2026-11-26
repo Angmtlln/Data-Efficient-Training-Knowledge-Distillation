@@ -1,0 +1,9 @@
+# Install a CUDA-compatible torch separately on the VM.
+transformers==4.57.1
+accelerate>=1.2,<2
+datasets==3.1.0
+numpy>=1.26,<3
+pandas>=2.2,<3
+scikit-learn>=1.5,<2
+matplotlib>=3.9,<4
+safetensors>=0.4

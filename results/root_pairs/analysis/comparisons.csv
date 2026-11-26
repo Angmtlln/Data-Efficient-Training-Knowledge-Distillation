@@ -1,0 +1,13 @@
+method,control,seed,delta_pp
+mixed_independent,roots,1103,0.34403669724770714
+mixed_independent,roots,1201,0.4587155963302725
+mixed_independent,roots,1301,0.917431192660545
+mixed_paired,mixed_independent,1103,-0.6880733944954143
+mixed_paired,mixed_independent,1201,-0.5733944954128489
+mixed_paired,mixed_independent,1301,-0.34403669724770714
+mixed_rank,mixed_paired,1103,-0.2293577981651418
+mixed_rank,mixed_paired,1201,0.4587155963302836
+mixed_rank,mixed_paired,1301,-0.917431192660545
+mixed_rank,roots,1103,-0.5733944954128489
+mixed_rank,roots,1201,0.34403669724770714
+mixed_rank,roots,1301,-0.34403669724770714

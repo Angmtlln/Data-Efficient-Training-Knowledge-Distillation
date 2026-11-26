@@ -1,0 +1,1496 @@
+[
+  {
+    "root": 64467,
+    "child": 5331,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "if you are curious to see the darker side of what 's going on with young tv actors ( dawson leery did what ?!? ) , or see some interesting storytelling devices , you might want to check it out , but there 's nothing very attractive about this movie . ",
+    "child_text": "if you are curious to see the darker side of what 's going on with young tv actors ( dawson leery did what ?!? ) , or see some interesting storytelling devices , you might want to check it out "
+  },
+  {
+    "root": 60170,
+    "child": 34854,
+    "accepted": false,
+    "reviewer": "assistant_text_review",
+    "reason": "Unclear standalone polarity or incomplete phrase; conservatively excluded",
+    "root_text": "as much as i laughed throughout the movie , i can not mount a cogent defense of the film as entertainment , or even performance art , although the movie does leave you marveling at these guys ' superhuman capacity to withstand pain . ",
+    "child_text": "mount a cogent defense of the film as entertainment , or even performance art , although the movie does leave you marveling at these guys ' superhuman capacity to withstand pain "
+  },
+  {
+    "root": 41793,
+    "child": 19643,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "never does `` lilo & stitch '' reach the emotion or timelessness of disney 's great past , or even that of more recent successes such as `` mulan '' or `` tarzan . '' ",
+    "child_text": "lilo & stitch '' reach the emotion or timelessness of disney 's great past , or even that of more recent successes such as `` mulan '' or `` tarzan "
+  },
+  {
+    "root": 3572,
+    "child": 6586,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "( city ) reminds us how realistically nuanced a robert de niro performance can be when he is not more lucratively engaged in the shameless self-caricature of ` analyze this ' ( 1999 ) and ` analyze that , ' promised ( or threatened ) for later this year . ",
+    "child_text": "lucratively engaged in the shameless self-caricature of ` analyze this ' ( 1999 ) and ` analyze that , ' promised ( or threatened ) for later this year "
+  },
+  {
+    "root": 18373,
+    "child": 34460,
+    "accepted": false,
+    "reviewer": "assistant_text_review",
+    "reason": "Unclear standalone polarity or incomplete phrase; conservatively excluded",
+    "root_text": "weirdly , broomfield has compelling new material but he does n't unveil it until the end , after endless scenes of him wheedling reluctant witnesses and pointing his camera through the smeared windshield of his rental car . ",
+    "child_text": "he does n't unveil it until the end , after endless scenes of him wheedling reluctant witnesses and pointing his camera through the smeared windshield of his rental car "
+  },
+  {
+    "root": 6221,
+    "child": 48639,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "there are laughs aplenty , and , as a bonus , viewers do n't have to worry about being subjected to farts , urine , feces , semen , or any of the other foul substances that have overrun modern-day comedies . ",
+    "child_text": "have to worry about being subjected to farts , urine , feces , semen , or any of the other foul substances that have overrun modern-day comedies "
+  },
+  {
+    "root": 49289,
+    "child": 60909,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "will undoubtedly play well in european markets , where mr. besson is a brand name , and in asia , where ms. shu is an institution , but american audiences will probably find it familiar and insufficiently cathartic . ",
+    "child_text": "will undoubtedly play well in european markets , where mr. besson is a brand name , and in asia , where ms. shu is an institution , "
+  },
+  {
+    "root": 569,
+    "child": 16219,
+    "accepted": false,
+    "reviewer": "assistant_text_review",
+    "reason": "Unclear standalone polarity or incomplete phrase; conservatively excluded",
+    "root_text": "often likable , but just as often it 's meandering , low on energy , and too eager to be quirky at moments when a little old-fashioned storytelling would come in handy . ",
+    "child_text": "as often it 's meandering , low on energy , and too eager to be quirky at moments when a little old-fashioned storytelling would come in handy "
+  },
+  {
+    "root": 44678,
+    "child": 57129,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "it 's hard to imagine anybody ever being `` in the mood '' to view a movie as harrowing and painful as the grey zone , but it 's equally hard to imagine anybody being able to tear their eyes away from the screen once it 's started . ",
+    "child_text": "it 's hard to imagine anybody ever being `` in the mood '' to view a movie as harrowing and painful as the grey zone , "
+  },
+  {
+    "root": 37819,
+    "child": 101,
+    "accepted": false,
+    "reviewer": "assistant_text_review",
+    "reason": "Unclear standalone polarity or incomplete phrase; conservatively excluded",
+    "root_text": "as with so many merchandised-to-the-max movies of this type , more time appears to have gone into recruiting the right bands for the playlist and the costuming of the stars than into the script , which has a handful of smart jokes and not much else . ",
+    "child_text": "into recruiting the right bands for the playlist and the costuming of the stars than into the script , which has a handful of smart jokes "
+  },
+  {
+    "root": 9209,
+    "child": 10614,
+    "accepted": false,
+    "reviewer": "assistant_text_review",
+    "reason": "Unclear standalone polarity or incomplete phrase; conservatively excluded",
+    "root_text": "with a tighter editorial process and firmer direction this material could work , especially since the actresses in the lead roles are all more than competent , but as is , personal velocity seems to be idling in neutral . ",
+    "child_text": "with a tighter editorial process and firmer direction this material could work , especially since the actresses in the lead roles are all more than competent "
+  },
+  {
+    "root": 60999,
+    "child": 16232,
+    "accepted": false,
+    "reviewer": "assistant_text_review",
+    "reason": "Unclear standalone polarity or incomplete phrase; conservatively excluded",
+    "root_text": "snoots will no doubt rally to its cause , trotting out threadbare standbys like ` masterpiece ' and ` triumph ' and all that malarkey , but rarely does an established filmmaker so ardently waste viewers ' time with a gobbler like this . ",
+    "child_text": "will no doubt rally to its cause , trotting out threadbare standbys like ` masterpiece ' and ` triumph ' and all that malarkey , "
+  },
+  {
+    "root": 57590,
+    "child": 7019,
+    "accepted": false,
+    "reviewer": "assistant_text_review",
+    "reason": "Unclear standalone polarity or incomplete phrase; conservatively excluded",
+    "root_text": "to those who have not read the book , the film is a much better mother-daughter tale than last summer 's ` divine secrets of the ya-ya sisterhood , ' but that 's not saying much . ",
+    "child_text": "is a much better mother-daughter tale than last summer 's ` divine secrets of the ya-ya sisterhood , ' but that 's not saying much "
+  },
+  {
+    "root": 38882,
+    "child": 55181,
+    "accepted": false,
+    "reviewer": "assistant_text_review",
+    "reason": "Unclear standalone polarity or incomplete phrase; conservatively excluded",
+    "root_text": "what 's not to like about a movie with a ` children 's ' song that includes the line ` my stepdad 's not mean , he 's just adjusting ' ? ",
+    "child_text": "a movie with a ` children 's ' song that includes the line ` my stepdad 's not mean , he 's just adjusting ' "
+  },
+  {
+    "root": 27144,
+    "child": 18005,
+    "accepted": false,
+    "reviewer": "assistant_text_review",
+    "reason": "Unclear standalone polarity or incomplete phrase; conservatively excluded",
+    "root_text": "... tara reid plays a college journalist , but she looks like the six-time winner of the miss hawaiian tropic pageant , so i do n't know what she 's doing in here ... ",
+    "child_text": "she looks like the six-time winner of the miss hawaiian tropic pageant , so i do n't know what she 's doing in here "
+  },
+  {
+    "root": 15316,
+    "child": 5354,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "yes , i suppose it 's lovely that cal works out his issues with his dad and comes to terms with his picture-perfect life -- but world traveler gave me no reason to care , so i did n't . ",
+    "child_text": "i suppose it 's lovely that cal works out his issues with his dad and comes to terms with his picture-perfect life -- "
+  },
+  {
+    "root": 64504,
+    "child": 20058,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "a thriller with an edge -- which is to say that it does n't follow the stale , standard , connect-the-dots storyline which has become commonplace in movies that explore the seamy underbelly of the criminal world . ",
+    "child_text": "follow the stale , standard , connect-the-dots storyline which has become commonplace in movies that explore the seamy underbelly of the criminal world "
+  },
+  {
+    "root": 13752,
+    "child": 31507,
+    "accepted": false,
+    "reviewer": "assistant_text_review",
+    "reason": "Unclear standalone polarity or incomplete phrase; conservatively excluded",
+    "root_text": "yet another iteration of what 's become one of the movies ' creepiest conventions , in which the developmentally disabled are portrayed with almost supernatural powers to humble , teach and ultimately redeem their mentally `` superior '' friends , family ... ",
+    "child_text": "are portrayed with almost supernatural powers to humble , teach and ultimately redeem their mentally `` superior '' friends , family ... "
+  },
+  {
+    "root": 53702,
+    "child": 64633,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "though it goes further than both , anyone who has seen the hunger or cat people will find little new here , but a tasty performance from vincent gallo lifts this tale of cannibal lust above the ordinary . ",
+    "child_text": "though it goes further than both , anyone who has seen the hunger or cat people will find little new here , "
+  },
+  {
+    "root": 36222,
+    "child": 3500,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "the acting , for the most part , is terrific , although the actors must struggle with the fact that they 're playing characters who sometimes feel more like literary conceits than flesh-and-blood humans . ",
+    "child_text": "the actors must struggle with the fact that they 're playing characters who sometimes feel more like literary conceits than flesh-and-blood humans "
+  },
+  {
+    "root": 42495,
+    "child": 37401,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "although olivier assayas ' elegantly appointed period drama seems , at times , padded with incident in the way of a too-conscientious adaptation ... its three-hour running time plays closer to two . ",
+    "child_text": "olivier assayas ' elegantly appointed period drama seems , at times , padded with incident in the way of a too-conscientious adaptation "
+  },
+  {
+    "root": 51034,
+    "child": 45516,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "the director , mark pellington , does a terrific job conjuring up a sinister , menacing atmosphere though unfortunately all the story gives us is flashing red lights , a rattling noise , and a bump on the head . ",
+    "child_text": "unfortunately all the story gives us is flashing red lights , a rattling noise , and a bump on the head "
+  },
+  {
+    "root": 44807,
+    "child": 53719,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "some of the computer animation is handsome , and various amusing sidekicks add much-needed levity to the otherwise bleak tale , but overall the film never rises above mediocrity . ",
+    "child_text": "some of the computer animation is handsome , and various amusing sidekicks add much-needed levity to the otherwise bleak tale , "
+  },
+  {
+    "root": 59982,
+    "child": 4425,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "behan 's memoir is great material for a film -- rowdy , brawny and lyrical in the best irish sense -- but sheridan has settled for a lugubrious romance . ",
+    "child_text": "behan 's memoir is great material for a film -- rowdy , brawny and lyrical in the best irish sense -- "
+  },
+  {
+    "root": 4968,
+    "child": 62886,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "cho 's latest comic set is n't as sharp or as fresh as i 'm the one that i want ... but it 's still damn funny stuff . ",
+    "child_text": "cho 's latest comic set is n't as sharp or as fresh as i 'm the one that i want ... "
+  },
+  {
+    "root": 1062,
+    "child": 4337,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "adolescents will be adequately served by the movie 's sophomoric blend of shenanigans and slapstick , although the more lascivious-minded might be disappointed in the relative modesty of a movie that sports a ` topless tutorial service . ' ",
+    "child_text": "the more lascivious-minded might be disappointed in the relative modesty of a movie that sports a ` topless tutorial service "
+  },
+  {
+    "root": 25000,
+    "child": 47759,
+    "accepted": false,
+    "reviewer": "assistant_text_review",
+    "reason": "Unclear standalone polarity or incomplete phrase; conservatively excluded",
+    "root_text": "despite its hawaiian setting , the science-fiction trimmings and some moments of rowdy slapstick , the basic plot of `` lilo '' could have been pulled from a tear-stained vintage shirley temple script . ",
+    "child_text": ", the basic plot of `` lilo '' could have been pulled from a tear-stained vintage shirley temple script . "
+  },
+  {
+    "root": 34984,
+    "child": 22241,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "i 've yet to find an actual vietnam war combat movie actually produced by either the north or south vietnamese , but at least now we 've got something pretty damn close . ",
+    "child_text": "i 've yet to find an actual vietnam war combat movie actually produced by either the north or south vietnamese "
+  },
+  {
+    "root": 64492,
+    "child": 37888,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "as david letterman and the onion have proven , the worst of tragedies can be fertile sources of humor , but lawrence has only a fleeting grasp of how to develop them . ",
+    "child_text": "as david letterman and the onion have proven , the worst of tragedies can be fertile sources of humor , "
+  },
+  {
+    "root": 52741,
+    "child": 57944,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "i 'm not a fan of the phrase ` life affirming ' because it usually means ` schmaltzy , ' but real women have curves truly is life affirming . ",
+    "child_text": "i 'm not a fan of the phrase ` life affirming ' because it usually means ` schmaltzy , ' "
+  },
+  {
+    "root": 46217,
+    "child": 48587,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "the film did n't convince me that calvin jr. 's barbershop represents some sort of beacon of hope in the middle of chicago 's south side . ",
+    "child_text": "that calvin jr. 's barbershop represents some sort of beacon of hope in the middle of chicago 's south side "
+  },
+  {
+    "root": 42695,
+    "child": 36963,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "return to never land may be another shameless attempt by disney to rake in dough from baby boomer families , but it 's not half-bad . ",
+    "child_text": "return to never land may be another shameless attempt by disney to rake in dough from baby boomer families , "
+  },
+  {
+    "root": 2820,
+    "child": 20665,
+    "accepted": false,
+    "reviewer": "assistant_text_review",
+    "reason": "Unclear standalone polarity or incomplete phrase; conservatively excluded",
+    "root_text": "not good enough to pass for a litmus test of the generation gap and not bad enough to repulse any generation of its fans . ",
+    "child_text": "pass for a litmus test of the generation gap and not bad enough to repulse any generation of its fans "
+  },
+  {
+    "root": 18532,
+    "child": 27052,
+    "accepted": false,
+    "reviewer": "assistant_text_review",
+    "reason": "Unclear standalone polarity or incomplete phrase; conservatively excluded",
+    "root_text": "despite engaging offbeat touches , knockaround guys rarely seems interested in kicking around a raison d'etre that 's as fresh-faced as its young-guns cast . ",
+    "child_text": "knockaround guys rarely seems interested in kicking around a raison d'etre that 's as fresh-faced as its young-guns cast . "
+  },
+  {
+    "root": 17714,
+    "child": 45834,
+    "accepted": false,
+    "reviewer": "assistant_text_review",
+    "reason": "Unclear standalone polarity or incomplete phrase; conservatively excluded",
+    "root_text": "this cinema verite speculation on the assassination of john f. kennedy may have been inspired by blair witch , but it takes its techniques into such fresh territory that the film never feels derivative . ",
+    "child_text": "this cinema verite speculation on the assassination of john f. kennedy may have been inspired by blair witch , "
+  },
+  {
+    "root": 49814,
+    "child": 54186,
+    "accepted": false,
+    "reviewer": "assistant_text_review",
+    "reason": "Unclear standalone polarity or incomplete phrase; conservatively excluded",
+    "root_text": "the film is an earnest try at beachcombing verismo , but it would be even more indistinct than it is were it not for the striking , quietly vulnerable personality of ms. ambrose . ",
+    "child_text": "even more indistinct than it is were it not for the striking , quietly vulnerable personality of ms. ambrose "
+  },
+  {
+    "root": 31973,
+    "child": 50644,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "although largely a heavy-handed indictment of parental failings and the indifference of spanish social workers and legal system towards child abuse , the film retains ambiguities that make it well worth watching . ",
+    "child_text": "a heavy-handed indictment of parental failings and the indifference of spanish social workers and legal system towards child abuse "
+  },
+  {
+    "root": 62143,
+    "child": 49561,
+    "accepted": false,
+    "reviewer": "assistant_text_review",
+    "reason": "Unclear standalone polarity or incomplete phrase; conservatively excluded",
+    "root_text": "not once in the rush to save the day did i become very involved in the proceedings ; to me , it was just a matter of ` eh . ' ",
+    "child_text": "once in the rush to save the day did i become very involved in the proceedings ; to me "
+  },
+  {
+    "root": 6727,
+    "child": 37671,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "( i ) t 's certainly laudable that the movie deals with hot-button issues in a comedic context , but barbershop is n't as funny as it should be . ",
+    "child_text": "( i ) t 's certainly laudable that the movie deals with hot-button issues in a comedic context , "
+  },
+  {
+    "root": 64891,
+    "child": 30665,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "return to never land is much more p.c. than the original version ( no more racist portraits of indians , for instance ) , but the excitement is missing . ",
+    "child_text": "is much more p.c. than the original version ( no more racist portraits of indians , for instance ) "
+  },
+  {
+    "root": 948,
+    "child": 23584,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "director shekhar kapur and screenwriters michael schiffer and hossein amini have tried hard to modernize and reconceptualize things , but the barriers finally prove to be too great . ",
+    "child_text": "director shekhar kapur and screenwriters michael schiffer and hossein amini have tried hard to modernize and reconceptualize things , "
+  },
+  {
+    "root": 17461,
+    "child": 64285,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "the film occasionally tries the viewer 's patience with slow pacing and a main character who sometimes defies sympathy , but it ultimately satisfies with its moving story . ",
+    "child_text": "the film occasionally tries the viewer 's patience with slow pacing and a main character who sometimes defies sympathy "
+  },
+  {
+    "root": 31976,
+    "child": 50516,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "filmmaker stacy peralta has a flashy editing style that does n't always jell with sean penn 's monotone narration , but he respects the material without sentimentalizing it . ",
+    "child_text": "filmmaker stacy peralta has a flashy editing style that does n't always jell with sean penn 's monotone narration "
+  },
+  {
+    "root": 59599,
+    "child": 37029,
+    "accepted": false,
+    "reviewer": "assistant_text_review",
+    "reason": "Unclear standalone polarity or incomplete phrase; conservatively excluded",
+    "root_text": "it is sentimental but feels free to offend , is analytical and then surrenders to the illogic of its characters , is about grief and yet permits laughter . ",
+    "child_text": "is sentimental but feels free to offend , is analytical and then surrenders to the illogic of its characters "
+  },
+  {
+    "root": 13347,
+    "child": 58009,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "while it is welcome to see a chinese film depict a homosexual relationship in a mature and frank fashion , lan yu never catches dramatic fire . ",
+    "child_text": "while it is welcome to see a chinese film depict a homosexual relationship in a mature and frank fashion "
+  },
+  {
+    "root": 22022,
+    "child": 27282,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "the film is a hoot , and is just as good , if not better than much of what 's on saturday morning tv especially the pseudo-educational stuff we all ca n't stand . ",
+    "child_text": "than much of what 's on saturday morning tv especially the pseudo-educational stuff we all ca n't stand "
+  },
+  {
+    "root": 61323,
+    "child": 47135,
+    "accepted": false,
+    "reviewer": "assistant_text_review",
+    "reason": "Unclear standalone polarity or incomplete phrase; conservatively excluded",
+    "root_text": "you may think you have figured out the con and the players in this debut film by argentine director fabian bielinsky , but while you were thinking someone made off with your wallet . ",
+    "child_text": "you have figured out the con and the players in this debut film by argentine director fabian bielinsky "
+  },
+  {
+    "root": 5742,
+    "child": 20213,
+    "accepted": false,
+    "reviewer": "assistant_text_review",
+    "reason": "Unclear standalone polarity or incomplete phrase; conservatively excluded",
+    "root_text": "mr. wollter and ms. seldhal give strong and convincing performances , but neither reaches into the deepest recesses of the character to unearth the quaking essence of passion , grief and fear . ",
+    "child_text": "into the deepest recesses of the character to unearth the quaking essence of passion , grief and fear "
+  },
+  {
+    "root": 19389,
+    "child": 63374,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "there 's some good material in their story about a retail clerk wanting more out of life , but the movie too often spins its wheels with familiar situations and repetitive scenes . ",
+    "child_text": "there 's some good material in their story about a retail clerk wanting more out of life , "
+  },
+  {
+    "root": 50091,
+    "child": 34707,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "like the rugrats movies , the wild thornberrys movie does n't offer much more than the series , but its emphasis on caring for animals and respecting other cultures is particularly welcome . ",
+    "child_text": "like the rugrats movies , the wild thornberrys movie does n't offer much more than the series , "
+  },
+  {
+    "root": 51548,
+    "child": 5560,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "a film centering on a traditional indian wedding in contemporary new delhi may not sound like specialized fare , but mira nair 's film is an absolute delight for all audiences . ",
+    "child_text": "a film centering on a traditional indian wedding in contemporary new delhi may not sound like specialized fare "
+  },
+  {
+    "root": 57758,
+    "child": 14063,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "the creative animation work may not look as fully ` rendered ' as pixar 's industry standard , but it uses lighting effects and innovative backgrounds to an equally impressive degree . ",
+    "child_text": "the creative animation work may not look as fully ` rendered ' as pixar 's industry standard , "
+  },
+  {
+    "root": 64907,
+    "child": 3584,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "lush and beautifully photographed ( somebody suggested the stills might make a nice coffee table book ) , but ultimately you 'll leave the theater wondering why these people mattered . ",
+    "child_text": "lush and beautifully photographed ( somebody suggested the stills might make a nice coffee table book ) , "
+  },
+  {
+    "root": 41828,
+    "child": 25280,
+    "accepted": false,
+    "reviewer": "assistant_text_review",
+    "reason": "Unclear standalone polarity or incomplete phrase; conservatively excluded",
+    "root_text": "it 's fairly solid -- not to mention well edited so that it certainly does n't feel like a film that strays past the two and a half mark . ",
+    "child_text": "that it certainly does n't feel like a film that strays past the two and a half mark "
+  },
+  {
+    "root": 12964,
+    "child": 23778,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "i liked about schmidt a lot , but i have a feeling that i would have liked it much more if harry & tonto never existed . ",
+    "child_text": "i have a feeling that i would have liked it much more if harry & tonto never existed "
+  },
+  {
+    "root": 6222,
+    "child": 44429,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "unlike most anime , whose most ardent fans outside japan seem to be introverted young men with fantasy fetishes , metropolis never seems hopelessly juvenile . ",
+    "child_text": "most anime , whose most ardent fans outside japan seem to be introverted young men with fantasy fetishes "
+  },
+  {
+    "root": 64917,
+    "child": 23672,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "audiences are advised to sit near the back and squint to avoid noticing some truly egregious lip-non-synching , but otherwise the production is suitably elegant . ",
+    "child_text": "audiences are advised to sit near the back and squint to avoid noticing some truly egregious lip-non-synching , "
+  },
+  {
+    "root": 8385,
+    "child": 29399,
+    "accepted": false,
+    "reviewer": "assistant_text_review",
+    "reason": "Unclear standalone polarity or incomplete phrase; conservatively excluded",
+    "root_text": "short and sweet , but also more than anything else slight ... tadpole pulls back from the consequences of its own actions and revelations . ",
+    "child_text": "more than anything else slight ... tadpole pulls back from the consequences of its own actions and revelations "
+  },
+  {
+    "root": 34508,
+    "child": 15951,
+    "accepted": false,
+    "reviewer": "assistant_text_review",
+    "reason": "Unclear standalone polarity or incomplete phrase; conservatively excluded",
+    "root_text": "... in no way original , or even all that memorable , but as downtown saturday matinee brain candy , it does n't disappoint . ",
+    "child_text": "in no way original , or even all that memorable , but as downtown saturday matinee brain candy "
+  },
+  {
+    "root": 30681,
+    "child": 49303,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "there is a certain sense of experimentation and improvisation to this film that may not always work , but it is nevertheless compelling . ",
+    "child_text": "there is a certain sense of experimentation and improvisation to this film that may not always work , "
+  },
+  {
+    "root": 10185,
+    "child": 45123,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "does n't come close to justifying the hype that surrounded its debut at the sundance film festival two years ago . ",
+    "child_text": "come close to justifying the hype that surrounded its debut at the sundance film festival two years ago "
+  },
+  {
+    "root": 54113,
+    "child": 31371,
+    "accepted": false,
+    "reviewer": "assistant_text_review",
+    "reason": "Unclear standalone polarity or incomplete phrase; conservatively excluded",
+    "root_text": "it 's mildly interesting to ponder the peculiar american style of justice that plays out here , but it 's so muddled and derivative that few will bother thinking it all through . ",
+    "child_text": "it 's mildly interesting to ponder the peculiar american style of justice that plays out here , "
+  },
+  {
+    "root": 55089,
+    "child": 39336,
+    "accepted": false,
+    "reviewer": "assistant_text_review",
+    "reason": "Unclear standalone polarity or incomplete phrase; conservatively excluded",
+    "root_text": "jones ... makes a great impression as the writer-director of this little $ 1.8 million charmer , which may not be cutting-edge indie filmmaking but has a huge heart . ",
+    "child_text": "the writer-director of this little $ 1.8 million charmer , which may not be cutting-edge indie filmmaking "
+  },
+  {
+    "root": 55399,
+    "child": 52583,
+    "accepted": false,
+    "reviewer": "assistant_text_review",
+    "reason": "Unclear standalone polarity or incomplete phrase; conservatively excluded",
+    "root_text": "but if the essence of magic is its make-believe promise of life that soars above the material realm , this is the opposite of a truly magical movie . ",
+    "child_text": "if the essence of magic is its make-believe promise of life that soars above the material realm "
+  },
+  {
+    "root": 39563,
+    "child": 45,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "an allegory concerning the chronically mixed signals african american professionals get about overachieving could be intriguing , but the supernatural trappings only obscure the message . ",
+    "child_text": "an allegory concerning the chronically mixed signals african american professionals get about overachieving could be intriguing , "
+  },
+  {
+    "root": 55890,
+    "child": 30000,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "a journey that is as difficult for the audience to take as it is for the protagonist -- yet it 's potentially just as rewarding . ",
+    "child_text": "a journey that is as difficult for the audience to take as it is for the protagonist "
+  },
+  {
+    "root": 57894,
+    "child": 43602,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "well , it probably wo n't have you swinging from the trees hooting it 's praises , but it 's definitely worth taking a look . ",
+    "child_text": "well , it probably wo n't have you swinging from the trees hooting it 's praises , "
+  },
+  {
+    "root": 19025,
+    "child": 27481,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "( t ) he film is never sure to make a clear point -- even if it seeks to rely on an ambiguous presentation . ",
+    "child_text": "sure to make a clear point -- even if it seeks to rely on an ambiguous presentation "
+  },
+  {
+    "root": 60100,
+    "child": 43424,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "i liked the movie , but i know i would have liked it more if it had just gone that one step further . ",
+    "child_text": "i know i would have liked it more if it had just gone that one step further "
+  },
+  {
+    "root": 29630,
+    "child": 36045,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "this is not one of the movies you 'd want to watch if you only had a week to live . ",
+    "child_text": "one of the movies you 'd want to watch if you only had a week to live "
+  },
+  {
+    "root": 35631,
+    "child": 8878,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "although fairly involving as far as it goes , the film does n't end up having much that is fresh to say about growing up catholic or , really , anything . ",
+    "child_text": "having much that is fresh to say about growing up catholic or , really , anything "
+  },
+  {
+    "root": 4894,
+    "child": 36034,
+    "accepted": false,
+    "reviewer": "assistant_text_review",
+    "reason": "Unclear standalone polarity or incomplete phrase; conservatively excluded",
+    "root_text": "the film does n't show enough of the creative process or even of what was created for the non-fan to figure out what makes wilco a big deal . ",
+    "child_text": "of what was created for the non-fan to figure out what makes wilco a big deal "
+  },
+  {
+    "root": 38973,
+    "child": 11084,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "not all of the stories work and the ones that do are thin and scattered , but the film works well enough to make it worth watching . ",
+    "child_text": "not all of the stories work and the ones that do are thin and scattered , "
+  },
+  {
+    "root": 12021,
+    "child": 53833,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "it 's easy to love robin tunney -- she 's pretty and she can act -- but it gets harder and harder to understand her choices . ",
+    "child_text": "it 's easy to love robin tunney -- she 's pretty and she can act -- "
+  },
+  {
+    "root": 1254,
+    "child": 11374,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "richard pryor mined his personal horrors and came up with a treasure chest of material , but lawrence gives us mostly fool 's gold . ",
+    "child_text": "richard pryor mined his personal horrors and came up with a treasure chest of material , "
+  },
+  {
+    "root": 4043,
+    "child": 19975,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "talk to her is not the perfect movie many have made it out to be , but it 's still quite worth seeing . ",
+    "child_text": "talk to her is not the perfect movie many have made it out to be , "
+  },
+  {
+    "root": 33981,
+    "child": 57794,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "the film is reasonably entertaining , though it begins to drag two-thirds through , when the melodramatic aspects start to overtake the comedy . ",
+    "child_text": "it begins to drag two-thirds through , when the melodramatic aspects start to overtake the comedy "
+  },
+  {
+    "root": 50694,
+    "child": 3781,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "parker can not sustain the buoyant energy level of the film 's city beginnings into its country conclusion ' ",
+    "child_text": "sustain the buoyant energy level of the film 's city beginnings into its country conclusion ' "
+  },
+  {
+    "root": 4721,
+    "child": 35880,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "none of this is meaningful or memorable , but frosting is n't , either , and you would n't turn down a big bowl of that , would you ? ",
+    "child_text": "none of this is meaningful or memorable , but frosting is n't , either , "
+  },
+  {
+    "root": 57736,
+    "child": 4762,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "the last kiss will probably never achieve the popularity of my big fat greek wedding , but its provocative central wedding sequence has far more impact . ",
+    "child_text": "the last kiss will probably never achieve the popularity of my big fat greek wedding "
+  },
+  {
+    "root": 6739,
+    "child": 5027,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "they kept much of the plot but jettisoned the stuff that would make this a moving experience for people who have n't read the book . ",
+    "child_text": "that would make this a moving experience for people who have n't read the book "
+  },
+  {
+    "root": 13880,
+    "child": 20732,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "despite the fact that this film was n't as bad as i thought it was going to be , it 's still not a good movie ",
+    "child_text": "that this film was n't as bad as i thought it was going to be "
+  },
+  {
+    "root": 26151,
+    "child": 39417,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "boll uses a lot of quick cutting and blurry step-printing to goose things up , but dopey dialogue and sometimes inadequate performances kill the effect . ",
+    "child_text": "boll uses a lot of quick cutting and blurry step-printing to goose things up , "
+  },
+  {
+    "root": 60392,
+    "child": 64273,
+    "accepted": false,
+    "reviewer": "assistant_text_review",
+    "reason": "Unclear standalone polarity or incomplete phrase; conservatively excluded",
+    "root_text": "it does n't make for great cinema , but it is interesting to see where one 's imagination will lead when given the opportunity . ",
+    "child_text": "it is interesting to see where one 's imagination will lead when given the opportunity "
+  },
+  {
+    "root": 52195,
+    "child": 63324,
+    "accepted": false,
+    "reviewer": "assistant_text_review",
+    "reason": "Unclear standalone polarity or incomplete phrase; conservatively excluded",
+    "root_text": "definitely funny stuff , but it 's more of the ` laughing at ' variety than the ` laughing with . ' ",
+    "child_text": "it 's more of the ` laughing at ' variety than the ` laughing with "
+  },
+  {
+    "root": 59199,
+    "child": 43617,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "thumbs up to paxton for not falling into the hollywood trap and making a vanity project with nothing new to offer . ",
+    "child_text": "falling into the hollywood trap and making a vanity project with nothing new to offer "
+  },
+  {
+    "root": 10434,
+    "child": 23181,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "a film really has to be exceptional to justify a three hour running time , and this is n't . ",
+    "child_text": "a film really has to be exceptional to justify a three hour running time , "
+  },
+  {
+    "root": 11733,
+    "child": 15790,
+    "accepted": false,
+    "reviewer": "assistant_text_review",
+    "reason": "Unclear standalone polarity or incomplete phrase; conservatively excluded",
+    "root_text": "though the film is well-intentioned , one could rent the original and get the same love story and parable . ",
+    "child_text": ", one could rent the original and get the same love story and parable . "
+  },
+  {
+    "root": 49240,
+    "child": 29520,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "i do n't think most of the people who loved the 1989 paradiso will prefer this new version . ",
+    "child_text": "think most of the people who loved the 1989 paradiso will prefer this new version "
+  },
+  {
+    "root": 63800,
+    "child": 8598,
+    "accepted": false,
+    "reviewer": "assistant_text_review",
+    "reason": "Unclear standalone polarity or incomplete phrase; conservatively excluded",
+    "root_text": "the film does n't sustain its initial promise with a jarring , new-agey tone creeping into the second half ",
+    "child_text": "sustain its initial promise with a jarring , new-agey tone creeping into the second half "
+  },
+  {
+    "root": 9144,
+    "child": 31865,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "not as well-written as sexy beast , not as gloriously flippant as lock , stock and two smoking barrels , but stylish and moody and exceptionally well-acted . ",
+    "child_text": ", not as gloriously flippant as lock , stock and two smoking barrels , "
+  },
+  {
+    "root": 30767,
+    "child": 32887,
+    "accepted": false,
+    "reviewer": "assistant_text_review",
+    "reason": "Unclear standalone polarity or incomplete phrase; conservatively excluded",
+    "root_text": "is many things -- stoner midnight flick , sci-fi deconstruction , gay fantasia -- but above all it 's a love story as sanguine as its title . ",
+    "child_text": "is many things -- stoner midnight flick , sci-fi deconstruction , gay fantasia -- "
+  },
+  {
+    "root": 64173,
+    "child": 19699,
+    "accepted": false,
+    "reviewer": "assistant_text_review",
+    "reason": "Unclear standalone polarity or incomplete phrase; conservatively excluded",
+    "root_text": "you 'll trudge out of the theater feeling as though you rode the zipper after eating a corn dog and an extra-large cotton candy . ",
+    "child_text": "you rode the zipper after eating a corn dog and an extra-large cotton candy "
+  },
+  {
+    "root": 42600,
+    "child": 30927,
+    "accepted": false,
+    "reviewer": "assistant_text_review",
+    "reason": "Unclear standalone polarity or incomplete phrase; conservatively excluded",
+    "root_text": "a good-natured ensemble comedy that tries hard to make the most of a bumper cast , but never quite gets off the ground . ",
+    "child_text": "a good-natured ensemble comedy that tries hard to make the most of a bumper "
+  },
+  {
+    "root": 63700,
+    "child": 64486,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "( caine ) proves once again he has n't lost his touch , bringing off a superb performance in an admittedly middling film . ",
+    "child_text": "lost his touch , bringing off a superb performance in an admittedly middling film "
+  },
+  {
+    "root": 14742,
+    "child": 44956,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "paid in full is remarkably engaging despite being noticeably derivative of goodfellas and at least a half dozen other trouble-in-the-ghetto flicks . ",
+    "child_text": "being noticeably derivative of goodfellas and at least a half dozen other trouble-in-the-ghetto flicks "
+  },
+  {
+    "root": 48594,
+    "child": 33296,
+    "accepted": false,
+    "reviewer": "assistant_text_review",
+    "reason": "Unclear standalone polarity or incomplete phrase; conservatively excluded",
+    "root_text": "you leave the same way you came -- a few tasty morsels under your belt , but no new friends . ",
+    "child_text": "the same way you came -- a few tasty morsels under your belt , "
+  },
+  {
+    "root": 46271,
+    "child": 45675,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "eight legged freaks wo n't join the pantheon of great monster/science fiction flicks that we have come to love ... ",
+    "child_text": "join the pantheon of great monster/science fiction flicks that we have come to love "
+  },
+  {
+    "root": 21647,
+    "child": 22754,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "all of the elements are in place for a great film noir , but director george hickenlooper 's approach to the material is too upbeat . ",
+    "child_text": "all of the elements are in place for a great film noir , "
+  },
+  {
+    "root": 23973,
+    "child": 5868,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "what 's so striking about jolie 's performance is that she never lets her character become a caricature -- not even with that radioactive hair . ",
+    "child_text": "lets her character become a caricature -- not even with that radioactive hair "
+  },
+  {
+    "root": 47942,
+    "child": 39703,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "although devoid of objectivity and full of nostalgic comments from the now middle-aged participants , dogtown and z-boys has a compelling story to tell . ",
+    "child_text": "devoid of objectivity and full of nostalgic comments from the now middle-aged participants "
+  },
+  {
+    "root": 48333,
+    "child": 10189,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "high crimes steals so freely from other movies and combines enough disparate types of films that it ca n't help but engage an audience . ",
+    "child_text": "steals so freely from other movies and combines enough disparate types of films "
+  },
+  {
+    "root": 62757,
+    "child": 63146,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "world traveler might not go anywhere new , or arrive anyplace special , but it 's certainly an honest attempt to get at something . ",
+    "child_text": "world traveler might not go anywhere new , or arrive anyplace special , "
+  },
+  {
+    "root": 25124,
+    "child": 54945,
+    "accepted": false,
+    "reviewer": "assistant_text_review",
+    "reason": "Unclear standalone polarity or incomplete phrase; conservatively excluded",
+    "root_text": "what 's needed so badly but what is virtually absent here is either a saving dark humor or the feel of poetic tragedy . ",
+    "child_text": "is either a saving dark humor or the feel of poetic tragedy . "
+  },
+  {
+    "root": 32432,
+    "child": 7135,
+    "accepted": false,
+    "reviewer": "assistant_text_review",
+    "reason": "Unclear standalone polarity or incomplete phrase; conservatively excluded",
+    "root_text": "horrid little propaganda film with fascinating connections not only to the serbs themselves but also to a network of american right-wing extremists . ",
+    "child_text": "to the serbs themselves but also to a network of american right-wing extremists "
+  },
+  {
+    "root": 11701,
+    "child": 15066,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "you 've already seen city by the sea under a variety of titles , but it 's worth yet another visit . ",
+    "child_text": "you 've already seen city by the sea under a variety of titles "
+  },
+  {
+    "root": 36155,
+    "child": 28551,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "though there 's a clarity of purpose and even-handedness to the film 's direction , the drama feels rigged and sluggish . ",
+    "child_text": "there 's a clarity of purpose and even-handedness to the film 's direction "
+  },
+  {
+    "root": 61798,
+    "child": 62165,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "watch barbershop again if you 're in need of a cube fix -- this is n't worth sitting through . ",
+    "child_text": "watch barbershop again if you 're in need of a cube fix -- "
+  },
+  {
+    "root": 29860,
+    "child": 64611,
+    "accepted": false,
+    "reviewer": "assistant_text_review",
+    "reason": "Unclear standalone polarity or incomplete phrase; conservatively excluded",
+    "root_text": "but first , you have to give the audience a reason to want to put for that effort ",
+    "child_text": "to give the audience a reason to want to put for that effort "
+  },
+  {
+    "root": 15464,
+    "child": 49907,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "i have a confession to make : i did n't particularly like e.t. the first time i saw it as a young boy . ",
+    "child_text": "like e.t. the first time i saw it as a young boy "
+  },
+  {
+    "root": 52986,
+    "child": 57208,
+    "accepted": false,
+    "reviewer": "assistant_text_review",
+    "reason": "Unclear standalone polarity or incomplete phrase; conservatively excluded",
+    "root_text": "how good this film might be , depends if you believe that the shocking conclusion is too much of a plunge or not . ",
+    "child_text": "you believe that the shocking conclusion is too much of a plunge "
+  },
+  {
+    "root": 37081,
+    "child": 43255,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "... while each moment of this broken character study is rich in emotional texture , the journey does n't really go anywhere . ",
+    "child_text": "each moment of this broken character study is rich in emotional texture "
+  },
+  {
+    "root": 47683,
+    "child": 38896,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "starts off witty and sophisticated and you want to love it -- but filmmaker yvan attal quickly writes himself into a corner . ",
+    "child_text": "starts off witty and sophisticated and you want to love it -- "
+  },
+  {
+    "root": 52023,
+    "child": 28662,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "it 's not as awful as some of the recent hollywood trip tripe ... but it 's far from a groundbreaking endeavor . ",
+    "child_text": "'s not as awful as some of the recent hollywood trip tripe "
+  },
+  {
+    "root": 20282,
+    "child": 462,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "it 's not going to be everyone 's bag of popcorn , but it definitely gives you something to chew on . ",
+    "child_text": "it 's not going to be everyone 's bag of popcorn , "
+  },
+  {
+    "root": 16393,
+    "child": 20242,
+    "accepted": false,
+    "reviewer": "assistant_text_review",
+    "reason": "Unclear standalone polarity or incomplete phrase; conservatively excluded",
+    "root_text": "those who are not acquainted with the author 's work , on the other hand , may fall fast asleep . ",
+    "child_text": "acquainted with the author 's work , on the other hand , "
+  },
+  {
+    "root": 61031,
+    "child": 34785,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "koepp 's screenplay is n't nearly surprising or clever enough to sustain a reasonable degree of suspense on its own . ",
+    "child_text": "clever enough to sustain a reasonable degree of suspense on its own "
+  },
+  {
+    "root": 9769,
+    "child": 12122,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "fessenden has nurtured his metaphors at the expense of his narrative , but he does display an original talent . ",
+    "child_text": "fessenden has nurtured his metaphors at the expense of his narrative , "
+  },
+  {
+    "root": 46882,
+    "child": 54942,
+    "accepted": false,
+    "reviewer": "assistant_text_review",
+    "reason": "Unclear standalone polarity or incomplete phrase; conservatively excluded",
+    "root_text": "not really a thriller so much as a movie for teens to laugh , groan and hiss at . ",
+    "child_text": "as a movie for teens to laugh , groan and hiss at "
+  },
+  {
+    "root": 1911,
+    "child": 21857,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "below may not mark mr. twohy 's emergence into the mainstream , but his promise remains undiminished . ",
+    "child_text": "below may not mark mr. twohy 's emergence into the mainstream , "
+  },
+  {
+    "root": 23450,
+    "child": 17611,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "there 's a delightfully quirky movie to be made from curling , but brooms is n't it . ",
+    "child_text": "there 's a delightfully quirky movie to be made from curling , "
+  },
+  {
+    "root": 50989,
+    "child": 21888,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "the good girl is a film in which the talent is undeniable but the results are underwhelming . ",
+    "child_text": "the good girl is a film in which the talent is undeniable "
+  },
+  {
+    "root": 18214,
+    "child": 36348,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "stealing harvard does n't care about cleverness , wit or any other kind of intelligent humor . ",
+    "child_text": "care about cleverness , wit or any other kind of intelligent humor "
+  },
+  {
+    "root": 3208,
+    "child": 50509,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "sweet home alabama is n't going to win any academy awards , but this date-night diversion will definitely win some hearts . ",
+    "child_text": "sweet home alabama is n't going to win any academy awards "
+  },
+  {
+    "root": 14826,
+    "child": 43898,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "if you 've grown tired of going where no man has gone before , but several movies have - take heart . ",
+    "child_text": "'ve grown tired of going where no man has gone before "
+  },
+  {
+    "root": 59856,
+    "child": 6238,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "alternates between deadpan comedy and heartbreaking loneliness and is n't afraid to provoke introspection in both its characters and its audience . ",
+    "child_text": "afraid to provoke introspection in both its characters and its audience "
+  },
+  {
+    "root": 52065,
+    "child": 13987,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "the movie , despite its rough edges and a tendency to sag in certain places , is wry and engrossing . ",
+    "child_text": "its rough edges and a tendency to sag in certain places "
+  },
+  {
+    "root": 676,
+    "child": 39355,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "take care is nicely performed by a quintet of actresses , but nonetheless it drags during its 112-minute length . ",
+    "child_text": "take care is nicely performed by a quintet of actresses , "
+  },
+  {
+    "root": 38355,
+    "child": 65303,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "paul bettany is good at being the ultra-violent gangster wannabe , but the movie is certainly not number 1 . ",
+    "child_text": "paul bettany is good at being the ultra-violent gangster wannabe , "
+  },
+  {
+    "root": 64061,
+    "child": 686,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "one well-timed explosion in a movie can be a knockout , but a hundred of them can be numbing . ",
+    "child_text": "one well-timed explosion in a movie can be a knockout , "
+  },
+  {
+    "root": 14337,
+    "child": 26707,
+    "accepted": false,
+    "reviewer": "assistant_text_review",
+    "reason": "Unclear standalone polarity or incomplete phrase; conservatively excluded",
+    "root_text": "proof once again that if the filmmakers just follow the books , they ca n't go wrong . ",
+    "child_text": "proof once again that if the filmmakers just follow the books "
+  },
+  {
+    "root": 21029,
+    "child": 3477,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "collateral damage is trash , but it earns extra points by acting as if it were n't . ",
+    "child_text": "it earns extra points by acting as if it were n't "
+  },
+  {
+    "root": 50501,
+    "child": 32563,
+    "accepted": false,
+    "reviewer": "assistant_text_review",
+    "reason": "Unclear standalone polarity or incomplete phrase; conservatively excluded",
+    "root_text": "the lousy john q all but spits out denzel washington 's fine performance in the title role . ",
+    "child_text": "spits out denzel washington 's fine performance in the title role "
+  },
+  {
+    "root": 33363,
+    "child": 3787,
+    "accepted": false,
+    "reviewer": "assistant_text_review",
+    "reason": "Unclear standalone polarity or incomplete phrase; conservatively excluded",
+    "root_text": "mindless yet impressively lean spinoff of last summer 's bloated effects fest the mummy returns . ",
+    "child_text": "spinoff of last summer 's bloated effects fest the mummy returns "
+  },
+  {
+    "root": 15370,
+    "child": 6530,
+    "accepted": false,
+    "reviewer": "assistant_text_review",
+    "reason": "Unclear standalone polarity or incomplete phrase; conservatively excluded",
+    "root_text": "the criticism never rises above easy , cynical potshots at morally bankrupt characters ... ",
+    "child_text": "rises above easy , cynical potshots at morally bankrupt characters ... "
+  },
+  {
+    "root": 19073,
+    "child": 61086,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "a little uneven to be the cat 's meow , but it 's good enough to be the purr . ",
+    "child_text": "a little uneven to be the cat 's meow , "
+  },
+  {
+    "root": 51010,
+    "child": 65271,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "amy and matthew have a bit of a phony relationship , but the film works in spite of it . ",
+    "child_text": "amy and matthew have a bit of a phony relationship "
+  },
+  {
+    "root": 52776,
+    "child": 63084,
+    "accepted": false,
+    "reviewer": "assistant_text_review",
+    "reason": "Unclear standalone polarity or incomplete phrase; conservatively excluded",
+    "root_text": "by not averting his eyes , solondz forces us to consider the unthinkable , the unacceptable , the unmentionable . ",
+    "child_text": "to consider the unthinkable , the unacceptable , the unmentionable "
+  },
+  {
+    "root": 60085,
+    "child": 34144,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "despite an impressive roster of stars and direction from kathryn bigelow , the weight of water is oppressively heavy . ",
+    "child_text": "an impressive roster of stars and direction from kathryn bigelow "
+  },
+  {
+    "root": 141,
+    "child": 33651,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "murphy and wilson actually make a pretty good team ... but the project surrounding them is distressingly rote . ",
+    "child_text": "murphy and wilson actually make a pretty good team ... "
+  },
+  {
+    "root": 22996,
+    "child": 37900,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "reyes ' directorial debut has good things to offer , but ultimately it 's undone by a sloppy script ",
+    "child_text": "reyes ' directorial debut has good things to offer , "
+  },
+  {
+    "root": 31205,
+    "child": 9515,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "ash wednesday is not edward burns ' best film , but it is a good and ambitious film . ",
+    "child_text": "ash wednesday is not edward burns ' best film , "
+  },
+  {
+    "root": 51904,
+    "child": 4962,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "yes , spirited away is a triumph of imagination , but it 's also a failure of storytelling . ",
+    "child_text": "yes , spirited away is a triumph of imagination , "
+  },
+  {
+    "root": 9749,
+    "child": 16235,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "saddled with an unwieldy cast of characters and angles , but the payoff is powerful and revelatory . ",
+    "child_text": "saddled with an unwieldy cast of characters and angles , "
+  },
+  {
+    "root": 39394,
+    "child": 62453,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "the premise of `` abandon '' holds promise , ... but its delivery is a complete mess . ",
+    "child_text": "the premise of `` abandon '' holds promise , ... "
+  },
+  {
+    "root": 57659,
+    "child": 21264,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "sweet home alabama certainly wo n't be remembered as one of ( witherspoon 's ) better films . ",
+    "child_text": "remembered as one of ( witherspoon 's ) better films "
+  },
+  {
+    "root": 62763,
+    "child": 18799,
+    "accepted": false,
+    "reviewer": "assistant_text_review",
+    "reason": "Unclear standalone polarity or incomplete phrase; conservatively excluded",
+    "root_text": "i admire it and yet can not recommend it , because it overstays its natural running time . ",
+    "child_text": "recommend it , because it overstays its natural running time "
+  },
+  {
+    "root": 39808,
+    "child": 57431,
+    "accepted": false,
+    "reviewer": "assistant_text_review",
+    "reason": "Unclear standalone polarity or incomplete phrase; conservatively excluded",
+    "root_text": "the movie does n't think much of its characters , its protagonist , or of us . ",
+    "child_text": "of its characters , its protagonist , or of us "
+  },
+  {
+    "root": 9287,
+    "child": 2998,
+    "accepted": false,
+    "reviewer": "assistant_text_review",
+    "reason": "Unclear standalone polarity or incomplete phrase; conservatively excluded",
+    "root_text": "though a capable thriller , somewhere along the way k-19 jettisoned some crucial drama . ",
+    "child_text": "somewhere along the way k-19 jettisoned some crucial drama . "
+  },
+  {
+    "root": 51276,
+    "child": 54414,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "he does this so well you do n't have the slightest difficulty accepting him in the role . ",
+    "child_text": "have the slightest difficulty accepting him in the role "
+  },
+  {
+    "root": 57418,
+    "child": 27711,
+    "accepted": false,
+    "reviewer": "assistant_text_review",
+    "reason": "Unclear standalone polarity or incomplete phrase; conservatively excluded",
+    "root_text": "it 's a very sincere work , but it would be better as a diary or documentary . ",
+    "child_text": "it would be better as a diary or documentary "
+  },
+  {
+    "root": 64951,
+    "child": 61159,
+    "accepted": false,
+    "reviewer": "assistant_text_review",
+    "reason": "Unclear standalone polarity or incomplete phrase; conservatively excluded",
+    "root_text": "though impostor deviously adopts the guise of a modern motion picture , it too is a bomb . ",
+    "child_text": "deviously adopts the guise of a modern motion picture "
+  },
+  {
+    "root": 63081,
+    "child": 42457,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "may lack the pungent bite of its title , but it 's an enjoyable trifle nonetheless . ",
+    "child_text": "may lack the pungent bite of its title , "
+  },
+  {
+    "root": 15843,
+    "child": 58057,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "it gets the details of its time frame right but it completely misses its emotions . ",
+    "child_text": "it gets the details of its time frame right "
+  },
+  {
+    "root": 1164,
+    "child": 10779,
+    "accepted": false,
+    "reviewer": "assistant_text_review",
+    "reason": "Unclear standalone polarity or incomplete phrase; conservatively excluded",
+    "root_text": "yet why it fails is a riddle wrapped in a mystery inside an enigma . ",
+    "child_text": "a riddle wrapped in a mystery inside an enigma "
+  },
+  {
+    "root": 51168,
+    "child": 3309,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "there is n't one moment in the film that surprises or delights . ",
+    "child_text": "one moment in the film that surprises or delights "
+  },
+  {
+    "root": 374,
+    "child": 32016,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "rice never clearly defines his characters or gives us a reason to care about them . ",
+    "child_text": "gives us a reason to care about them "
+  },
+  {
+    "root": 21317,
+    "child": 49646,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "me no lika da accents so good , but i thoroughly enjoyed the love story . ",
+    "child_text": "me no lika da accents so good , "
+  },
+  {
+    "root": 50753,
+    "child": 506,
+    "accepted": false,
+    "reviewer": "assistant_text_review",
+    "reason": "Unclear standalone polarity or incomplete phrase; conservatively excluded",
+    "root_text": "perhaps it 's cliche to call the film ` refreshing , ' but it is . ",
+    "child_text": "'s cliche to call the film ` refreshing "
+  },
+  {
+    "root": 32818,
+    "child": 29927,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "may not be a breakthrough in filmmaking , but it is unwavering and arresting . ",
+    "child_text": "may not be a breakthrough in filmmaking , "
+  },
+  {
+    "root": 33012,
+    "child": 24465,
+    "accepted": false,
+    "reviewer": "assistant_text_review",
+    "reason": "Unclear standalone polarity or incomplete phrase; conservatively excluded",
+    "root_text": "but , like silence , it 's a movie that gets under your skin . ",
+    "child_text": "'s a movie that gets under your skin "
+  },
+  {
+    "root": 5356,
+    "child": 62256,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "despite some strong performances , never rises above the level of a telanovela . ",
+    "child_text": "rises above the level of a telanovela . "
+  },
+  {
+    "root": 10172,
+    "child": 21659,
+    "accepted": false,
+    "reviewer": "assistant_text_review",
+    "reason": "Unclear standalone polarity or incomplete phrase; conservatively excluded",
+    "root_text": "the picture runs a mere 84 minutes , but it 's no glance . ",
+    "child_text": "the picture runs a mere 84 minutes , "
+  },
+  {
+    "root": 45213,
+    "child": 53788,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "a prison comedy that never really busts out of its comfy little cell . ",
+    "child_text": "really busts out of its comfy little cell "
+  },
+  {
+    "root": 9341,
+    "child": 3284,
+    "accepted": true,
+    "reviewer": "assistant_text_review",
+    "reason": "Clear contextual polarity contrast",
+    "root_text": "a live-wire film that never loses its ability to shock and amaze . ",
+    "child_text": "loses its ability to shock and amaze . "
+  },
+  {
+    "root": 8603,
+    "child": 18453,
+    "accepted": false,
+    "reviewer": "assistant_text_review",
+    "reason": "Unclear standalone polarity or incomplete phrase; conservatively excluded",
+    "root_text": "but they lack their idol 's energy and passion for detail . ",
+    "child_text": "their idol 's energy and passion for detail "
+  }
+]

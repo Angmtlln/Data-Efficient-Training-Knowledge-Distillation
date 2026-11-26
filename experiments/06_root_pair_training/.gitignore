@@ -1,0 +1,6 @@
+data/
+outputs/
+local_checkpoints/
+__pycache__/
+*.pyc
+queue.log
